@@ -166,9 +166,9 @@ export default function Home() {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
 
     {[
-      { title: 'UK TAXATION', img: '/uk.png', slug: "uk-taxation" },
-      { title: 'USA TAXATION', img: '/usa.png', slug: "/usa-taxation" },
-      { title: 'UAE TAXATION', img: '/uae.png', slug: "uae-taxation" },
+      { title: 'UK TAXATION', img: '/Rectangle 1.png', slug: "uk-taxation" },
+      { title: 'USA TAXATION', img: '/USA.png', slug: "/usa-taxation" },
+      { title: 'UAE TAXATION', img: '/UAE.png', slug: "uae-taxation" },
       { title: 'SAUDI TAXATION', img: '/saudi.png', slug: "saudi-taxation" },
       { title: 'CERTIFIED TAX ADVISOR', img: '/fbr.png', slug: "certified-tax-advisor" },
       { title: 'ADVANCE TAXATION AND LITIGATION', img: '/advance-tax.png', slug: "advance-taxation-and-litigation" },
