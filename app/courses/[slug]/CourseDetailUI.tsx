@@ -336,7 +336,33 @@ export default function CourseDetailUI({ course }: any) {
   </section>
 )}
 
+{course.certificate && (
+  <section className="py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <Image
+        src={urlFor(course.certificate.image).width(700).url()}
+        alt="Certificate"
+        width={700}
+        height={400}
+        className="rounded-2xl"
+      />
 
+      <div>
+        <h2 className="text-4xl font-bold mb-6">
+          {course.certificate.title}
+        </h2>
+        <p className="text-gray-600 mb-8">
+          {course.certificate.text}
+        </p>
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform">
+        <button className="bg-[#3c3f9e] text-white px-10 py-4 rounded-xl">
+          Apply Now
+        </button>
+        </Link>
+      </div>
+    </div>
+  </section>
+)}
 
 
       {/* ================= FAQ ================= */}

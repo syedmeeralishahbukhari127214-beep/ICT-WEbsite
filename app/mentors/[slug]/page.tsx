@@ -3,7 +3,7 @@ import { singleMentorQuery } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 import type { Metadata } from "next";
-
+import Link from "next/link";
 export async function generateMetadata(
   { params }: { params: { slug: string } | Promise<{ slug: string }> }
 ): Promise<Metadata> {
@@ -83,9 +83,10 @@ export default async function MentorDetail({ params }: PageProps) {
           </div>
 
           {/* CTA */}
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform">
           <button className="bg-[#3D4098] hover:bg-[#2f327a] mt-6 lg:mt-10 text-white px-6 sm:px-7 py-2 rounded-lg shadow-lg transition">
             Enroll Now
-          </button>
+          </button></Link>
         </div>
 
         {/* RIGHT IMAGE */}

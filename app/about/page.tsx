@@ -39,7 +39,7 @@ export default function ICTPage() {
     <div className="mt-6 sm:mt-8 lg:mt-12 gap-4 flex flex-col sm:flex-row justify-center lg:justify-start">
       <a
         className="bg-[#3D4098] py-3 sm:py-4 px-8 sm:px-10 text-white font-bold text-base sm:text-lg lg:text-xl rounded-lg text-center"
-        href="https://tally.so/r/OD4Z07?transparentBackground=1"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform"
         target="_blank"
         rel="noopener noreferrer"
       >
