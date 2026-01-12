@@ -1,84 +1,3 @@
-// export default {
-//   name: "course",
-//   title: "Course",
-//   type: "document",
-//   fields: [
-//     {
-//       name: "title",
-//       title: "Course Title",
-//       type: "string",
-//       validation: (Rule: any) => Rule.required(),
-//     },
-
-//     {
-//       name: "slug",
-//       title: "Slug",
-//       type: "slug",
-//       options: { source: "title" },
-//       validation: (Rule: any) => Rule.required(),
-//     },
-
-//     {
-//       name: "thumbnail",
-//       title: "Course Image",
-//       type: "image",
-//       options: { hotspot: true },
-//     },
-
-//     {
-//       name: "shortDescription",
-//       title: "Short Description",
-//       type: "text",
-//       rows: 3,
-//     },
-
-//     {
-//       name: "category",
-//       title: "Category",
-//       type: "string",
-//       options: {
-//         list: ["Taxation", "Accounting", "Finance", "Corporate Law"],
-//       },
-//     },
-
-//     {
-//       name: "duration",
-//       title: "Duration",
-//       type: "string",
-//       description: "e.g. 3 Months",
-//     },
-
-//     {
-//       name: "price",
-//       title: "Price",
-//       type: "number",
-//     },
-
-//     {
-//       name: "instructor",
-//       title: "Instructor",
-//       type: "reference",
-//       to: [{ type: "mentor" }],
-//     },
-
-//     {
-//       name: "description",
-//       title: "Full Description",
-//       type: "array",
-//       of: [{ type: "block" }],
-//     },
-
-//     {
-//       name: "features",
-//       title: "Course Features",
-//       type: "array",
-//       of: [{ type: "string" }],
-//     },
-//   ],
-// };
-
-
-
 // schemas/course.js
 export default {
   name: "course",
@@ -89,6 +8,17 @@ export default {
     { name: "category", type: "string" },
 
     {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
+      validation: (Rule: any) => Rule.required(),
+    },
+
+    {
       name: "thumbnail",
       type: "image",
       options: { hotspot: true },
@@ -96,6 +26,12 @@ export default {
 
     {
       name: "description",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+
+    {
+      name: "explain",
       type: "array",
       of: [{ type: "block" }],
     },
@@ -153,6 +89,44 @@ export default {
           options: { hotspot: true },
         },
       ],
+    },
+
+    // ✅ FAQS (ONLY NEW ADDITION)
+    {
+      name: "faqs",
+      title: "FAQs",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "question",
+              title: "Question",
+              type: "string",
+            },
+            {
+              name: "answer",
+              title: "Answer",
+              type: "text",
+            },
+          ],
+        },
+      ],
+    },
+     // 🔥 SEO METADATA
+      {
+  name: "seo",
+  title: "SEO Settings",
+  type: "seo",
+},
+    
+    // Alt text for Thumbnail (SEO ke liye zaroori hai)
+    {
+      name: "thumbnailAlt",
+      title: "Thumbnail Alt Text",
+      type: "string",
+      description: "Image ke bare mein batayein (SEO aur Accessibility ke liye)",
     },
   ],
 };

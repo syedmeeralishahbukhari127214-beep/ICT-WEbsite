@@ -140,35 +140,58 @@ export default function CompleteContactPage() {
         SECTION 1: ORIGINAL CONTACT BLOCK (Text + 3-Image Structure)
         ---------------------------------------------------- 
       */}
+{/* Hero Section */}
+<div className="flex flex-col lg:flex-row justify-start px-4 sm:px-10 lg:px-28 py-6 sm:py-8 lg:py-10 gap-6 sm:gap-10 lg:gap-14">
 
-       {/* Hero Section */}
-            <div className="flex justify-start px-28 py-10 gap-14">
-      
-              <div>
-                <h1 className="rotate-270 text-lg -ml-1 font-extrabold text-[#15A959]">ICT</h1>
-                <p className="w-1 h-28 font-bold bg-black ml-3 mt-3 mb-3"></p>
-      
-                      <a className="mt-5 flex text-[#3D4098] ml-1 text-lg" href=""><FaFacebookF/></a> 
-                      <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href=""><FiTwitter /></a> 
-                      <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href=""><AiOutlineInstagram /></a> 
-                      <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href=""><LuYoutube /></a> 
-                
-                <p className="w-1 h-54 bg-black ml-3 mt-3 mb-3"></p>
-                </div>
-              <div>
-                <h1 className=" text-5xl text-[#3D4098] mt-30 font-extrabold ">We're Here to <span className="text-[#15A959]">Help</span> </h1> 
-                <p className="text-2xl font-sans mt-9 ">Have a question or need support? Send us a  <br></br>message and we'll respond as soon as possible. </p>
-                <div className="mt-12 gap-4 flex">
-                  <a className="bg-[#3D4098] py-4 px-10 text-white font-bold text-xl rounded-lg" href="">Contact Us</a>
-                <a className="py-3 px-12 border-[#3D4098] border-3 text-[#3D4098] font-bold text-xl rounded-lg" href="">Enroll Now</a>
-                </div>
-                </div> 
-              <div><img className="h-96 w-72 mt-14" src="30.png" alt="" /></div>
-              <div>
-                <div><img className="h-46 w-72 mt-14 -ml-8" src="31.png" alt="" /></div>
-               <div><img className="h-46 w-72 -ml-8 mt-4" src="32.png" alt="" /></div>
-              </div>
-            </div>
+  {/* LEFT SOCIAL SECTION — hidden on mobile */}
+  <div className="hidden lg:block">
+    <h1 className="rotate-270 text-lg -ml-1 font-extrabold text-[#15A959]">ICT</h1>
+    <p className="w-1 h-28 font-bold bg-black ml-3 mt-3 mb-3"></p>
+
+    <a className="mt-5 flex text-[#3D4098] ml-1 text-lg" href=""><FaFacebookF/></a> 
+    <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href=""><FiTwitter /></a> 
+    <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href=""><AiOutlineInstagram /></a> 
+    <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href=""><LuYoutube /></a> 
+
+    <p className="w-1 h-54 bg-black ml-3 mt-3 mb-3"></p>
+  </div>
+
+  {/* TEXT SECTION */}
+  <div className="text-center lg:text-left">
+    <h1 className="text-2xl sm:text-3xl lg:text-5xl text-[#3D4098] mt-6 sm:mt-10 lg:mt-30 font-extrabold">
+      We're Here to <span className="text-[#15A959]">Help</span>
+    </h1> 
+    <p className="text-base sm:text-lg lg:text-2xl font-sans mt-4 sm:mt-6 lg:mt-9">
+      Have a question or need support? Send us a <br /> message and we'll respond as soon as possible.
+    </p>
+    <div className="mt-6 sm:mt-8 lg:mt-12 gap-4 flex flex-col sm:flex-row justify-center lg:justify-start">
+      <a className="bg-[#3D4098] py-3 sm:py-4 px-8 sm:px-10 lg:px-10 text-white font-bold text-base sm:text-lg lg:text-xl rounded-lg text-center" href="">
+        Contact Us
+      </a>
+      <a
+        className="py-3 px-8 sm:px-10 lg:px-12 border-[#3D4098] border-2 lg:border-3 text-[#3D4098] font-bold text-base sm:text-lg lg:text-xl rounded-lg text-center"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Enroll Now
+      </a>
+    </div>
+  </div> 
+
+  {/* HERO IMAGES */}
+  <div className="flex justify-center lg:block">
+    <img className="h-60 sm:h-72 lg:h-96 w-44 sm:w-56 lg:w-72 mt-8 lg:mt-14" src="30.png" alt="" />
+  </div>
+  <div className="flex flex-col items-center lg:block">
+    <div>
+      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-6 lg:mt-14 -ml-0 lg:-ml-8" src="31.png" alt="" />
+    </div>
+    <div>
+      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-4 -ml-0 lg:-ml-8" src="32.png" alt="" />
+    </div>
+  </div>
+</div>
 
       {/* ----------------------------------------------------
         SECTION 2: WANDERLUST FORM

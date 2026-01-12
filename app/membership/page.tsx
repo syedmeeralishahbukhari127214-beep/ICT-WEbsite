@@ -19,7 +19,7 @@ export default function ICTMembership() {
 
           <div className="mt-6">
             <Link
-              href="#"
+              href="https://course.ict.net.pk/checkout/speaker-club-membership"
               className="inline-block bg-[#3D4098] rounded-lg text-white px-6 py-3 font-bold shadow-lg hover:scale-105 transition"
             >
               Join Now – Limited Launch Offer
@@ -123,7 +123,7 @@ export default function ICTMembership() {
           </p>
 
           <Link
-            href="#"
+            href="https://course.ict.net.pk/checkout/speaker-club-membership"
             className="inline-block bg-white text-indigo-700 px-8 py-3 rounded-lg font-semibold shadow-lg hover:scale-105 transition"
           >
             Join Now – Limited Launch Offer

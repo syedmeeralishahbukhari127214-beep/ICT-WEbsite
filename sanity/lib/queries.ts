@@ -1,34 +1,4 @@
-// import { groq } from "next-sanity";
 
-// /* 🔹 BLOG LIST (NO slug) */
-// export const blogsQuery = groq`
-// *[_type == "post"] | order(publishedAt desc){
-//   _id,
-//   title,
-//   excerpt,
-//   publishedAt,
-//   "slug": slug.current,
-//   author->{
-//     name
-//   },
-//   "imageUrl": mainImage.asset->url
-// }
-// `;
-
-// /* 🔹 SINGLE BLOG (USES slug) */
-// export const singleBlogQuery = groq`
-// *[_type == "post" && slug.current == $slug][0]{
-//   _id,
-//   title,
-//   excerpt,
-//   publishedAt,
-//   body,
-//   author->{
-//     name
-//   },
-//   "imageUrl": mainImage.asset->url
-// }
-// `;
 
 
 
@@ -40,6 +10,7 @@ export const blogsQuery = `
   excerpt,
   "slug": slug.current,
   "mainImage": image,
+  body,
 }
 `;
 export const singleBlogQuery = `
@@ -51,6 +22,7 @@ export const singleBlogQuery = `
   body,
   publishedAt,
   "mainImage": image,
+  body,
   seo,
   author->{
     name
@@ -102,23 +74,7 @@ export const coursesQuery = `
   }
 }
 `;
-// export const singleCourseQuery = `
-// *[_type == "course" && slug.current == $slug][0] {
-//   title,
-//   slug,
-//   category,
-//   price,
-//   duration,
-//   thumbnail,
-//   description,
-//   features,
-//   instructor->{
-//     name,
-//     image,
-//     designation
-//   }
-// }
-// `;
+
 
 // sanity/lib/queries.ts
 export const singleCourseQuery = `
@@ -127,15 +83,26 @@ export const singleCourseQuery = `
   category,
   thumbnail,
   description,
+   explain,        // 🔥 Add this
+  shortExplain,
+  faqs, 
   features,
   gallery,
   benefits,
   outline,
+  seo {
+    metaTitle,
+    metaDescription,
+    canonicalUrl,
+     keywords,
+    ogImage
+  },
 
   instructor->{
     name,
     designation,
-    image
+    image,
+    slug 
   },
 
   certificate

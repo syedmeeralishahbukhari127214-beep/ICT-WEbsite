@@ -2,11 +2,6 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
 import { RiMessengerLine } from "react-icons/ri";
-
-
-
-
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -144,12 +139,17 @@ const HeroContactSection: React.FC = () => {
               Tell us what you need help with and we'll respond as soon as possible.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-              <button className="px-8 py-3 w-48 bg-[#3D4098] text-white font-semibold rounded-lg shadow-xl hover:bg-[#3D4098] transition transform hover:scale-105">
-                Enroll Now
-              </button>
-              <button className="px-8 py-3 w-48 bg-white text-[#3D4098] font-semibold rounded-lg border-2 border-indigo-300 shadow-md hover:bg-indigo-50 transition transform hover:scale-105">
+              <a
+    className="bg-[#3D4098] py-4 px-10 text-white font-bold text-lg rounded-lg"
+    href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Enroll Now
+  </a>
+              {/* <button className="px-8 py-3 w-48 bg-white text-[#3D4098] font-semibold rounded-lg border-2 border-indigo-300 shadow-md hover:bg-indigo-50 transition transform hover:scale-105">
                 Explore
-              </button>
+              </button> */}
             </div>
           </div>
           <div className="flex justify-center lg:justify-end relative">

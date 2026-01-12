@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 const benefitItems = [
   {
@@ -77,10 +78,10 @@ const CareerCompanionHeroSection = () => {
           <p className="text-lg text-gray-700 max-w-md">
             At ICT, we empower graduates with skills, confidence, and real-world experience.
           </p>
-
-          <button className="px-8 py-3 bg-[#3D4098] text-white rounded-lg font-semibold">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLScKVQgqpXIYIQs3VA8et5bXDqJOhoewY4QBc9PXofywLmYYFA/viewform">
+          <button  className="px-8 py-3 bg-[#3D4098] text-white rounded-lg font-semibold">
             Join ICT
-          </button>
+          </button></Link>
         </div>
 
         <div className="h-[450px] rounded-3xl overflow-hidden shadow-2xl">
