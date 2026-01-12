@@ -115,13 +115,13 @@ function NavLinks() {
   return (
     <>
       <a className="hover:text-[#15A959]" href="/">Home</a>
-      <a className="hover:text-[#15A959]" href="/about">About Us</a>
+      <a className="hover:text-[#15A959]" href="/About">About Us</a>
       <a className="hover:text-[#15A959]" href="/courses">Courses</a>
       <a className="hover:text-[#15A959]" href="/mentors">Our Mentors</a>
-      <a className="hover:text-[#15A959]" href="/feedback">Feedback</a>
+      <a className="hover:text-[#15A959]" href="/Feedback">Feedback</a>
       <a className="hover:text-[#15A959]" href="/contact">Contact Us</a>
       <a className="hover:text-[#15A959]" href="/blogs">Blogs</a>
-      <a className="hover:text-[#15A959]" href="/help_desk">Help Desk</a>
+      <a className="hover:text-[#15A959]" href="/Help_desk">Help Desk</a>
       <a className="hover:text-[#15A959]" href="/career">Careers</a>
     </>
   );
