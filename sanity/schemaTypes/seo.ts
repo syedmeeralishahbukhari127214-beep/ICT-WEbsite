@@ -7,14 +7,14 @@ export default {
       name: "metaTitle",
       title: "Meta Title",
       type: "string",
-      validation: (Rule) => Rule.max(60).warning("Keep under 60 characters"),
+      validation: (Rule:any) => Rule.max(60).warning("Keep under 60 characters"),
     },
     {
       name: "metaDescription",
       title: "Meta Description",
       type: "text",
       rows: 3,
-      validation: (Rule) =>
+      validation: (Rule:any) =>
         Rule.max(160).warning("Keep under 160 characters"),
     },
     {
