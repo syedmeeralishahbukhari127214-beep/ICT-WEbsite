@@ -8,6 +8,7 @@ import Link from "next/dist/client/link";
 
 export default function Home() {
   return (
+    
     <div className="">
   {/* Hero Section */}
   <div className="flex flex-col md:flex-row justify-start px-4 sm:px-6 md:px-28 py-4 sm:py-6 md:py-10 gap-4 sm:gap-6 md:gap-10">
@@ -43,40 +44,45 @@ export default function Home() {
     </div>
 
     {/* TEXT SECTION */}
-    <div className="text-center md:text-left">
+    <div className="flex-1 text-center md:text-left">
 
-      <h1 className="text-xl sm:text-2xl md:text-4xl text-[#3D4098] mt-4 sm:mt-6 md:mt-12 font-extrabold">
-        Develop Global Business <br /> 
-        Skills With <span className="text-[#15A959]">ICT.</span>
-      </h1>
+  {/* Heading: Font sizes ko fluid kiya hai (laptop par khud choti ho jayegi) */}
+  <h1 className="text-2xl sm:text-3xl lg:text-5xl text-[#3D4098] mt-4 md:mt-12 font-extrabold leading-tight">
+    Develop Global Business <br className="hidden lg:block" /> 
+    Skills With <span className="text-[#15A959]">ICT.</span>
+  </h1>
 
-      <p className="text-base sm:text-lg md:text-3xl font-sans mt-4 sm:mt-6 md:mt-9">
-        Master practical skills in Taxation, <br /> 
-        Accounting, Finance, Corporate Affairs <br />  
-        and more through 
-        <span className="text-[#15A959]"> ICT's online in- <br /> person classes.</span>
-      </p>
+  {/* Paragraph: md:text-3xl bohot bara tha laptop ke liye, isay optimize kiya hai */}
+  <p className="text-base sm:text-lg lg:text-2xl font-sans mt-4 md:mt-8 text-gray-700 leading-relaxed">
+    Master practical skills in Taxation, Accounting, Finance, 
+    <br className="hidden lg:block" /> Corporate Affairs and more through 
+    <span className="text-[#15A959]"> ICT's online in-person classes.</span>
+  </p>
 
-      <div className="mt-6 sm:mt-8 md:mt-12 gap-4 flex flex-col sm:flex-row justify-center md:justify-start">
+  {/* Buttons Container */}
+  {/* Buttons Container: Gap aur margins ko responsive kiya hai */}
+<div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center md:justify-start items-center">
 
-        <a
-          className="bg-[#3D4098] py-3 md:py-4 px-6 md:px-10 text-white font-bold text-base sm:text-lg md:text-xl rounded-lg text-center"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Enroll Now
-        </a>
+  {/* Solid Button: Enroll Now */}
+  <a
+    className="bg-[#3D4098] hover:bg-[#2e317a] transition-all duration-300 py-3 px-10 md:py-4 md:px-12 text-white font-bold text-lg md:text-xl rounded-xl text-center min-w-[200px] shadow-md"
+    href="https://docs.google.com/forms/..."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Enroll Now
+  </a>
 
-        <a
-          className="py-3 px-6 sm:px-8 md:px-12 border-[#3D4098] border-2 md:border-3 text-[#3D4098] font-bold text-base sm:text-lg md:text-xl rounded-lg text-center"
-          href="/membership"
-        >
-          Membership
-        </a>
-      </div>
-    </div>
-
+  {/* Outline Button: Membership */}
+  <a
+    className="bg-white border-[#3D4098] border-2 md:border-[3px] text-[#3D4098] hover:bg-[#3D4098] hover:text-white transition-all duration-300 py-3 px-10 md:py-4 md:px-12 font-bold text-lg md:text-xl rounded-xl text-center min-w-[200px]"
+    href="/membership"
+  >
+    Membership
+  </a>
+  
+</div>
+</div>
 
 
 
@@ -108,26 +114,33 @@ export default function Home() {
 
       
       {/* Second Section */}
-<div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 px-6 md:px-32">
-   {/* one */}
-   <div className="flex justify-center md:justify-start w-full md:w-[1100px] gap-2 md:gap-1 mt-6 md:mt-0">
-    <img className="w-40 md:w-56 h-[250px] md:h-[400px]" src="/Rectangle 8.png" alt="" />
-    <img className="w-28 md:w-36 h-[300px] md:h-[450px] pt-6 md:pt-12" src="/Rectangle 9.png" alt="" />
-    <img className="w-40 md:w-56 h-[300px] md:h-[450px] pt-8 md:pt-16" src="/Rectangle 7.png" alt="" />
+{/* Second Section (About Us) - Fixed for Laptop/PC */}
+<div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 md:gap-16 px-6 md:px-12 py-10">
+   
+   {/* Column One: Images (Ab ye screen ke mutabiq resize hon gi) */}
+   <div className="flex-1 flex justify-center md:justify-start items-baseline gap-2 md:gap-4 w-full">
+    <img className="w-1/3 h-auto max-h-[400px] rounded-xl shadow-md" src="/Rectangle 8.png" alt="ICT 1" />
+    <img className="w-1/4 h-auto max-h-[450px] rounded-xl shadow-md mt-6 md:mt-12" src="/Rectangle 9.png" alt="ICT 2" />
+    <img className="w-1/3 h-auto max-h-[450px] rounded-xl shadow-md mt-8 md:mt-16" src="/Rectangle 7.png" alt="ICT 3" />
    </div>
 
-   {/* Second */}
-   <div className="w-full md:w-[1100px] mt-6 md:mt-0">
-    <p className="bg-[#15A959] w-1 h-20 md:h-28 rotate-90 font-bold"></p> 
-    <p className="text-[#3D4098] font-bold pb-3"> Welcome to ICT</p>
-    <h1 className="text-2xl md:text-3xl font-extrabold pb-3">About us</h1>
-    <p className="mb-6 w-full md:w-[500px] font-semibold">
+   {/* Column Second: Text Content */}
+   <div className="flex-1 w-full">
+    {/* Line design */}
+    <div className="bg-[#15A959] w-1 h-20 md:h-28 rotate-90 font-bold mb-6 ml-10"></div> 
+    
+    <p className="text-[#3D4098] font-bold pb-2 uppercase tracking-wide"> Welcome to ICT</p>
+    <h1 className="text-3xl md:text-5xl font-extrabold pb-4">About us</h1>
+    
+    <p className="mb-8 text-gray-700 text-lg font-semibold leading-relaxed max-w-xl">
       ICT turns complex tax rules into practical skills and real results. As Pakistan’s leading taxation institute, we offer expert-led training and corporate solutions that help professionals and businesses stay compliant, confident, and ahead.
     </p>
-    <a className="bg-[#3D4098] py-2 px-6 md:px-9 text-white font-bold text-md md:text-lg rounded-lg" href="/about">Explore</a>
+    
+    <a className="bg-[#3D4098] hover:bg-[#15A959] transition-colors py-3 px-10 text-white font-bold text-lg rounded-lg inline-block" href="/about">
+      Explore
+    </a>
    </div>
 </div>
-
 
 
 

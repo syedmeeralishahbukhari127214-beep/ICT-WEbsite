@@ -76,67 +76,75 @@ export default function ICTPage() {
 
 
      
-      <section className="w-full px-4 sm:px-10 md:px-20 lg:px-[250px] py-10 sm:py-12 md:py-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-20 items-start">
-  
-  {/* LEFT CARD */}
-  <div className="bg-gradient-to-b from-indigo-900 to-indigo-900 rounded-2xl p-6 text-white shadow-lg w-full sm:w-[400px] md:w-[500px] lg:w-[600px]">
+      <section className="w-full py-10 sm:py-16">
+  {/* container mx-auto content ko screen ke beech mein rakhta hai */}
+  <div className="container mx-auto px-4 md:px-12 lg:px-20">
     
-    <div className="rounded-xl overflow-hidden mb-5">
-      <img
-        src="/pic6.webp"
-        alt="Rai Basharat Ali"
-        className="w-full h-60 sm:h-72 md:h-80 object-cover"
-      />
-    </div>
+    <div className="flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-16">
+      
+      {/* LEFT CARD - Fixed width container for the card */}
+      <div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
+        <div className="bg-[#3D4098] rounded-2xl p-6 text-white shadow-xl w-full max-w-[350px] md:max-w-[400px]">
+          
+          <div className="rounded-xl overflow-hidden mb-5 border-2 border-white/10">
+            <img
+              src="/pic6.webp"
+              alt="Rai Basharat Ali"
+              className="w-full h-72 md:h-80 object-cover"
+            />
+          </div>
 
-    <h3 className="text-xl sm:text-2xl font-extrabold text-center">
-      Rai Basharat Ali
-    </h3>
-    <p className="text-base sm:text-lg text-white text-center mt-1">
-      Principal <br />
-      Institute of Corporate and Taxation
-    </p>
+          <h3 className="text-xl sm:text-2xl font-extrabold text-center">
+            Rai Basharat Ali
+          </h3>
+          <p className="text-sm sm:text-base text-gray-200 text-center mt-2 leading-tight">
+            Principal <br />
+            Institute of Corporate and Taxation
+          </p>
+        </div>
+      </div>
+
+      {/* RIGHT CONTENT - Flex-1 takes remaining space properly */}
+      <div className="w-full lg:flex-1 lg:max-w-[800px]">
+        <div className="flex items-center gap-3 mb-6 pt-2">
+          <span className="w-10 h-[2px] bg-[#15A959]"></span>
+          <h3 className="text-lg sm:text-xl font-bold text-[#3D4098] uppercase tracking-wide">
+            Principal Message
+          </h3>
+        </div>
+
+        <div className="space-y-5 text-gray-800 leading-relaxed font-semibold text-base sm:text-lg">
+          <p>
+            Welcome to the Institute of Corporate and Taxation. We’re committed to
+            strong academics, professional growth, and practical learning.
+          </p>
+
+          <p>
+            Corporate governance, finance, and taxation are crucial in today’s
+            economy. Our goal is to develop skilled professionals who can lead,
+            advise, and make informed decisions in these areas.
+          </p>
+
+          <p>
+            Our programs combine theory with real-world application. With experienced
+            faculty, industry connections, and a focused curriculum, we prepare
+            students for successful careers.
+          </p>
+
+          <p>
+            As a growing center of excellence in Pakistan, we take pride in offering
+            a disciplined, innovative, and supportive learning environment.
+          </p>
+
+          <p>
+            I invite you to join us and move toward a future that is rewarding,
+            responsible, and globally competitive.
+          </p>
+        </div>
+      </div>
+
+    </div>
   </div>
-
-  {/* RIGHT CONTENT */}
-  <div className="w-full lg:w-[1500px]">
-    <div className="flex items-center gap-3 mb-4 pt-6 sm:pt-8 md:pt-10">
-      <span className="w-6 sm:w-8 md:w-10 h-[2px] bg-green-500"></span>
-      <h3 className="text-base sm:text-lg font-semibold text-[#3D4098]">
-        Principal Message
-      </h3>
-    </div>
-
-    <div className="space-y-3 sm:space-y-4 text-black leading-relaxed font-bold text-sm sm:text-base md:text-lg">
-      <p>
-        Welcome to the Institute of Corporate and Taxation. We’re committed to
-        strong academics, professional growth, and practical learning.
-      </p>
-
-      <p>
-        Corporate governance, finance, and taxation are crucial in today’s
-        economy. Our goal is to develop skilled professionals who can lead,
-        advise, and make informed decisions in these areas.
-      </p>
-
-      <p>
-        Our programs combine theory with real-world application. With experienced
-        faculty, industry connections, and a focused curriculum, we prepare
-        students for successful careers.
-      </p>
-
-      <p>
-        As a growing center of excellence in Pakistan, we take pride in offering
-        a disciplined, innovative, and supportive learning environment.
-      </p>
-
-      <p>
-        I invite you to join us and move toward a future that is rewarding,
-        responsible, and globally competitive.
-      </p>
-    </div>
-  </div>
-
 </section>
 
 
@@ -197,87 +205,80 @@ export default function ICTPage() {
 
         </div>
       </section>
-{/* WHY CHOOSE ICT */}
-<img className="mt-20 sm:mt-40 lg:mt-90 w-full object-cover" src="pic15.webp" alt="" />
-
-<section className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 -mt-40 sm:-mt-80 lg:-mt-[1350px]">
+{/* WHY CHOOSE ICT SECTION */}
+<section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
   
-  {/* Heading */}
-  <div className="mb-6 sm:mb-10">
-    <p className="text-xs sm:text-sm font-semibold text-[#3D4098] flex items-center gap-2">
-      <span className="w-6 sm:w-8 h-[2px] bg-green-500"></span>
-      Why Choose ICT?
-    </p>
-
-    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#3D4098] mt-2">
-      No Compromise On Excellence
-    </h2>
+  {/* Background Decorative Image (Optional - replaces the massive negative margin logic) */}
+  <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+    <img src="pic15.webp" className="object-cover w-full h-full" alt="" />
   </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start">
+  <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
     
-    {/* LEFT CONTENT */}
-    <div className="space-y-4 sm:space-y-6 text-gray-700 text-sm sm:text-base">
-      <div>
-        <h4 className="font-bold text-black">Learn From Real Experts</h4>
-        <p>
-          Get hands-on insights from seasoned corporate tax professionals and
-          master strategies beyond textbooks.
-        </p>
-      </div>
-
-      <div>
-        <h4 className="font-bold text-black">Tackle Live Tax Challenges</h4>
-        <p>
-          Engage in real-time corporate tax scenarios and crisis simulations
-          to sharpen your decision-making and strategic skills under pressure.
-        </p>
-      </div>
-
-      <div>
-        <h4 className="font-bold text-black">AI-Powered Learning, Anytime</h4>
-        <p>
-          Access AI-driven quizzes, 24/7 mentor support, and bite-sized tax
-          training videos to learn at your own pace and master corporate
-          taxation efficiently.
-        </p>
-      </div>
-
-      <div>
-        <h4 className="font-bold text-black">Connect With Elite Tax Pros</h4>
-        <p>
-          Join a global network of 10,000+ corporate tax professionals spanning
-          5 countries, expanding your connections, opportunities, and influence
-          in the industry.
-        </p>
-      </div>
-    </div>
-
-    {/* RIGHT IMAGES */}
-    <div className="relative flex flex-col gap-4 sm:gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       
-      <img
-        src="/pic13.png"
-        className="rounded-2xl shadow-md object-cover h-32 sm:h-44 w-full"
-      />
+      {/* LEFT CONTENT: Text blocks */}
+      <div className="space-y-8">
+        <div>
+          <p className="text-[#3D4098] font-bold flex items-center gap-3 mb-2">
+            <span className="w-10 h-[2px] bg-[#15A959]"></span>
+            Why Choose ICT?
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#3D4098] leading-tight">
+            No Compromise On Excellence
+          </h2>
+        </div>
 
-      <img
-        src="/pic14.png"
-        className="rounded-2xl shadow-md object-cover h-40 sm:h-52 w-full"
-      />
-
-      <div className="relative flex justify-center sm:justify-start">
-        <img
-          src="/pic4.png"
-          className="rounded-2xl shadow-md object-cover -mt-20 sm:-mt-[161px] sm:-ml-12 h-40 sm:h-54 w-40 sm:w-60"
-        />
-
-        {/* 10+ YEARS BADGE */}
-        <div className="absolute bottom-2 left-1/2 sm:left-42 transform -translate-x-1/2 sm:translate-x-0 bg-[#3D4098] text-white px-6 sm:px-12 py-1 rounded-xl shadow-lg text-center">
-          <p className="text-2xl sm:text-[50px] font-semibold -mt-1 sm:-mt-2">10+</p>
-          <p className="text-lg sm:text-3xl font-semibold -mt-1 sm:-mt-3 mb-1 sm:mb-2">Years</p>
+        <div className="grid gap-8">
+          {[
+            { title: "Learn From Real Experts", desc: "Get hands-on insights from seasoned corporate tax professionals and master strategies beyond textbooks." },
+            { title: "Tackle Live Tax Challenges", desc: "Engage in real-time corporate tax scenarios and crisis simulations to sharpen your decision-making." },
+            { title: "AI-Powered Learning, Anytime", desc: "Access AI-driven quizzes, 24/7 mentor support, and bite-sized tax training videos." },
+            { title: "Connect With Elite Tax Pros", desc: "Join a global network of 10,000+ corporate tax professionals spanning 5 countries." }
+          ].map((item, index) => (
+            <div key={index} className="group">
+              <h4 className="font-bold text-xl text-black mb-2 group-hover:text-[#3D4098] transition-colors">{item.title}</h4>
+              <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* RIGHT CONTENT: Image Collage (As per image_2ddd8d.png) */}
+      <div className="relative">
+        <div className="flex flex-col gap-6">
+          {/* Top Image */}
+          <div className="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
+            <img src="/pic13.png" className="w-full h-48 md:h-64 object-cover" alt="Classroom" />
+          </div>
+          
+          {/* Bottom Row Collage */}
+          <div className="grid grid-cols-12 gap-4 items-end">
+            <div className="col-span-12 md:col-span-11 rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
+              <img src="/pic14.png" className="w-full h-56 md:h-72 object-cover" alt="Team" />
+            </div>
+          </div>
+        </div>
+
+        {/* Floating Overlap Image & Badge */}
+        <div className="absolute -bottom-10 -left-6 md:-left-16 w-56 md:w-72">
+          <div className="relative">
+            <img 
+              src="/pic4.png" 
+              className="rounded-3xl shadow-2xl border-4 border-white w-full h-44 md:h-56 object-cover" 
+              alt="Team Badge" 
+            />
+            {/* 10+ YEARS BADGE - Styled exactly like the blue box in screenshot */}
+            <div className="absolute -bottom-4 -right-4 bg-[#3D4098] text-white p-4 md:p-6 rounded-2xl shadow-2xl text-center min-w-[120px]">
+              <p className="text-3xl md:text-5xl font-black leading-none">10+</p>
+              <p className="text-sm md:text-lg font-bold uppercase tracking-tighter">Years</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

@@ -13,96 +13,62 @@ export default function Header() {
   return (
     <>
       {/* TOP BAR */}
-      <div className="flex flex-wrap items-center justify-between gap-4 px-4 lg:px-16 py-3 bg-[#3D4098]">
-        {/* Social */}
-        <div className="flex items-center gap-3 text-white text-lg">
-          {/* Facebook */}
-  <a
-    href="https://www.facebook.com/Instituteofcorporateandtaxation?rdid=VUbvuGmGX0dl8g1f&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AMUrXLsPZ%2F#"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-blue-400 transition"
-  >
-    <FaFacebookF />
-  </a>
+      <div className="bg-[#3D4098]">
+        <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4 px-6 py-3">
+          
+          {/* Social */}
+          <div className="flex items-center gap-4 text-white text-lg">
+            <a href="#" className="hover:text-blue-400"><FaFacebookF /></a>
+            <a href="#" className="hover:text-pink-400"><AiOutlineInstagram /></a>
+            <a href="#" className="hover:text-sky-400"><FiTwitter /></a>
+            <a href="#" className="hover:text-red-500"><LuYoutube /></a>
+          </div>
 
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/ict_pakistan/?igsh=MXRwNDR6ZnpiN3pqNg%3D%3D#"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-pink-400 transition"
-  >
-    <AiOutlineInstagram />
-  </a>
+          {/* Search */}
+          <div className="flex items-center gap-1 w-full sm:w-auto">
+            <input
+              className="bg-white rounded-md px-3 py-1 w-full sm:w-56"
+              type="text"
+              placeholder="Search..."
+            />
+            <span className="py-2 px-3 rounded-md text-white bg-[#15A959] cursor-pointer">
+              <CiSearch />
+            </span>
+          </div>
 
-  {/* Twitter / X */}
-  <a
-    href="https://x.com/IctIsbd2022"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-sky-400 transition"
-  >
-    <FiTwitter />
-  </a>
-
-  {/* YouTube */}
-  <a
-    href="https://www.youtube.com/@ICTPakistanofficial"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-red-500 transition"
-  >
-    <LuYoutube />
-  </a>
-        </div>
-
-        {/* Search */}
-        <div className="flex items-center gap-1 w-full sm:w-auto">
-          <input
-            className="bg-white rounded-md px-2 py-1 w-full sm:w-48"
-            type="text"
-            placeholder="Search..."
-          />
-          <span className="py-2 px-3 rounded-md text-white bg-[#15A959] cursor-pointer">
-            <CiSearch />
-          </span>
-        </div>
-
-        {/* Links */}
-        <div className="flex gap-2">
-          <a className="px-3 py-1 text-sm border border-white text-white" href="/certificate_verification">
-            Certificate
-          </a>
-          <a className="px-3 py-1 text-sm text-white hover:bg-[#15A959]" href="https://lms.ictpk.cloud/#login">
-            ICT LMS
-          </a>
+          {/* Links */}
+          <div className="flex gap-3">
+            <a className="px-4 py-1 text-sm border border-white text-white" href="/certificate_verification">
+              Certificate
+            </a>
+            <a className="px-4 py-1 text-sm text-white hover:bg-[#15A959]" href="#">
+              ICT LMS
+            </a>
+          </div>
         </div>
       </div>
 
       {/* MAIN NAVBAR */}
       <div className="border-b border-gray-200">
-        <div className="flex items-center justify-between px-4 lg:px-28 py-4">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-4">
+          
           {/* Logo */}
-          <img src="/logo ict.png" alt="logo" className="w-40 lg:w-64" />
+          <img src="/logo ict.png" alt="logo" className="w-48" />
 
-          {/* Hamburger (ALL screens) */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="text-2xl lg:hidden"
-          >
+          {/* Hamburger */}
+          <button onClick={() => setOpen(!open)} className="text-2xl lg:hidden">
             {open ? <FaX /> : <FaBars />}
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-7 text-lg">
+          <div className="hidden lg:flex items-center gap-8 text-[17px] font-medium">
             <NavLinks />
           </div>
         </div>
 
         {/* Mobile Menu */}
         {open && (
-          <div className="lg:hidden flex flex-col gap-4 px-6 pb-6 text-lg">
+          <div className="lg:hidden max-w-[1400px] mx-auto flex flex-col gap-4 px-6 pb-6 text-lg">
             <NavLinks />
           </div>
         )}
@@ -114,15 +80,16 @@ export default function Header() {
 function NavLinks() {
   return (
     <>
-      <a className="hover:text-[#15A959]" href="/">Home</a>
-      <a className="hover:text-[#15A959]" href="/about">About Us</a>
-      <a className="hover:text-[#15A959]" href="/courses">Courses</a>
-      <a className="hover:text-[#15A959]" href="/mentors">Our Mentors</a>
-      <a className="hover:text-[#15A959]" href="/feedback">Feedback</a>
-      <a className="hover:text-[#15A959]" href="/contact">Contact Us</a>
-      <a className="hover:text-[#15A959]" href="/blogs">Blogs</a>
-      <a className="hover:text-[#15A959]" href="/help_desk">Help Desk</a>
-      <a className="hover:text-[#15A959]" href="/career">Careers</a>
+      <a className="hover:text-[#15A959] font-normal" href="/">Home</a>
+      <a className="hover:text-[#15A959] font-normal" href="/about">About Us</a>
+      <a className="hover:text-[#15A959] font-normal" href="/courses">Courses</a>
+      <a className="hover:text-[#15A959] font-normal" href="/mentors">Our Mentors</a>
+      <a className="hover:text-[#15A959] font-normal" href="/feedback">Feedback</a>
+      <a className="hover:text-[#15A959] font-normal" href="/contact">Contact Us</a>
+      <a className="hover:text-[#15A959] font-normal" href="/blogs">Blogs</a>
+      <a className="hover:text-[#15A959] font-normal" href="/help_desk">Help Desk</a>
+      <a className="hover:text-[#15A959] font-normal" href="/career">Careers</a>
     </>
   );
 }
+
