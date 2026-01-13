@@ -6,7 +6,7 @@ import { LuYoutube } from "react-icons/lu";
 import Link from "next/dist/client/link";
 
 
-export default function Home() {
+export default async function Home() {
   return (
     
     <div className="">
@@ -531,11 +531,84 @@ export default function Home() {
   </div>
 
   {/* Insights Section */}
-  <div className="text-center mt-10">
-    <p className="text-[#3D4098] font-bold">Insights</p>
-    <h1 className="text-3xl sm:text-4xl font-bold mt-2">Stay Ahead in Tax & Finance</h1>
-    <img className="mt-3 w-full max-w-md mx-auto" src="pic3.png" alt="" />
+  {/* Insights Section — Now with proper Types and Image Helper */}
+{/* Container ki width barha di gayi hai taake cards door door hon */}
+<div className="max-w-[1200px] mx-auto px-4 py-16">
+  <div className="text-center mb-12">
+    <p className="text-[#3D4098] font-bold uppercase tracking-widest text-sm">Insights</p>
+    <h1 className="text-3xl sm:text-4xl font-extrabold mt-2 text-black">Stay Ahead in Tax & Finance</h1>
   </div>
+
+  {/* Gap-10 se cards ke beech mein wazay farq aayega */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    {await (async () => {
+      const { client } = await import("@/sanity/lib/client");
+      const imageUrlBuilder = await import("@sanity/image-url");
+      const builder = imageUrlBuilder.default(client);
+      const urlFor = (source: any) => builder.image(source);
+
+      const posts = await client.fetch(`*[_type == "post"] | order(publishedAt desc) [0...3]{
+        _id,
+        title,
+        "slug": slug.current,
+        "mainImage": image,
+        publishedAt
+      }`);
+
+      return posts.map((post: any) => (
+        
+        <div key={post._id} className="bg-white rounded-none shadow-sm border border-gray-100 flex flex-col h-[450px] w-full overflow-hidden transition-all hover:shadow-md">
+          
+          {/* Image Container — No Rounding */}
+          <div className="relative w-full h-[200px] overflow-hidden bg-gray-50">
+            {post.mainImage ? (
+              <img 
+                src={urlFor(post.mainImage).width(600).height(300).fit('crop').url()} 
+                alt={post.title}
+                className="w-full h-full object-cover rounded-none" 
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-gray-400">No Image</div>
+            )}
+          </div>
+
+          <div className="p-6 flex flex-col flex-grow text-left">
+            <p className="text-[#3D4098] font-bold text-[10px] uppercase tracking-[0.1em] mb-2">
+              Education
+            </p>
+            
+            <h3 className="text-lg font-bold text-black mb-3 line-clamp-2 leading-tight">
+              {post.title}
+            </h3>
+            
+            <p className="text-gray-500 text-sm mb-6 line-clamp-2">
+              Read the latest update from ICT Pakistan experts.
+            </p>
+            
+            <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-[#15A959] flex items-center justify-center text-white text-[10px] font-bold">
+                  I
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-xs font-bold text-gray-800 leading-tight">ICT Admin</p>
+                  <p className="text-[10px] text-gray-400">2026</p>
+                </div>
+              </div>
+              
+              <Link 
+                href={`/blogs/${post.slug}`} 
+                className="text-[#3D4098] font-bold text-sm hover:underline flex items-center gap-1"
+              >
+                Read More →
+              </Link>
+            </div>
+          </div>
+        </div>
+      ));
+    })()}
+  </div>
+</div>
 
 </div>
 

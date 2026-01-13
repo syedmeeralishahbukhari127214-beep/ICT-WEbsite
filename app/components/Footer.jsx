@@ -53,9 +53,7 @@ export default function Footer() {
           <div>
             <img src="/logo ict.png" alt="Logo" className="h-12 mb-4" />
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Macat Megatrons is a thriving community where innovators,
-              professionals, and enthusiasts come together to share
-              knowledge, collaborate, and grow.
+              "ICT (Institute of Corporate and Taxation): Premier educational institution in Islamabad Lahore and Karachi offering Taxation and Corporate Trainings. Prepare for success in law, taxation, and business with expert faculty, practical education, and industry relevance. Unlock your potential in the corporate and taxation sectors."
             </p>
           </div>
 
