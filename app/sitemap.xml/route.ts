@@ -21,7 +21,7 @@ export async function GET() {
   // 2. Manual Pages (Static - Jo aapke code mein hain)
   const manualPages = [
     { path: '', priority: '1.0', freq: 'daily' },
-    { path: '/certificate_verfication', priority: '0.9', freq: 'monthly' },
+    { path: '/certificate-verfication', priority: '0.9', freq: 'monthly' },
     { path: '/about', priority: '0.8', freq: 'monthly' },
     { path: '/contact', priority: '0.8', freq: 'monthly' },
     { path: '/courses', priority: '0.9', freq: 'weekly' },
