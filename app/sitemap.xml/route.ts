@@ -8,7 +8,7 @@ const client = createClient({
 });
 
 export async function GET() {
-  const baseUrl = 'http://localhost:3000';
+  const baseUrl = 'http://ict.net.pk';
 
   // 1. Sanity Data (Dynamic)
   const query = `*[_type in ["course", "post", "mentors"]] {

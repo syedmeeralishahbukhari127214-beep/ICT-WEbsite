@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/', '/studio/'],
     },
-    sitemap: 'https://localhost:3000/sitemap.xml',
+    sitemap: 'https://ict.net.pk/sitemap.xml',
   }
 }
