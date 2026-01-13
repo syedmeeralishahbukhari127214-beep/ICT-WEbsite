@@ -110,7 +110,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="bg-gray-200 px-6 py-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
-          <p>© 2025 ICT. All rights reserved.</p>
+          <p>© 2026 ICT. All rights reserved.</p>
 
           <div className="flex flex-wrap gap-4">
             <a href="">Privacy Policy</a>
