@@ -38,7 +38,7 @@ export default function Header() {
 
           {/* Links */}
           <div className="flex gap-3">
-            <a className="px-4 py-1 text-sm border border-white text-white" href="/certificate_verification">
+            <a className="px-4 py-1 text-sm border border-white text-white" href="/certificate-verification">
               Certificate
             </a>
             <a className="px-4 py-1 text-sm text-white hover:bg-[#15A959]" href="#">

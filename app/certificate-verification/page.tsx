@@ -94,19 +94,19 @@ const CertificateVerification: React.FC = () => {
         </div>
       </div>
 
-      {/* --- Overlay Modal (Yahan fixes kiye hain) --- */}
+      {/* Overlay Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-hidden transition-all duration-300">
-          
-          {/* Transparent Backdrop: Is se background halka kala aur blur dikhega */}
+
+          {/* Transparent Backdrop */}
           <div 
             className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
-            onClick={() => setIsModalOpen(false)} // Background click par band karne ke liye
+            onClick={() => setIsModalOpen(false)}
           ></div>
 
           {/* Modal Box */}
           <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 md:p-8 text-center animate-in fade-in zoom-in duration-300">
-            
+
             {/* Success Icon */}
             {status === 'success' && (
               <div className="flex justify-center mb-4">
@@ -118,7 +118,7 @@ const CertificateVerification: React.FC = () => {
               </div>
             )}
 
-            {/* Error/Not Found Icon */}
+            {/* Error / Not Found Icon */}
             {(status === 'not_found' || status === 'error') && (
               <div className="flex justify-center mb-4">
                 <div className="bg-red-500 w-16 h-16 rounded-full flex items-center justify-center shadow-lg shadow-red-200">
@@ -130,20 +130,22 @@ const CertificateVerification: React.FC = () => {
             )}
 
             <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">
-              {status === 'success' ? 'Verified Successfully!' : 
-               status === 'not_found' ? 'Record Not Found' : 
-               'System Error'}
+              {status === 'success'
+                ? 'Verified Successfully!'
+                : status === 'not_found'
+                ? 'Record Not Found'
+                : 'System Error'}
             </h2>
 
             <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
               {status === 'success'
-                ? 'The Certificate Record associated with this Registration Number has been successfully verified. It is officially issued by ICT.'
+                ? 'The certificate record associated with this registration number has been successfully verified. It is officially issued by ICT.'
                 : status === 'not_found'
-                ? 'Hamay aapke faraham kiye gaye record se koi certificate nahi mila. Baraye meherbani spelling aur ID dobara check karein.'
-                : 'Server se rabta nahi ho pa raha. Kuch dair baad dobara koshish karein.'}
+                ? 'No certificate record was found matching the provided details. Please recheck the spelling and registration number.'
+                : 'Unable to connect with the server. Please try again later.'}
             </p>
 
-            {/* Certificate Details Card */}
+            {/* Certificate Details */}
             {status === 'success' && certificateData && (
               <div className="bg-blue-50 border border-blue-100 text-gray-800 rounded-xl px-5 py-4 mb-6 space-y-2 text-left text-sm md:text-[15px]">
                 <p className="border-b border-blue-100 pb-1 flex justify-between">
@@ -160,7 +162,9 @@ const CertificateVerification: React.FC = () => {
                 </p>
                 <p className="flex justify-between">
                   <span className="font-semibold text-blue-800">Reg No:</span> 
-                  <span className="font-mono text-xs bg-blue-100 px-2 rounded uppercase">{certificateData.cerificate_id}</span>
+                  <span className="font-mono text-xs bg-blue-100 px-2 rounded uppercase">
+                    {certificateData.cerificate_id}
+                  </span>
                 </p>
               </div>
             )}
