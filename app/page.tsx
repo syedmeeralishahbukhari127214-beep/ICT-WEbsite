@@ -8,7 +8,8 @@ import Link from "next/dist/client/link";
 
 export default async function Home() {
   return (
-    
+     <div className="w-full bg-white">
+
     <div className="">
   {/* Hero Section */}
   <div className="flex flex-col md:flex-row justify-start px-4 sm:px-6 md:px-28 py-4 sm:py-6 md:py-10 gap-4 sm:gap-6 md:gap-10">
@@ -606,6 +607,7 @@ export default async function Home() {
 
 </div>
 
+    </div>
     </div>
   );
 }

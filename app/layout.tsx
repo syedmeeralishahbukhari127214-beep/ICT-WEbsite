@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import Script from "next/script"; // 1. Script import kiya
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,34 +15,46 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+/* =========================
+   SEO METADATA
+========================= */
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ict.net.pk'), 
+  metadataBase: new URL("https://ict.net.pk"),
   title: {
     default: "Institute of Corporate and Taxation (ICT) Pakistan",
-    template: "%s | ICT Pakistan", 
+    template: "%s | ICT Pakistan",
   },
+  description:
+    "Institute of Corporate & Taxation Pakistan offers expert-led income tax, sales tax & IRIS courses online or at campuses in Islamabad, Lahore & Karachi.",
   icons: {
-    icon: "/download.png", 
-    apple: "/download.png", 
+    icon: "/download.png",
+    apple: "/download.png",
   },
-  description: "Institute of Corporate & Taxation Pakistan offers expert-led income tax, sales tax & IRIS courses online or at campuses in Islamabad, Lahore & Karachi.",
   verification: {
     google: "SipOYwLIHMgcNv8RuBMEOB31g3Kth1xqbKCCSVOG6WY",
   },
   alternates: {
-    canonical: '/', 
+    canonical: "/",
   },
+};
+
+/* =========================
+   VIEWPORT (Mobile SAFE)
+========================= */
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <head>
-        {/* 2. Google Analytics Scripts yahan add ki hain */}
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BCPP0G4FMS"
           strategy="afterInteractive"
@@ -56,9 +68,23 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
+
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <Header />
-        {children}
+
+        {/* =========================
+            DESKTOP FIXED WIDTH
+            MOBILE UNTOUCHED
+        ========================= */}
+        <main className="min-h-screen flex justify-center bg-gray-100">
+          <div className="w-full max-w-[1440px] bg-white">
+            {children}
+          </div>
+        </main>
+
         <Footer />
       </body>
     </html>

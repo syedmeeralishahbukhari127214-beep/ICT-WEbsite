@@ -6,6 +6,8 @@ export default function Footer() {
   return (
     <>
       {/* Newsletter Section */}
+      <div className="w-full bg-white">
+
       <div className="flex justify-center bg-gray-100 px-4">
         <div className="flex flex-col lg:flex-row bg-[#3D4098] mt-24 pt-18 rounded-3xl w-full max-w-5xl gap-10 items-center px-6 pb-10">
           
@@ -119,6 +121,7 @@ export default function Footer() {
             <a href="">Sitemap</a>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

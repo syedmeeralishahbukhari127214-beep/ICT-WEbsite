@@ -44,6 +44,7 @@ interface FAQItemProps {
 
 const FAQItem: React.FC<FAQItemProps> = ({ item, isOpen, toggle }) => {
   return (
+    <div className="w-full bg-white">
     <div className="border border-gray-300 rounded-xl shadow-md overflow-hidden mb-4 transition-all duration-300">
       
       {/* Header/Question (Always Visible) */}
@@ -77,6 +78,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ item, isOpen, toggle }) => {
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
@@ -102,6 +104,7 @@ const FAQListSection: React.FC = () => {
                 ))}
             </div>
         </section>
+        
     );
 };
  

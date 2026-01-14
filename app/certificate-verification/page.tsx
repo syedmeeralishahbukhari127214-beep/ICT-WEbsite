@@ -50,6 +50,7 @@ const CertificateVerification: React.FC = () => {
   };
 
   return (
+    <div className="w-full bg-white">
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       {/* Main Verification Card */}
       <div className="bg-white p-8 md:p-12 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] w-full max-w-lg">
@@ -178,6 +179,7 @@ const CertificateVerification: React.FC = () => {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };

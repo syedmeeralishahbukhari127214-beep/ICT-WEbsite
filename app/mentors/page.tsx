@@ -52,6 +52,7 @@ export default function MentorsPage() {
 
       {/* ================= SLIDER SECTION ================= */}
       {scrollingMentors.length > 0 && (
+        <div className="w-full bg-white">
         <section className="py-14 overflow-hidden">
           <h1 className="text-3xl sm mb-2 :text-4xl md:text-4xl font-poppins font-extrabold text-[#3D4098] flex items-center justify-center gap-3">
             Meet Our Mentors
@@ -98,6 +99,7 @@ export default function MentorsPage() {
             </div>
           </div>
         </section>
+        </div>
       )}
 
       {/* ================= HEADING + GRID ================= */}

@@ -10,6 +10,8 @@ import { RiMapPinLine } from "react-icons/ri";
 
 export default function ICTPage() {
   return (
+    <div className="w-full bg-white">
+
     <div className="w-full min-h-screen bg-white text-black font-sans">
       
       {/* HERO SECTION */}
@@ -533,6 +535,7 @@ export default function ICTPage() {
       </section>
 
      
+    </div>
     </div>
   );
 }

@@ -21,6 +21,7 @@ export async function generateMetadata(
   const seo = blog.seo || {};
 
   return {
+    
     title: seo.metaTitle || blog.title,
     description: seo.metaDescription || blog.excerpt,
     keywords: seo.keywords?.join(", "),

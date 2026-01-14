@@ -52,6 +52,7 @@ const InteractiveContactTabs: React.FC = () => {
   const currentCityData = contactData[activeCity as keyof typeof contactData];
   
   return (
+    <div className="w-full bg-white">
     <section className="py-20 px-4 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto text-center">
         
@@ -127,6 +128,7 @@ const InteractiveContactTabs: React.FC = () => {
 
       </div>
     </section>
+    </div>
   );
 };
 

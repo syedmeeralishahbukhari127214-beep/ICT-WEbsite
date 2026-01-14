@@ -19,6 +19,7 @@ const ptComponents = {
     image: ({ value }: any) => {
       if (!value?.asset) return null;
       return (
+        
         <div className="my-8 overflow-hidden rounded-xl">
           <img
             src={urlFor(value).auto('format').url()}
@@ -35,6 +36,8 @@ export default async function BlogsPage() {
   const blogs = await getBlogs();
 
   return (
+    <div className="w-full bg-white">
+
     <div>
       {/* Hero Section - No Changes Here */}
       <div className="bg-gradient-to-b from-white to-gray-50 flex items-center justify-center px-6 py-16">
@@ -135,6 +138,7 @@ export default async function BlogsPage() {
           );
         })}
       </div>
+    </div>
     </div>
   );
 }

@@ -8,6 +8,7 @@ export default async function CoursesPage() {
   const courses = await client.fetch(coursesQuery);
 
   return (
+    <div className="w-full bg-white">
     <section className="py-20 bg-white">
       {/* ================= HEADER ================= */}
       <div className="text-center mb-14">
@@ -57,5 +58,6 @@ export default async function CoursesPage() {
         ))}
       </div>
     </section>
+    </div>
   );
 }

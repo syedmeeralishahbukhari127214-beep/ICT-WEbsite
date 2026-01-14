@@ -62,7 +62,10 @@ const benefitItems = [
 
 const CareerCompanionHeroSection = () => {
   return (
+    
+
     <section className="bg-gray-100 py-24 px-6">
+      <div className="w-full">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
 
         <div className="space-y-6">
@@ -92,7 +95,10 @@ const CareerCompanionHeroSection = () => {
         </div>
 
       </div>
+      </div>
     </section>
+   
+
   );
 };
 

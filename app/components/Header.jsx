@@ -13,6 +13,8 @@ export default function Header() {
   return (
     <>
       {/* TOP BAR */}
+      <div className="w-full bg-white">
+
       <div className="bg-[#3D4098]">
         <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4 px-6 py-3">
           
@@ -72,6 +74,7 @@ export default function Header() {
             <NavLinks />
           </div>
         )}
+      </div>
       </div>
     </>
   );

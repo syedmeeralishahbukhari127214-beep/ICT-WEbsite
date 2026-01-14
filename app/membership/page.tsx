@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function ICTMembership() {
   return (
+    <div className="w-full bg-white">
     <section className="w-full  py-20">
       <div className="max-w-7xl mx-auto px-6">
 
@@ -132,5 +133,6 @@ export default function ICTMembership() {
 
       </div>
     </section>
+    </div>
   );
 }

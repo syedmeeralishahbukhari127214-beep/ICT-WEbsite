@@ -38,6 +38,7 @@ export default function ICTPage() {
   ];
 
   return (
+    <div className="w-full bg-white">
     <div className="w-full min-h-screen bg-white text-black font-sans">
       
       {/* 1. FORM SECTION */}
@@ -171,6 +172,7 @@ export default function ICTPage() {
 
         </div>
       </section>
+    </div>
     </div>
   );
 }
