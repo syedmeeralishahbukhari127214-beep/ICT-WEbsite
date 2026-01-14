@@ -87,28 +87,22 @@ export default async function Home() {
 
 
   {/* IMAGE SECTION */}
-  <div className="flex justify-center md:ml-40 mt-6 md:mt-0 gap-3 sm:gap-4 md:gap-0">
-
-    <img
-      className="h-[150px] w-[90px] sm:h-[200px] sm:w-[120px] md:h-[500px] md:w-[300px]"
-      src="h1.png"
-      alt=""
-    />
-
-    <img
-      className="h-[90px] w-[90px] sm:h-[120px] sm:w-[120px] md:h-[200px] md:w-[200px]"
-      src="t1.png"
-      alt=""
-    />
-
-    <img
-      className="h-[110px] w-[110px] sm:h-[150px] sm:w-[150px] md:h-[270px] md:w-[270px] 
-      mt-4 sm:mt-6 md:mt-50 -ml-0 md:-ml-48"
-      src="28.png"
-      alt=""
-    />
-
-  </div>
+   <div className="hero-container flex-1 h-[600px] relative bg-white ">
+          <div className="watch-orbit-window bg-white">
+  <div className="needle-pill p1"><div className="pill-content"><img src="h1.png" alt="1" /></div></div>
+  <div className="needle-pill p2"><div className="pill-content"><img src="t1.png" alt="2" /></div></div>
+  <div className="needle-pill p3"><div className="pill-content"><img src="c4e19b4602f4684a277dd2d9c0ab08154479de10.jpg" alt="3" /></div></div>
+  <div className="needle-pill p4"><div className="pill-content"><img src="h1.png" alt="4" /></div></div>
+  <div className="needle-pill p5"><div className="pill-content"><img src="t1.png" alt="5" /></div></div>
+  <div className="needle-pill p6"><div className="pill-content"><img src="c4e19b4602f4684a277dd2d9c0ab08154479de10.jpg" alt="6" /></div></div>
+  <div className="needle-pill p7"><div className="pill-content"><img src="h1.png" alt="7" /></div></div>
+  <div className="needle-pill p8"><div className="pill-content"><img src="t1.png" alt="8" /></div></div>
+  <div className="needle-pill p9"><div className="pill-content"><img src="c4e19b4602f4684a277dd2d9c0ab08154479de10.jpg" alt="9" /></div></div>
+  <div className="needle-pill p10"><div className="pill-content"><img src="h1.png" alt="10" /></div></div>
+  <div className="needle-pill p11"><div className="pill-content"><img src="t1.png" alt="11" /></div></div>
+</div>
+        </div>
+      
 
 </div>
 

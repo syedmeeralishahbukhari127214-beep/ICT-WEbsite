@@ -3,6 +3,98 @@ html, body {
   overflow-x: hidden;
 }
 
+
+
+.watch-orbit-window {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.needle-pill {
+  position: absolute;
+  width: 260px;
+  height: 420px;
+  left: 50%;
+  margin-left: -120px;
+  
+  /* Origin pushed deep to prevent bottom-touching */
+  transform-origin: center 900px; 
+  bottom: 150px; 
+
+  /* Increased total time to accommodate 11 images */
+  animation: clean-watch-sweep 22s infinite ease-in-out;
+  opacity: 0;
+}
+
+.pill-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 120px;
+  overflow: hidden;
+  background: white;
+}
+
+.pill-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- THE STAGGERED DELAYS --- 
+   Formula: (Total Time / Number of Images) * Index
+   22s / 11 = 2s gaps
+*/
+.p1 { animation-delay: 0s; }
+.p2 { animation-delay: 2s; }
+.p3 { animation-delay: 4s; }
+.p4 { animation-delay: 6s; }
+.p5 { animation-delay: 8s; }
+.p6 { animation-delay: 10s; }
+.p7 { animation-delay: 12s; }
+.p8 { animation-delay: 14s; }
+.p9 { animation-delay: 16s; }
+.p10 { animation-delay: 18s; }
+.p11 { animation-delay: 20s; }
+
+/* --- THE CLEAN SWEEP ANIMATION --- */
+@keyframes clean-watch-sweep {
+  0% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  /* Each pill only stays visible for about 18% of the total 22s time 
+     This ensures it is GONE before the 3rd or 4th pill arrives */
+  5% {
+    opacity: 0;
+    transform: rotate(-70deg);
+  }
+  15% {
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+  25% {
+    opacity: 1;
+    transform: rotate(0deg); /* 12 o'clock */
+  }
+  35% {
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+  45% {
+    opacity: 0;
+    transform: rotate(70deg);
+  }
+  100% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
