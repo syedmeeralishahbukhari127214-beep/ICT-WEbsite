@@ -49,17 +49,18 @@ html, body {
    Formula: (Total Time / Number of Images) * Index
    22s / 11 = 2s gaps
 */
-.p1 { animation-delay: 0s; }
-.p2 { animation-delay: 2s; }
-.p3 { animation-delay: 4s; }
-.p4 { animation-delay: 6s; }
-.p5 { animation-delay: 8s; }
-.p6 { animation-delay: 10s; }
-.p7 { animation-delay: 12s; }
-.p8 { animation-delay: 14s; }
-.p9 { animation-delay: 16s; }
-.p10 { animation-delay: 18s; }
-.p11 { animation-delay: 20s; }
+.p1 { animation-delay: -4s; }
+.p2 { animation-delay: -2s; }
+.p3 { animation-delay: 0s; }
+.p4 { animation-delay: 2s; }
+.p5 { animation-delay: 4s; }
+.p6 { animation-delay: 6s; }
+.p7 { animation-delay: 8s; }
+.p8 { animation-delay: 10s; }
+.p9 { animation-delay: 12s; }
+.p10 { animation-delay: 14s; }
+.p11 { animation-delay: 16s; }
+.p12 { animation-delay: 18s; }
 
 /* --- THE CLEAN SWEEP ANIMATION --- */
 @keyframes clean-watch-sweep {
