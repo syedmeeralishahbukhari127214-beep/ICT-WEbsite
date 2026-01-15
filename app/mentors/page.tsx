@@ -89,7 +89,7 @@ export default function MentorsPage() {
                   key={i}
                   src={
                     mentor.image
-                      ? urlFor(mentor.image).width(300).height(350).url()
+                      ? urlFor(mentor.image).width(300).height(383).url()
                       : "/placeholder.jpg"
                   }
                   className="w-40 sm:w-48 md:w-52 h-52 sm:h-60 object-cover rounded-2xl shadow-md shrink-0"

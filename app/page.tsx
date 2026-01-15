@@ -24,19 +24,19 @@ export default async function Home() {
       <p className="w-1 h-16 sm:h-20 md:h-28 font-bold bg-black ml-3 mt-3 mb-3"></p>
 
       <div className="md:block">
-        <a className="mt-3 sm:mt-5 flex text-[#3D4098] ml-1 text-base sm:text-lg" href="">
+        <a className="mt-3 sm:mt-5 flex text-[#3D4098] ml-1 text-base sm:text-lg" href="https://www.facebook.com/Instituteofcorporateandtaxation?rdid=2WCHFvVL9UeBaktA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AMUrXLsPZ%2F#">
           <FaFacebookF/>
         </a>
 
-        <a className="mt-3 sm:mt-5 flex ml-1.5 text-[#3D4098] text-base sm:text-lg" href="">
+        <a className="mt-3 sm:mt-5 flex ml-1.5 text-[#3D4098] text-base sm:text-lg" href="https://x.com/IctIsbd2022">
           <FiTwitter />
         </a>
 
-        <a className="mt-3 sm:mt-5 flex ml-1.5 text-[#3D4098] text-base sm:text-lg" href="">
+        <a className="mt-3 sm:mt-5 flex ml-1.5 text-[#3D4098] text-base sm:text-lg" href="https://www.instagram.com/ict_pakistan/?igsh=MXRwNDR6ZnpiN3pqNg%3D%3D#">
           <AiOutlineInstagram />
         </a>
 
-        <a className="mt-3 sm:mt-5 flex ml-1.5 text-[#3D4098] text-base sm:text-lg" href="">
+        <a className="mt-3 sm:mt-5 flex ml-1.5 text-[#3D4098] text-base sm:text-lg" href="https://www.youtube.com/@ICTPakistanofficial">
           <LuYoutube />
         </a>
       </div>

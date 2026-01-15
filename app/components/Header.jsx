@@ -20,10 +20,10 @@ export default function Header() {
           
           {/* Social */}
           <div className="flex items-center gap-4 text-white text-lg">
-            <a href="#" className="hover:text-blue-400"><FaFacebookF /></a>
-            <a href="#" className="hover:text-pink-400"><AiOutlineInstagram /></a>
-            <a href="#" className="hover:text-sky-400"><FiTwitter /></a>
-            <a href="#" className="hover:text-red-500"><LuYoutube /></a>
+            <a href="https://www.facebook.com/Instituteofcorporateandtaxation?rdid=2WCHFvVL9UeBaktA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AMUrXLsPZ%2F#" className="hover:text-blue-400"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/ict_pakistan/?igsh=MXRwNDR6ZnpiN3pqNg%3D%3D#" className="hover:text-pink-400"><AiOutlineInstagram /></a>
+            <a href="https://x.com/IctIsbd2022" className="hover:text-sky-400"><FiTwitter /></a>
+            <a href="https://www.youtube.com/@ICTPakistanofficial" className="hover:text-red-500"><LuYoutube /></a>
           </div>
 
           {/* Search */}
