@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaFacebookF, FaBars, FaX } from "react-icons/fa6";
+import { FaFacebookF, FaBars, FaX,FaLinkedinIn, FaTiktok } from "react-icons/fa6";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
 import { LuYoutube } from "react-icons/lu";
@@ -24,6 +24,8 @@ export default function Header() {
             <a href="https://www.instagram.com/ict_pakistan/?igsh=MXRwNDR6ZnpiN3pqNg%3D%3D#" className="hover:text-pink-400"><AiOutlineInstagram /></a>
             <a href="https://x.com/IctIsbd2022" className="hover:text-sky-400"><FiTwitter /></a>
             <a href="https://www.youtube.com/@ICTPakistanofficial" className="hover:text-red-500"><LuYoutube /></a>
+                <a href="https://www.linkedin.com/company/ict-isb/"className="hover:text-blue-500"><FaLinkedinIn /></a>  
+                <a href="https://www.tiktok.com/@icttaxation?lang=en"className="hover:text-black"><FaTiktok /></a> 
           </div>
 
           {/* Search */}

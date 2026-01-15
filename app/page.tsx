@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaFacebookF } from "react-icons/fa6";
+import { FaFacebookF,FaLinkedinIn, FaTiktok } from "react-icons/fa6";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
 import { LuYoutube } from "react-icons/lu";
@@ -39,6 +39,8 @@ export default async function Home() {
         <a className="mt-3 sm:mt-5 flex ml-1.5 text-[#3D4098] text-base sm:text-lg" href="https://www.youtube.com/@ICTPakistanofficial">
           <LuYoutube />
         </a>
+            <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href="https://www.linkedin.com/company/ict-isb/"><FaLinkedinIn /></a>  
+    <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href="https://www.tiktok.com/@icttaxation?lang=en"><FaTiktok /></a> 
       </div>
 
       <p className="w-1 h-24 sm:h-40 md:h-54 bg-black ml-3 mt-3 mb-3"></p>

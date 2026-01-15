@@ -1,7 +1,7 @@
 "use client"; 
 import { FiTwitter } from "react-icons/fi";
 import { LuYoutube } from "react-icons/lu";
-import { FaFacebookF } from "react-icons/fa6";
+import { FaFacebookF,FaLinkedinIn, FaTiktok } from "react-icons/fa6";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { TiTick } from "react-icons/ti";
 import { MdCallEnd } from "react-icons/md";
@@ -154,6 +154,8 @@ export default function CompleteContactPage() {
     <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href="https://x.com/IctIsbd2022"><FiTwitter /></a> 
     <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href="https://www.instagram.com/ict_pakistan/?igsh=MXRwNDR6ZnpiN3pqNg%3D%3D#"><AiOutlineInstagram /></a> 
     <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href="https://www.youtube.com/@ICTPakistanofficial"><LuYoutube /></a> 
+        <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href="https://www.linkedin.com/company/ict-isb/"><FaLinkedinIn /></a>  
+    <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href="https://www.tiktok.com/@icttaxation?lang=en"><FaTiktok /></a> 
 
     <p className="w-1 h-54 bg-black ml-3 mt-3 mb-3"></p>
   </div>
