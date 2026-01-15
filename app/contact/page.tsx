@@ -147,7 +147,7 @@ export default function CompleteContactPage() {
 
   {/* LEFT SOCIAL SECTION — hidden on mobile */}
   <div className="hidden lg:block">
-    <h1 className="rotate-270 text-lg -ml-1 font-extrabold text-[#15A959]">ICT</h1>
+    <h1 className="rotate-270 text-lg -ml-1 font-extrabold text-[#15A959]"style={{ letterSpacing: '2px' }}>ICT</h1>
     <p className="w-1 h-28 font-bold bg-black ml-3 mt-3 mb-3"></p>
 
     <a className="mt-5 flex text-[#3D4098] ml-1 text-lg" href="https://www.facebook.com/Instituteofcorporateandtaxation?rdid=2WCHFvVL9UeBaktA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AMUrXLsPZ%2F#"><FaFacebookF/></a> 

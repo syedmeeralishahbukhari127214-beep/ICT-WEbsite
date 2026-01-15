@@ -17,7 +17,7 @@ export default async function Home() {
     {/* LEFT SOCIAL SECTION — hidden on mobile */}
     <div className="hidden md:block items-center md:items-start justify-center md:justify-start">
 
-      <h1 className="rotate-270 text-base sm:text-lg -ml-1 font-extrabold text-[#15A959]">
+      <h1 className="rotate-270 text-base sm:text-lg -ml-1 font-extrabold text-[#15A959]"style={{ letterSpacing: '2px' }}>
         ICT
       </h1>
 

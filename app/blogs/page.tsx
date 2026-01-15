@@ -40,10 +40,10 @@ export default async function BlogsPage() {
 
     <div>
       {/* Hero Section - No Changes Here */}
-      <div className="bg-gradient-to-b from-white to-gray-50 flex items-center justify-center px-6 py-16">
+      <div className="bg-gradient-to-b from-white to-gray-50 flex items-center justify-center px-2 py-16 pt-2">
         <div className="flex flex-col md:flex-row justify-start px-4 md:px-28 py-10 gap-14">
           <div className="hidden md:block">
-            <h1 className="rotate-270 text-lg -ml-1 font-extrabold text-[#15A959]">ICT</h1>
+            <h1 className="rotate-270 text-lg -ml-1 font-extrabold text-[#15A959]"style={{ letterSpacing: '2px' }}>ICT</h1>
             <p className="w-1 h-28 font-bold bg-black ml-3 mt-3 mb-3"></p>
             <a className="mt-5 flex text-[#3D4098] ml-1 text-lg" href="https://www.facebook.com/Instituteofcorporateandtaxation?rdid=2WCHFvVL9UeBaktA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AMUrXLsPZ%2F#"><FaFacebookF /></a>
             <a className="mt-5 flex ml-1.5 text-[#3D4098] text-lg" href="https://x.com/IctIsbd2022"><FiTwitter /></a>
