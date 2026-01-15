@@ -134,9 +134,9 @@ const CertificateVerification: React.FC = () => {
 
               <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
                 {status === 'success'
-                  ? 'The certificate record associated with this registration number has been successfully verified. It is officially issued by ICT.'
+                  ? 'The Certificate record associated with this registration number has been successfully verified. It has been officially issued by ICT.'
                   : status === 'not_found'
-                  ? 'No certificate record was found matching the provided details. Please recheck the spelling and registration number.'
+                  ? 'No Certificate record was found matching the provided details. Please recheck the spelling and registration number.'
                   : 'Unable to connect with the server. Please try again later.'}
               </p>
 
