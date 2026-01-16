@@ -30,7 +30,7 @@ const CertificateVerification: React.FC = () => {
         .from('Certificate')
         .select('*')
         .ilike('Name', name.trim())
-        .ilike('Registration', regNo.trim());
+        .ilike('Registration ', regNo.trim());
 
       if (error) {
         console.error("Database Error:", error.message);
