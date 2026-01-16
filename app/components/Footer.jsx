@@ -87,23 +87,43 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-gray-600 text-sm">
               <li className="flex gap-3">
-                <span className="text-[#3D4098] text-lg">
-                  <FaMapMarkerAlt />
-                </span>
-                Plot No. 63, Service Road, I-10/3 North, Islamabad
-              </li>
+  <span className="text-[#3D4098] text-lg shrink-0">
+    <FaMapMarkerAlt />
+  </span>
+  {/* Google Maps Link */}
+  <a 
+    href="https://maps.app.goo.gl/CD2pZAA8FJzet1VV7" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="hover:text-[#3D4098] transition-colors"
+  >
+    Plot No. 63, Service Road, I-10/3 North, Islamabad
+  </a>
+</li>
               <li className="flex gap-3">
-                <span className="text-[#3D4098] text-lg">
-                  <FaPhone />
-                </span>
-                03710194615
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#3D4098] text-xl">
-                  <IoIosMail />
-                </span>
-                admission@ict.net.pk
-              </li>
+  <span className="text-[#3D4098] text-lg">
+    <FaPhone />
+  </span>
+  {/* Phone Number Link */}
+  <a 
+    href="tel:+923710194615" 
+    className="hover:text-[#3D4098] transition-colors"
+  >
+    03710194615
+  </a>
+</li>
+
+<li className="flex gap-3">
+  <span className="text-[#3D4098] text-xl">
+    <IoIosMail />
+  </span>
+  <a 
+    href="mailto:admission@ict.net.pk" 
+    className="hover:text-[#3D4098] transition-colors"
+  >
+    admission@ict.net.pk
+  </a>
+</li>
             </ul>
           </div>
         </div>
