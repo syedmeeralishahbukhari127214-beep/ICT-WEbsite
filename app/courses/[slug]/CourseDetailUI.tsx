@@ -363,7 +363,7 @@ export default function CourseDetailUI({ course }: any) {
       </div>
       {/* Floating WhatsApp Button */}
 <a
-  href="https://wa.me/923377774856" 
+  href="https://wa.me/923377774856?text=Hello%20ICT%20Team%2C%20I%20am%20interested%20in%20your%20courses%20and%20seek%20your%20guidance." 
   target="_blank"
   rel="noopener noreferrer"
   className="fixed bottom-8 right-8 z-[100] flex items-center justify-center group"
