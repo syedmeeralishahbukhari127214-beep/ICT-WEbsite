@@ -6,6 +6,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
 import { LuYoutube } from "react-icons/lu";
 import { CiSearch } from "react-icons/ci";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -26,6 +27,7 @@ export default function Header() {
             <a href="https://www.youtube.com/@ICTPakistanofficial" className="hover:text-red-500"><LuYoutube /></a>
                 <a href="https://www.linkedin.com/company/ict-isb/"className="hover:text-blue-500"><FaLinkedinIn /></a>  
                 <a href="https://www.tiktok.com/@icttaxation?lang=en"className="hover:text-black"><FaTiktok /></a> 
+                
           </div>
 
           {/* Search */}
@@ -39,12 +41,21 @@ export default function Header() {
               <CiSearch />
             </span>
           </div>
+          
 
           {/* Links */}
           <div className="flex gap-3">
+            <a 
+  href="tel:+923377774856" 
+  className="flex items-center gap-2 text-white hover:text-[#0073a8] transition-all duration-300 font-small"
+>
+  <FaPhoneAlt size={14} />
+  <span>Call Us</span>
+</a>
             <a className="px-4 py-1 text-sm border border-white text-white" href="/certificate-verification">
               Certificate
             </a>
+            
             <a className="px-4 py-1 text-sm text-white hover:bg-[#15A959]" href="#">
               ICT LMS
             </a>
