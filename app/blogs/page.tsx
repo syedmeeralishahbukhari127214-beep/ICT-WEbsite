@@ -6,6 +6,7 @@ import { client } from "@/sanity/lib/client";
 import { blogsQuery } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa6";
 // 1. In donon ko install karlein: npm install @portabletext/react
 import { PortableText } from "@portabletext/react";
 
@@ -140,6 +141,29 @@ export default async function BlogsPage() {
           );
         })}
       </div>
+      {/* Floating WhatsApp Button */}
+<a
+  href="https://wa.me/923377774856" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-8 right-8 z-[100] flex items-center justify-center group"
+  aria-label="Chat on WhatsApp"
+>
+  {/* The Radar Ripples (Animations added below) */}
+  <span className="absolute w-full h-full bg-[#25D366] rounded-full animate-ping opacity-75"></span>
+  <span className="absolute w-full h-full bg-[#25D366] rounded-full animate-pulse-ring"></span>
+
+  {/* Main Button Body */}
+  <div className="relative bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 flex items-center gap-0 group-hover:gap-3 overflow-hidden">
+    
+    {/* Tooltip text: Now slides and fades */}
+    <span className="max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500 ease-in-out whitespace-nowrap font-bold text-lg">
+      Chat with us
+    </span>
+
+    <FaWhatsapp size={35} className="relative z-10 animate-wiggle" />
+  </div>
+</a>
     </div>
     </div>
   );

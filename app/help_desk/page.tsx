@@ -5,6 +5,7 @@ import { RiMessengerLine } from "react-icons/ri";
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+
 // --- Data for the 4th Section (FAQ) ---
 const faqItems = [
   {
@@ -215,6 +216,7 @@ const TwoCardServicesSection: React.FC = () => {
             </Link>
           ))}
         </div>
+        
       </div>
     </section>
   );
@@ -282,6 +284,7 @@ const ContactInfoAndFAQIntroSection: React.FC = () => {
                         Find answers to common questions about the UK Taxation Course, including eligibility, course content, certification, and career opportunities. Get the clarity you need to start your tax career with confidence.
                     </p>
                 </div>
+                
 
             </div>
         </section>
@@ -304,7 +307,29 @@ export default function CompleteServicesPage() {
             
             {/* SECTION 4: FAQ LIST SECTION */}
             <FAQListSection />
+{/* Floating WhatsApp Button */}
+<a
+  href="https://wa.me/923377774856" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-8 right-8 z-[100] flex items-center justify-center group"
+  aria-label="Chat on WhatsApp"
+>
+  {/* The Radar Ripples (Animations added below) */}
+  <span className="absolute w-full h-full bg-[#25D366] rounded-full animate-ping opacity-75"></span>
+  <span className="absolute w-full h-full bg-[#25D366] rounded-full animate-pulse-ring"></span>
 
+  {/* Main Button Body */}
+  <div className="relative bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 flex items-center gap-0 group-hover:gap-3 overflow-hidden">
+    
+    {/* Tooltip text: Now slides and fades */}
+    <span className="max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500 ease-in-out whitespace-nowrap font-bold text-lg">
+      Chat with us
+    </span>
+
+    <FaWhatsapp size={35} className="relative z-10 animate-wiggle" />
+  </div>
+</a>
         </div>
     );
 }

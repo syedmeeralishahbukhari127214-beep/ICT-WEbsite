@@ -6,6 +6,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { TiTick } from "react-icons/ti";
 import { MdCallEnd } from "react-icons/md";
 import { RiMapPinLine } from "react-icons/ri";
+import { FaWhatsapp } from "react-icons/fa6";
 // Yeh directive bataati hai ki is file ko client side par render karna hai, 
 // taki React Hooks (jaise ki useState) kaam kar sakein.
 
@@ -271,6 +272,29 @@ export default function CompleteContactPage() {
                 Send Message
               </button>
             </form>
+            {/* Floating WhatsApp Button */}
+<a
+  href="https://wa.me/923377774856" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-8 right-8 z-[100] flex items-center justify-center group"
+  aria-label="Chat on WhatsApp"
+>
+  {/* The Radar Ripples (Animations added below) */}
+  <span className="absolute w-full h-full bg-[#25D366] rounded-full animate-ping opacity-75"></span>
+  <span className="absolute w-full h-full bg-[#25D366] rounded-full animate-pulse-ring"></span>
+
+  {/* Main Button Body */}
+  <div className="relative bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 flex items-center gap-0 group-hover:gap-3 overflow-hidden">
+    
+    {/* Tooltip text: Now slides and fades */}
+    <span className="max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500 ease-in-out whitespace-nowrap font-bold text-lg">
+      Chat with us
+    </span>
+
+    <FaWhatsapp size={35} className="relative z-10 animate-wiggle" />
+  </div>
+</a>
           </div>
           
         </div>

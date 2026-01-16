@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { supabase } from '@/utils/supabase';
+import { FaWhatsapp } from "react-icons/fa6";
 
 const CertificateVerification: React.FC = () => {
   // Input States
@@ -134,7 +135,7 @@ const CertificateVerification: React.FC = () => {
 
               <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
                 {status === 'success'
-                  ? 'The Certificate record associated with this registration number has been successfully verified. It has been officially issued by ICT.'
+                  ? 'The Certificate Record associated with this Registration Number has been successfully verified.It has been officially issued by the Institute of Corporate and Taxation (ICT) and is considered genuine.'
                   : status === 'not_found'
                   ? 'No Certificate record was found matching the provided details. Please recheck the spelling and registration number.'
                   : 'Unable to connect with the server. Please try again later.'}
@@ -157,7 +158,7 @@ const CertificateVerification: React.FC = () => {
                   </p>
                   <p className="flex justify-between">
                     <span className="font-semibold text-blue-800">Reg No:</span> 
-                    <span className="font-mono text-xs bg-blue-100 px-2 rounded uppercase">
+                    <span>
                       {certificateData.Registration}
                     </span>
                   </p>
@@ -170,11 +171,36 @@ const CertificateVerification: React.FC = () => {
               >
                 Close
               </button>
+              
             </div>
           </div>
         )}
       </div>
+      {/* Floating WhatsApp Button */}
+<a
+  href="https://wa.me/923377774856" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-8 right-8 z-[100] flex items-center justify-center group"
+  aria-label="Chat on WhatsApp"
+>
+  {/* The Radar Ripples (Animations added below) */}
+  <span className="absolute w-full h-full bg-[#25D366] rounded-full animate-ping opacity-75"></span>
+  <span className="absolute w-full h-full bg-[#25D366] rounded-full animate-pulse-ring"></span>
+
+  {/* Main Button Body */}
+  <div className="relative bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 flex items-center gap-0 group-hover:gap-3 overflow-hidden">
+    
+    {/* Tooltip text: Now slides and fades */}
+    <span className="max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500 ease-in-out whitespace-nowrap font-bold text-lg">
+      Chat with us
+    </span>
+
+    <FaWhatsapp size={35} className="relative z-10 animate-wiggle" />
+  </div>
+</a>
     </div>
+    
   );
 };
 
