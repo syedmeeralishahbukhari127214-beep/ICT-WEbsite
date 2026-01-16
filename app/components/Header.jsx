@@ -46,7 +46,7 @@ export default function Header() {
           {/* Links */}
           <div className="flex gap-3">
             <a 
-  href="tel:+923377774856" 
+  href="tel:+923710194615" 
   className="flex items-center gap-2 text-white hover:text-[#0073a8] transition-all duration-300 font-small"
 >
   <FaPhoneAlt size={14} />
