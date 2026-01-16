@@ -29,6 +29,13 @@ export default function Header() {
                 <a href="https://www.tiktok.com/@icttaxation?lang=en"className="hover:text-black"><FaTiktok /></a> 
                 
           </div>
+           <a 
+  href="tel:+923710194615" 
+  className="flex items-center gap-2 text-white hover:text-[#0073a8] transition-all duration-300 font-small"
+>
+  <FaPhoneAlt size={14} />
+  <span>Call Us</span>
+</a>
 
           {/* Search */}
           <div className="flex items-center gap-1 w-full sm:w-auto">
@@ -45,13 +52,7 @@ export default function Header() {
 
           {/* Links */}
           <div className="flex gap-3">
-            <a 
-  href="tel:+923710194615" 
-  className="flex items-center gap-2 text-white hover:text-[#0073a8] transition-all duration-300 font-small"
->
-  <FaPhoneAlt size={14} />
-  <span>Call Us</span>
-</a>
+           
             <a className="px-4 py-1 text-sm border border-white text-white" href="/certificate-verification">
               Certificate
             </a>
