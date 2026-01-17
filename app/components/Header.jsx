@@ -57,7 +57,7 @@ export default function Header() {
               Certificate
             </a>
             
-            <a className="px-4 py-1 text-sm text-white hover:bg-[#15A959]" href="#">
+            <a className="px-4 py-1 text-sm text-white hover:bg-[#15A959]" href="lms.ictpk.cloud">
               ICT LMS
             </a>
           </div>
