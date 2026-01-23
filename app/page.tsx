@@ -70,7 +70,7 @@ export default async function Home() {
   {/* Solid Button: Enroll Now */}
   <a
     className="bg-[#3D4098] hover:bg-[#2e317a] transition-all duration-300 py-3 px-10 md:py-4 md:px-12 text-white font-bold text-lg md:text-xl rounded-xl text-center min-w-[200px] shadow-md"
-    href="https://docs.google.com/forms/..."
+    href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform"
     target="_blank"
     rel="noopener noreferrer"
   >
