@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 /* =========================
    SEO METADATA
 ========================= */
+/* =========================
+   SEO METADATA
+========================= */
 export const metadata: Metadata = {
   metadataBase: new URL("https://ict.net.pk"),
   title: {
@@ -27,7 +30,10 @@ export const metadata: Metadata = {
   description:
     "Institute of Corporate & Taxation Pakistan offers expert-led income tax, sales tax & IRIS courses online or at campuses in Islamabad, Lahore & Karachi.",
   icons: {
-    icon: "/download.png",
+    icon: [
+      { url: "/download.png" }, 
+      { url: "/download.png", sizes: "32x32", type: "image/png" },
+    ],
     apple: "/download.png",
   },
   verification: {
