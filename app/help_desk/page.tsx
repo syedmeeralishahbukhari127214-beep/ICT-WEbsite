@@ -115,13 +115,13 @@ const serviceCards = [
   {
     title: 'LMS Technical Support',
     summary: 'Facing issues with our Learning Management System (LMS)? Get help with login problems, video playback, course access, assignment submission, quiz errors, and technical difficulties.',
-    imageSrc: '44.png', 
+    imageSrc: '/Help desk 1.png', 
     link: '#lms-support',
   },
   {
     title: 'Career Guidance',
     summary: 'Explore career opportunities in corporate and taxation fields. Get guidance on professional certifications and career paths.',
-    imageSrc: '45.png', 
+    imageSrc: '/Help desk 2.png', 
     link: '#career-guidance',
   },
 ];
@@ -166,7 +166,7 @@ const HeroContactSection: React.FC = () => {
               }}
             >
               <img
-                src="43.png" 
+                src="/Help desk.png" 
                 alt="Customer service agent assisting clients"
                 className="w-full h-full object-cover object-center"
               />

@@ -186,14 +186,14 @@ export default function CompleteContactPage() {
 
   {/* HERO IMAGES */}
   <div className="flex justify-center lg:block">
-    <img className="h-60 sm:h-72 lg:h-96 w-44 sm:w-56 lg:w-72 mt-8 lg:mt-14" src="30.png" alt="" />
+    <img className="h-60 sm:h-72 lg:h-96 w-44 sm:w-56 lg:w-72 mt-8 lg:mt-14" src="/Telephone.png" alt="" />
   </div>
   <div className="flex flex-col items-center lg:block">
     <div>
-      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-6 lg:mt-14 -ml-0 lg:-ml-8" src="31.png" alt="" />
+      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-6 lg:mt-14 -ml-0 lg:-ml-8" src="/Contact.png" alt="" />
     </div>
     <div>
-      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-4 -ml-0 lg:-ml-8" src="32.png" alt="" />
+      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-4 -ml-0 lg:-ml-8" src="/Contact us.png" alt="" />
     </div>
   </div>
 </div>

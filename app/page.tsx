@@ -93,17 +93,17 @@ export default async function Home() {
   {/* IMAGE SECTION */}
    <div className="hero-container flex-1 h-[600px] relative bg-white ">
           <div className="watch-orbit-window bg-white">
-  <div className="needle-pill p1"><div className="pill-content"><img src="h1.png" alt="1" /></div></div>
-  <div className="needle-pill p2"><div className="pill-content"><img src="t1.png" alt="2" /></div></div>
-  <div className="needle-pill p3"><div className="pill-content"><img src="c4e19b4602f4684a277dd2d9c0ab08154479de10.jpg" alt="3" /></div></div>
-  <div className="needle-pill p4"><div className="pill-content"><img src="h1.png" alt="4" /></div></div>
-  <div className="needle-pill p5"><div className="pill-content"><img src="t1.png" alt="5" /></div></div>
-  <div className="needle-pill p6"><div className="pill-content"><img src="c4e19b4602f4684a277dd2d9c0ab08154479de10.jpg" alt="6" /></div></div>
-  <div className="needle-pill p7"><div className="pill-content"><img src="h1.png" alt="7" /></div></div>
-  <div className="needle-pill p8"><div className="pill-content"><img src="t1.png" alt="8" /></div></div>
-  <div className="needle-pill p9"><div className="pill-content"><img src="c4e19b4602f4684a277dd2d9c0ab08154479de10.jpg" alt="9" /></div></div>
-  <div className="needle-pill p10"><div className="pill-content"><img src="h1.png" alt="10" /></div></div>
-  <div className="needle-pill p11"><div className="pill-content"><img src="t1.png" alt="11" /></div></div>
+  <div className="needle-pill p1"><div className="pill-content"><img src="/tax animation.webp" alt="1" /></div></div>
+  <div className="needle-pill p2"><div className="pill-content"><img src="/tax animation 2.webp" alt="2" /></div></div>
+  <div className="needle-pill p3"><div className="pill-content"><img src="/tax animation 3.webp" alt="3" /></div></div>
+  <div className="needle-pill p4"><div className="pill-content"><img src="/tax animation 4.webp" alt="4" /></div></div>
+  <div className="needle-pill p5"><div className="pill-content"><img src="/tax animation.webp" alt="5" /></div></div>
+  <div className="needle-pill p6"><div className="pill-content"><img src="/tax animation 2.webp" alt="6" /></div></div>
+  <div className="needle-pill p7"><div className="pill-content"><img src="/tax animation 3.webp" alt="7" /></div></div>
+  <div className="needle-pill p8"><div className="pill-content"><img src="/tax animation 4.webp" alt="8" /></div></div>
+  <div className="needle-pill p9"><div className="pill-content"><img src="/tax animation.webp" alt="9" /></div></div>
+  <div className="needle-pill p10"><div className="pill-content"><img src="/tax animation 2.webp" alt="10" /></div></div>
+  <div className="needle-pill p11"><div className="pill-content"><img src="/tax animation 4.webp" alt="11" /></div></div>
 </div>
         </div>
       
@@ -117,9 +117,9 @@ export default async function Home() {
    
    {/* Column One: Images (Ab ye screen ke mutabiq resize hon gi) */}
    <div className="flex-1 flex justify-center md:justify-start items-baseline gap-2 md:gap-4 w-full">
-    <img className="w-1/3 h-auto max-h-[400px] rounded-xl shadow-md" src="/Rectangle 8.png" alt="ICT 1" />
-    <img className="w-1/4 h-auto max-h-[450px] rounded-xl shadow-md mt-6 md:mt-12" src="/Rectangle 9.png" alt="ICT 2" />
-    <img className="w-1/3 h-auto max-h-[450px] rounded-xl shadow-md mt-8 md:mt-16" src="/Rectangle 7.png" alt="ICT 3" />
+    <img className="w-1/3 h-auto max-h-[400px] rounded-xl shadow-md" src="/Rectangle 8.png" />
+    <img className="w-1/4 h-auto max-h-[450px] rounded-xl shadow-md mt-6 md:mt-12" src="/Building Professionals (2).webp" alt="ICT 2" />
+    <img className="w-1/3 h-auto max-h-[450px] rounded-xl shadow-md mt-8 md:mt-16" src="/Building Professionals.webp" alt="ICT 3" />
    </div>
 
    {/* Column Second: Text Content */}
@@ -177,13 +177,13 @@ export default async function Home() {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
 
     {[
-      { title: 'UK TAXATION', img: '/Rectangle 1.png', slug: "uk-taxation" },
-      { title: 'USA TAXATION', img: '/USA.png', slug: "/usa-taxation" },
+      { title: 'UK TAXATION', img: '/uk (2).png', slug: "uk-taxation" },
+      { title: 'USA TAXATION', img: '/USA (1).png', slug: "/usa-taxation" },
       { title: 'UAE TAXATION', img: '/UAE.png', slug: "uae-taxation" },
       { title: 'SAUDI TAXATION', img: '/saudi.png', slug: "saudi-taxation" },
-      { title: 'CERTIFIED TAX ADVISOR', img: '/fbr.png', slug: "certified-tax-advisor" },
-      { title: 'ADVANCE TAXATION AND LITIGATION', img: '/advance-tax.png', slug: "advance-taxation-and-litigation" },
-      { title: 'MASTER SALES TAX', img: '/sales-tax.png', slug: "master-sales-tax" },
+      { title: 'CERTIFIED TAX ADVISOR', img: '/fbr (1) (1).png', slug: "certified-tax-advisor" },
+      { title: 'ADVANCE TAXATION AND LITIGATION', img: '/advance-tax (2).png', slug: "advance-taxation-and-litigation" },
+      { title: 'MASTER SALES TAX', img: '/sales-tax (2).png', slug: "master-sales-tax" },
       { title: 'CANADIAN TAXATION', img: '/canada.png', slug: "canadian-taxation" },
     ].map((course, index) => (
    
@@ -245,7 +245,7 @@ export default async function Home() {
         {/* Left Image */}
         <div className="relative overflow-hidden rounded-2xl -rotate-3 shadow-lg">
           <img
-            src="/h2.png"
+            src="/gallery.png"
             alt="Campus Session"
             className="w-full h-[360px] object-cover"
           />
@@ -254,7 +254,7 @@ export default async function Home() {
         {/* Center Image */}
         <div className="relative overflow-hidden rounded-2xl shadow-2xl scale-105">
           <img
-            src="/h3.png"
+            src="/ICT Campus Group.png"
             alt="ICT Campus Group"
             className="w-full h-[420px] object-cover"
           />
@@ -263,7 +263,7 @@ export default async function Home() {
         {/* Right Image */}
         <div className="relative overflow-hidden rounded-2xl rotate-3 shadow-lg">
           <img
-            src="/pic1.png"
+            src="/Campus Faculty.png"
             alt="Campus Faculty"
             className="w-full h-[360px] object-cover"
           />
@@ -490,7 +490,7 @@ export default async function Home() {
   <div className="flex flex-col lg:flex-row justify-center gap-8 mt-6">
 
     <div className="flex justify-center">
-      <img className="w-full max-w-[570px]" src="pic1.png" alt="" />
+      <img className="w-full max-w-[570px]" src="Campus Faculty.png" alt="" />
     </div>
 
     <div className="flex justify-center">

@@ -90,7 +90,7 @@ const CareerCompanionHeroSection = () => {
 
         <div className="h-[450px] rounded-3xl overflow-hidden shadow-2xl">
           <img
-            src="47.png"
+            src="/Career.png"
             className="w-full h-full object-cover"
           />
         </div>
@@ -114,7 +114,7 @@ const StrugglesSection = () => {
 
         <div className="space-y-8">
           <img
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+            src="/Career 2.jpg"
             className="rounded-2xl shadow-xl"
           />
         </div>
@@ -169,10 +169,10 @@ const BenefitsSection = () => {
          {/* RIGHT IMAGES */}
           <div className="relative w-full mb-26 h-[420px]">
             {/* TOP IMAGE */}
-            <div className="absolute top-0 right-0 w-[70%] h-[260px] rounded-2xl"><img src="49.png" alt="" /></div>
+            <div className="absolute top-0 right-0 w-[70%] h-[260px] rounded-2xl"><img src="/Gallery.png" alt="" /></div>
 
             {/* BOTTOM IMAGE */}
-            <div className=" absolute bottom-0 -left-4 w-[75%] h-[280px] rounded-2xl \"><img className="m-15" src="48.png" alt="" /></div>
+            <div className=" absolute bottom-0 -left-4 w-[75%] h-[280px] rounded-2xl \"><img className="m-15" src="Career last.png" alt="" /></div>
 
           </div>
 {/* Floating WhatsApp Button */}

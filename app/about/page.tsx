@@ -60,10 +60,10 @@ export default function ICTPage() {
 
   {/* HERO IMAGES */}
   <div className="flex justify-center lg:block">
-    <img className="h-60 sm:h-72 lg:h-96 w-44 sm:w-56 lg:w-72 mt-8 lg:mt-44" src="pic4.png" alt="" />
+    <img className="h-60 sm:h-72 lg:h-96 w-44 sm:w-56 lg:w-72 mt-8 lg:mt-44" src="/Gallery 1.png" alt="About gallery" />
   </div>
   <div className="flex justify-center lg:block">
-    <img className="h-48 sm:h-60 lg:h-84 w-44 sm:w-56 lg:w-72 mt-6 lg:mt-20 -ml-0 lg:-ml-8" src="pic5.png" alt="" />
+    <img className="h-48 sm:h-60 lg:h-84 w-44 sm:w-56 lg:w-72 mt-6 lg:mt-20 -ml-0 lg:-ml-8" src="/Gallery 2.png" alt="About Gallery" />
   </div>
 
   {/* FLOATING BOX */}
@@ -92,7 +92,7 @@ export default function ICTPage() {
           
           <div className="rounded-xl overflow-hidden mb-5 border-2 border-white/10">
             <img
-              src="/pic6.webp"
+              src="/Rai basharat.webp"
               alt="Rai Basharat Ali"
               className="w-full h-72 md:h-80 object-cover"
             />
@@ -167,7 +167,7 @@ export default function ICTPage() {
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-6">
             <div className="h-44 bg-gray-200 rounded-2xl shadow">
-              <img src="pic8.webp" alt="" />
+              <img src="/Gallery 3.webp" alt="" />
             </div>
 
             <div className=" border rounded-2xl -mt-4 overflow-hidden">
@@ -188,8 +188,8 @@ export default function ICTPage() {
 
           {/* CENTER COLUMN (STACKED IMAGES) */}
           <div className="flex flex-col gap-6">
-            <div className="h-72  rounded-2xl "><img className="h-100 w-96 rounded-2xl" src="pic10.png" alt="" /></div>
-            <div className="h-48 bg-gray-200 mt-24 rounded-2xl shadow"> <img className="rounded-2xl" src="pic7.png" alt="" /></div>
+            <div className="h-72  rounded-2xl "><img className="h-100 w-96 rounded-2xl" src="/Gallery center.png" alt="" /></div>
+            <div className="h-48 bg-gray-200 mt-24 rounded-2xl shadow"> <img className="rounded-2xl" src="/Gallery center.png" alt="" /></div>
           </div>
 
           {/* RIGHT COLUMN */}
@@ -204,7 +204,7 @@ export default function ICTPage() {
               </p>
             </div>
 
-            <div className="h-44 bg-gray-300 rounded-2xl -mt-4 shadow"> <img src="pic9.webp" alt="" /></div>
+            <div className="h-44 bg-gray-300 rounded-2xl -mt-4 shadow"> <img src="/Gallery 5.webp" alt="" /></div>
           </div>
 
         </div>
@@ -255,13 +255,13 @@ export default function ICTPage() {
         <div className="flex flex-col gap-6">
           {/* Top Image */}
           <div className="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
-            <img src="/pic13.png" className="w-full h-48 md:h-64 object-cover" alt="Classroom" />
+            <img src="/About gallery.png" className="w-full h-48 md:h-64 object-cover" alt="Classroom" />
           </div>
           
           {/* Bottom Row Collage */}
           <div className="grid grid-cols-12 gap-4 items-end">
             <div className="col-span-12 md:col-span-11 rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
-              <img src="/pic14.png" className="w-full h-56 md:h-72 object-cover" alt="Team" />
+              <img src="/About gallery 0.png" className="w-full h-56 md:h-72 object-cover" alt="Team" />
             </div>
           </div>
         </div>
@@ -270,7 +270,7 @@ export default function ICTPage() {
         <div className="absolute -bottom-10 -left-6 md:-left-16 w-56 md:w-72">
           <div className="relative">
             <img 
-              src="/pic4.png" 
+              src="/About gallery 1.jpg" 
               className="rounded-3xl shadow-2xl border-4 border-white w-full h-44 md:h-56 object-cover" 
               alt="Team Badge" 
             />
@@ -293,7 +293,7 @@ export default function ICTPage() {
     {/* Card 1 */}
     <div className="bg-white shadow-lg overflow-hidden">
       <div className="py-3 mt-3 px-3">
-        <img src="pic16.png" alt="" className="w-full h-auto object-contain" />
+        <img src="/Real world.png" alt="" className="w-full h-auto object-contain" />
       </div>
       <div>
         <img className="-mt-20 sm:-mt-76 mb-20 sm:mb-64 w-full h-auto object-contain" src="pic20.png" alt="" />
@@ -307,7 +307,7 @@ export default function ICTPage() {
 
     {/* Card 2 */}
     <div className="bg-white shadow-lg overflow-hidden">
-      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="pic17.png" alt="" />
+      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="/Practical Training.png" alt="" />
       <div>
         <img className="-mt-20 sm:-mt-76 mb-20 sm:mb-64 w-full h-auto object-contain" src="pic21.png" alt="" />
       </div>
@@ -318,7 +318,7 @@ export default function ICTPage() {
 
     {/* Card 3 */}
     <div className="bg-white shadow-lg overflow-hidden">
-      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="pic18.png" alt="" />
+      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="/Nationaly.png" alt="" />
       <div>
         <img className="-mt-20 sm:-mt-76 mb-20 sm:mb-64 w-full h-auto object-contain" src="pic22.png" alt="" />
       </div>
@@ -329,7 +329,7 @@ export default function ICTPage() {
 
     {/* Card 4 */}
     <div className="bg-white shadow-lg overflow-hidden">
-      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="pic19.png" alt="" />
+      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="/Focused.png" alt="" />
       <div>
         <img className="-mt-20 sm:-mt-76 mb-20 sm:mb-64 w-full h-auto object-contain" src="pic23.png" alt="" />
       </div>
