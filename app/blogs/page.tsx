@@ -78,10 +78,10 @@ export default async function BlogsPage() {
           </div>
 
           <div className="flex gap-10">
-            <img className="h-96 w-72 object-cover rounded-xl" src="/Blog.png" alt="ICT Feature" />
+            <img className="h-96 w-72 object-cover rounded-xl" src="/Blog.webp" alt="ICT Feature" />
             <div className="hidden lg:block">
-              <img className="h-44 w-72 -ml-8 mt-14 object-cover rounded-xl" src="/Blog 1.png" alt="ICT Detail" />
-              <img className="h-44 w-72 -ml-8 mt-4 object-cover rounded-xl" src="/Blog 3.png" alt="ICT Detail" />
+              <img className="h-44 w-72 -ml-8 mt-14 object-cover rounded-xl" src="/Blog 1.webp" alt="ICT Detail" />
+              <img className="h-44 w-72 -ml-8 mt-4 object-cover rounded-xl" src="/Blog 3.webp" alt="ICT Detail" />
             </div>
           </div>
         </div>

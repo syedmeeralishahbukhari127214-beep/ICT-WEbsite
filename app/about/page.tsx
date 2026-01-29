@@ -60,10 +60,10 @@ export default function ICTPage() {
 
   {/* HERO IMAGES */}
   <div className="flex justify-center lg:block">
-    <img className="h-60 sm:h-72 lg:h-96 w-44 sm:w-56 lg:w-72 mt-8 lg:mt-44" src="/Gallery 1.png" alt="About gallery" />
+    <img className="h-60 sm:h-72 lg:h-96 w-44 sm:w-56 lg:w-72 mt-8 lg:mt-44" src="/Gallery 1 (1).webp" alt="About gallery" />
   </div>
   <div className="flex justify-center lg:block">
-    <img className="h-48 sm:h-60 lg:h-84 w-44 sm:w-56 lg:w-72 mt-6 lg:mt-20 -ml-0 lg:-ml-8" src="/Gallery 2.png" alt="About Gallery" />
+    <img className="h-48 sm:h-60 lg:h-84 w-44 sm:w-56 lg:w-72 mt-6 lg:mt-20 -ml-0 lg:-ml-8" src="/Gallery 2 (1).webp" alt="About Gallery" />
   </div>
 
   {/* FLOATING BOX */}
@@ -171,7 +171,7 @@ export default function ICTPage() {
             </div>
 
             <div className=" border rounded-2xl -mt-4 overflow-hidden">
-              <img className="" src="pic11.png" alt="" />
+              <img className="" src="/About gallery design.webp" alt="" />
               <h4 className="font-bold -mt-90 flex px-4 text-3xl mb-2 text-[#3D4098]">
                 Professional Growth
               </h4>
@@ -188,14 +188,14 @@ export default function ICTPage() {
 
           {/* CENTER COLUMN (STACKED IMAGES) */}
           <div className="flex flex-col gap-6">
-            <div className="h-72  rounded-2xl "><img className="h-100 w-96 rounded-2xl" src="/Gallery center.png" alt="" /></div>
-            <div className="h-48 bg-gray-200 mt-24 rounded-2xl shadow"> <img className="rounded-2xl" src="/Gallery center.png" alt="" /></div>
+            <div className="h-72  rounded-2xl "><img className="h-100 w-96 rounded-2xl" src="/Gallery center.webp" alt="" /></div>
+            <div className="h-48 bg-gray-200 mt-24 rounded-2xl shadow"> <img className="rounded-2xl" src="/Gallery center.webp" alt="" /></div>
           </div>
 
           {/* RIGHT COLUMN */}
           <div className="flex flex-col gap-6">
             <div className=" border rounded-2xl shadow">
-               <img className="" src="pic12.png" alt="" />
+               <img className="" src="/About Design.webp" alt="" />
               <h4 className="font-bold -mt-44 flex px-4 text-3xl mb-2 text-[#3D4098]">
                 Quality Learning
               </h4>
@@ -214,7 +214,7 @@ export default function ICTPage() {
   
   {/* Background Decorative Image (Optional - replaces the massive negative margin logic) */}
   <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
-    <img src="pic15.webp" className="object-cover w-full h-full" alt="" />
+    <img src="/Design about.webp" className="object-cover w-full h-full" alt="" />
   </div>
 
   <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
@@ -255,13 +255,13 @@ export default function ICTPage() {
         <div className="flex flex-col gap-6">
           {/* Top Image */}
           <div className="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
-            <img src="/About gallery.png" className="w-full h-48 md:h-64 object-cover" alt="Classroom" />
+            <img src="/About gallery (1).webp" className="w-full h-48 md:h-64 object-cover" alt="Classroom" />
           </div>
           
           {/* Bottom Row Collage */}
           <div className="grid grid-cols-12 gap-4 items-end">
             <div className="col-span-12 md:col-span-11 rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
-              <img src="/About gallery 0.png" className="w-full h-56 md:h-72 object-cover" alt="Team" />
+              <img src="/About gallery 0 (1).webp" className="w-full h-56 md:h-72 object-cover" alt="Team" />
             </div>
           </div>
         </div>
@@ -270,7 +270,7 @@ export default function ICTPage() {
         <div className="absolute -bottom-10 -left-6 md:-left-16 w-56 md:w-72">
           <div className="relative">
             <img 
-              src="/About gallery 1.jpg" 
+              src="/About gallery 1 (1).webp" 
               className="rounded-3xl shadow-2xl border-4 border-white w-full h-44 md:h-56 object-cover" 
               alt="Team Badge" 
             />
@@ -293,7 +293,7 @@ export default function ICTPage() {
     {/* Card 1 */}
     <div className="bg-white shadow-lg overflow-hidden">
       <div className="py-3 mt-3 px-3">
-        <img src="/Real world.png" alt="" className="w-full h-auto object-contain" />
+        <img src="/Real world.webp" alt="" className="w-full h-auto object-contain" />
       </div>
       <div>
         <img className="-mt-20 sm:-mt-76 mb-20 sm:mb-64 w-full h-auto object-contain" src="pic20.png" alt="" />
@@ -307,7 +307,7 @@ export default function ICTPage() {
 
     {/* Card 2 */}
     <div className="bg-white shadow-lg overflow-hidden">
-      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="/Practical Training.png" alt="" />
+      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="/Practical Training.webp" alt="" />
       <div>
         <img className="-mt-20 sm:-mt-76 mb-20 sm:mb-64 w-full h-auto object-contain" src="pic21.png" alt="" />
       </div>
@@ -318,7 +318,7 @@ export default function ICTPage() {
 
     {/* Card 3 */}
     <div className="bg-white shadow-lg overflow-hidden">
-      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="/Nationaly.png" alt="" />
+      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="/Nationaly.webp" alt="" />
       <div>
         <img className="-mt-20 sm:-mt-76 mb-20 sm:mb-64 w-full h-auto object-contain" src="pic22.png" alt="" />
       </div>
@@ -329,7 +329,7 @@ export default function ICTPage() {
 
     {/* Card 4 */}
     <div className="bg-white shadow-lg overflow-hidden">
-      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="/Focused.png" alt="" />
+      <img className="py-3 mt-3 px-3 w-full h-auto object-contain" src="/Focused.webp" alt="" />
       <div>
         <img className="-mt-20 sm:-mt-76 mb-20 sm:mb-64 w-full h-auto object-contain" src="pic23.png" alt="" />
       </div>
@@ -358,7 +358,7 @@ export default function ICTPage() {
     <div className="flex flex-col gap-8">
       {/* Islamabad Campus */}
       <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
-        <img src="/isb.png" alt="Islamabad Campus" className="w-full h-40 sm:h-48 object-cover" />
+        <img src="/isb.webp" alt="Islamabad Campus" className="w-full h-40 sm:h-48 object-cover" />
         <div className="p-4 sm:p-6">
           <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">Islamabad Campus</h4>
           <div className="space-y-2 sm:space-y-3 text-sm sm:text-base">
@@ -377,7 +377,7 @@ export default function ICTPage() {
       {/* Karachi Campus */}
       <div className="bg-white shadow-lg overflow-hidden rounded-2xl flex flex-col sm:flex-row w-full sm:w-[790px] h-auto sm:h-[250px]">
         <div>
-          <img className="w-full sm:w-[340px] h-40 sm:h-[250px] object-cover" src="kar.png" alt="Karachi Campus" />
+          <img className="w-full sm:w-[340px] h-40 sm:h-[250px] object-cover" src="/kar.webp" alt="Karachi Campus" />
         </div>
         <div className="p-4 sm:p-6">
           <h1 className="text-lg sm:text-2xl font-bold">Karachi Campus</h1>
@@ -395,7 +395,7 @@ export default function ICTPage() {
     {/* Lahore Campus */}
     <div className="flex flex-col gap-8 md:pt-20 -mt-8 sm:-mt-12 md:-mt-20">
       <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
-        <img src="/lah.png" alt="Lahore Campus" className="w-full h-40 sm:h-48 object-cover" />
+        <img src="/lah.webp" alt="Lahore Campus" className="w-full h-40 sm:h-48 object-cover" />
         <div className="p-4 sm:p-6">
           <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">Lahore Campus</h4>
           <div className="space-y-2 sm:space-y-3 text-sm sm:text-base">
@@ -422,10 +422,10 @@ export default function ICTPage() {
     {/* Left Logos */}
     <div className="flex flex-wrap gap-6 sm:gap-8 lg:gap-10 items-center justify-center lg:justify-start">
       {[
-        "/FBR5.png",
-        "/FBR2.png",
-        "/FBR3.png",
-        "/FBR4.png",
+        "/FBR5.webp",
+        "/FBR2.webp",
+        "/FBR3.webp",
+        "/FBR4.webp",
       ].map((logo, index) => (
         <div
           key={index}

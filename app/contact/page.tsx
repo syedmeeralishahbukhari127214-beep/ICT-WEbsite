@@ -18,7 +18,7 @@ const contactData = {
     phone: '+923710194615',
     email: 'admission@ict.net.pk',
     location: 'Plot No. 63, Service Road, I-10/3 North, Islamabad 44000',
-    image: '/isb.png', // Example Image (Faisal Mosque or Monument)
+    image: '/isb.webp', // Example Image (Faisal Mosque or Monument)
     hours: [
       { day: 'Monday', time: '9 am – 5:30 pm' },
       { day: 'Tuesday–Friday', time: '9 am – 5:30 pm' },
@@ -29,7 +29,7 @@ const contactData = {
     phone: '+924212345678',
     email: 'info.lhr@ict.net.pk',
     location: 'Mall Road, near Lahore Museum, Lahore 54000',
-    image: '/lah.png', // Example Image (Badshahi Mosque)
+    image: '/lah.webp', // Example Image (Badshahi Mosque)
     hours: [
       { day: 'Monday–Friday', time: '9 am – 6 pm' },
       { day: 'Saturday', time: '9 am – 1 pm' },
@@ -39,7 +39,7 @@ const contactData = {
     phone: '+922198765432',
     email: 'info.khi@ict.net.pk',
     location: 'Shahrah-e-Faisal, Karachi 74400',
-    image: '/kar.png', // Example Image (Frere Hall/Sea View)
+    image: '/kar.webp', // Example Image (Frere Hall/Sea View)
     hours: [
       { day: 'Monday–Friday', time: '10 am – 7 pm' },
       { day: 'Saturday', time: '10 am – 3 pm' },
@@ -186,14 +186,14 @@ export default function CompleteContactPage() {
 
   {/* HERO IMAGES */}
   <div className="flex justify-center lg:block">
-    <img className="h-60 sm:h-72 lg:h-96 w-44 sm:w-56 lg:w-72 mt-8 lg:mt-14" src="/Telephone.png" alt="" />
+    <img className="h-60 sm:h-72 lg:h-96 w-44 sm:w-56 lg:w-72 mt-8 lg:mt-14" src="/Telephone.webp" alt="" />
   </div>
   <div className="flex flex-col items-center lg:block">
     <div>
-      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-6 lg:mt-14 -ml-0 lg:-ml-8" src="/Contact.png" alt="" />
+      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-6 lg:mt-14 -ml-0 lg:-ml-8" src="/Contact.webp" alt="" />
     </div>
     <div>
-      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-4 -ml-0 lg:-ml-8" src="/Contact us.png" alt="" />
+      <img className="h-36 sm:h-44 lg:h-46 w-44 sm:w-56 lg:w-72 mt-4 -ml-0 lg:-ml-8" src="/Contact us.webp" alt="" />
     </div>
   </div>
 </div>
@@ -211,7 +211,7 @@ export default function CompleteContactPage() {
             {/* Illustration Placeholder */}
             <div className="w-full max-w-md lg:max-w-none h-auto">
                 <img
-                    src="35.png" 
+                    src="/Design...png" 
                     alt="Travel wanderlust illustration"
                     className="w-[500px] h-auto object-contain"
                 />

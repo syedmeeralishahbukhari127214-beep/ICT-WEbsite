@@ -82,10 +82,10 @@ export default function ICTPage() {
 
           <div className="relative w-full h-[450px]">
             <div className="absolute top-0 left-0 w-[70%] h-[280px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
-              <img src="/Student 1.png" alt="Student 1" className="w-full h-full object-cover" />
+              <img src="/Student 1.webp" alt="Student 1" className="w-full h-full object-cover" />
             </div>
             <div className="absolute bottom-0 right-0 w-[70%] h-[280px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-              <img src="/Student 2.png" alt="Student 2" className="w-full h-full object-cover" />
+              <img src="/Student 2.webp" alt="Student 2" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

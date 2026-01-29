@@ -117,7 +117,7 @@ export default async function Home() {
    
    {/* Column One: Images (Ab ye screen ke mutabiq resize hon gi) */}
    <div className="flex-1 flex justify-center md:justify-start items-baseline gap-2 md:gap-4 w-full">
-    <img className="w-1/3 h-auto max-h-[400px] rounded-xl shadow-md" src="/Rectangle 8.png" />
+    <img className="w-1/3 h-auto max-h-[400px] rounded-xl shadow-md" src="/Basharat.webp" />
     <img className="w-1/4 h-auto max-h-[450px] rounded-xl shadow-md mt-6 md:mt-12" src="/Building Professionals (2).webp" alt="ICT 2" />
     <img className="w-1/3 h-auto max-h-[450px] rounded-xl shadow-md mt-8 md:mt-16" src="/Building Professionals.webp" alt="ICT 3" />
    </div>
@@ -245,7 +245,7 @@ export default async function Home() {
         {/* Left Image */}
         <div className="relative overflow-hidden rounded-2xl -rotate-3 shadow-lg">
           <img
-            src="/gallery.png"
+            src="/Campus Faculty-compressed.webp"
             alt="Campus Session"
             className="w-full h-[360px] object-cover"
           />
@@ -254,7 +254,7 @@ export default async function Home() {
         {/* Center Image */}
         <div className="relative overflow-hidden rounded-2xl shadow-2xl scale-105">
           <img
-            src="/ICT Campus Group.png"
+            src="/gallery-compressed.webp"
             alt="ICT Campus Group"
             className="w-full h-[420px] object-cover"
           />
@@ -263,7 +263,7 @@ export default async function Home() {
         {/* Right Image */}
         <div className="relative overflow-hidden rounded-2xl rotate-3 shadow-lg">
           <img
-            src="/Campus Faculty.png"
+            src="/ICT Campus Group-compressed.webp"
             alt="Campus Faculty"
             className="w-full h-[360px] object-cover"
           />
@@ -286,10 +286,10 @@ export default async function Home() {
     {/* Left Logos */}
     <div className="flex flex-wrap gap-6 sm:gap-8 lg:gap-10 items-center justify-center lg:justify-start">
       {[
-        "/FBR5.png",
-        "/FBR2.png",
-        "/FBR3.png",
-        "/FBR4.png",
+        "/FBR5.webp",
+        "/FBR2.webp",
+        "/FBR3.webp",
+        "/FBR4.webp",
       ].map((logo, index) => (
         <div
           key={index}
@@ -434,7 +434,7 @@ export default async function Home() {
 
     {/* Center Image */}
     <div className="flex justify-center">
-      <img className="w-64 sm:w-80 md:w-96 h-auto" src="rba.png" alt="" />
+      <img className="w-64 sm:w-80 md:w-96 h-auto" src="/Center Image Rai.webp" alt="" />
     </div>
 
     {/* Right Features */}
@@ -470,7 +470,7 @@ export default async function Home() {
     </div>
 
     <div className="flex justify-center">
-      <img className="w-20 sm:w-28 h-20 sm:h-28" src="Buttob.png" alt="" />
+      <img className="w-20 sm:w-28 h-20 sm:h-28" src="/ICTLogo.webp" alt="" />
     </div>
 
     <div className="w-full sm:w-[450px] flex justify-center">
@@ -490,7 +490,7 @@ export default async function Home() {
   <div className="flex flex-col lg:flex-row justify-center gap-8 mt-6">
 
     <div className="flex justify-center">
-      <img className="w-full max-w-[570px]" src="Campus Faculty.png" alt="" />
+      <img className="w-full max-w-[570px]" src="/Campus Faculty-compressed.webp" alt="" />
     </div>
 
     <div className="flex justify-center">
