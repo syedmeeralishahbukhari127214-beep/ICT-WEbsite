@@ -177,14 +177,14 @@ export default async function Home() {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
 
     {[
-      { title: 'UK TAXATION', img: '/uk (2).png', slug: "uk-taxation" },
-      { title: 'USA TAXATION', img: '/USA (1).png', slug: "/usa-taxation" },
-      { title: 'UAE TAXATION', img: '/UAE.png', slug: "uae-taxation" },
-      { title: 'SAUDI TAXATION', img: '/saudi.png', slug: "saudi-taxation" },
-      { title: 'CERTIFIED TAX ADVISOR', img: '/fbr (1) (1).png', slug: "certified-tax-advisor" },
-      { title: 'ADVANCE TAXATION AND LITIGATION', img: '/advance-tax (2).png', slug: "advance-taxation-and-litigation" },
-      { title: 'MASTER SALES TAX', img: '/sales-tax (2).png', slug: "master-sales-tax" },
-      { title: 'CANADIAN TAXATION', img: '/canada.png', slug: "canadian-taxation" },
+      { title: 'UK TAXATION', img: '/Uk Taxation Course Thumbnail.webp', slug: "uk-taxation" },
+      { title: 'USA TAXATION', img: '/USA Taxation Course Thumbnail.webp', slug: "/usa-taxation" },
+      { title: 'UAE TAXATION', img: '/UAE Taxation Course Thumbnail.webp', slug: "uae-taxation" },
+      { title: 'SAUDI TAXATION', img: '/Saudi Taxation Course.webp', slug: "saudi-taxation" },
+      { title: 'CERTIFIED TAX ADVISOR', img: '/Certified tax thumbnail.webp', slug: "certified-tax-advisor" },
+      { title: 'ADVANCE TAXATION AND LITIGATION', img: '/Advance Taxation and Ligitation Course Thumbnail.webp', slug: "advance-taxation-and-litigation" },
+      { title: 'MASTER SALES TAX', img: '/Master Sales Tax Thumbnail.webp', slug: "master-sales-tax" },
+      { title: 'CANADIAN TAXATION', img: '/Canadian Taxation Course (4).webp', slug: "canadian-taxation" },
     ].map((course, index) => (
    
       <Link href={`/courses/${course.slug}`} key={index}>
@@ -362,7 +362,7 @@ export default async function Home() {
         {/* Avatar */}
         <div className="absolute -top-6 sm:-top-8 left-6 sm:left-8">
           <img
-            src="/front-view-male-student-green-checkered-shirt-wearing-black-backpack-holding-files-blue-wall.jpg"
+            src="/Small Pic student Hompage (1).webp"
             alt="Student"
             className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 border-white shadow-md object-cover"
           />
@@ -544,7 +544,6 @@ export default async function Home() {
       const imageUrlBuilder = await import("@sanity/image-url");
       const builder = imageUrlBuilder.default(client);
       const urlFor = (source: any) => builder.image(source);
-
       const posts = await client.fetch(`*[_type == "post"] | order(publishedAt desc) [0...3]{
         _id,
         title,

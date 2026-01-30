@@ -121,7 +121,7 @@ const serviceCards = [
   {
     title: 'Career Guidance',
     summary: 'Explore career opportunities in corporate and taxation fields. Get guidance on professional certifications and career paths.',
-    imageSrc: '/Help desk 2.webp', 
+    imageSrc: '/Company Secretary Course (2).webp', 
     link: '#career-guidance',
   },
 ];
