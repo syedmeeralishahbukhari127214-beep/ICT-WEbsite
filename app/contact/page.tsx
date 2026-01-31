@@ -15,7 +15,7 @@ import React, { useState } from 'react';
 // --- Data for the Interactive Tabs ---
 const contactData = {
   Islamabad: {
-    phone: '+923710194615',
+    phone: '+923308880211',
     email: 'admission@ict.net.pk',
     location: 'Plot No. 63, Service Road, I-10/3 North, Islamabad 44000',
     image: '/isb.webp', // Example Image (Faisal Mosque or Monument)
@@ -26,7 +26,7 @@ const contactData = {
     ],
   },
   Lahore: {
-    phone: '+924212345678',
+    phone: '+923360022399',
     email: 'info.lhr@ict.net.pk',
     location: 'Mall Road, near Lahore Museum, Lahore 54000',
     image: '/lah.webp', // Example Image (Badshahi Mosque)
@@ -36,7 +36,7 @@ const contactData = {
     ],
   },
   Karachi: {
-    phone: '+922198765432',
+    phone: '+923710194615',
     email: 'info.khi@ict.net.pk',
     location: 'Shahrah-e-Faisal, Karachi 74400',
     image: '/kar.webp', // Example Image (Frere Hall/Sea View)
