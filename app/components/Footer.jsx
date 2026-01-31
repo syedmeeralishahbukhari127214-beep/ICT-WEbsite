@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex justify-center">
             <img
               className="w-60 lg:w-72 lg:-mt-36"
-              src="image 8.png"
+              src="/Letter Box.webp"
               alt=""
             />
           </div>
