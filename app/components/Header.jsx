@@ -44,7 +44,7 @@ export default function Header() {
   target="_blank"
   className="px-6 py-2 text-sm font-semibold text-white bg-[#15A959] rounded-full shadow-md hover:bg-[green] hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
 >
-  Apply Now
+  Enroll Now
 </a> 
 </div>
 
@@ -69,7 +69,7 @@ export default function Header() {
               Certificate
             </a>
             
-            <a className="px-4 py-1 text-sm text-white hover:bg-[#15A959]" href="https://lms.ictpk.cloud">
+            <a className="px-4 py-1 text-sm text-white bg-[#15A959]" href="https://lms.ictpk.cloud">
               ICT LMS
             </a>
           </div>
