@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "Institute of Corporate & Taxation Pakistan offers expert-led income tax, sales tax & IRIS courses online or at campuses in Islamabad, Lahore & Karachi.",
   icons: {
     icon: [
-      { url: "/favicon.png" }, 
+      { url: "/favicon.ico" }, 
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },
     ],
     apple: "/favicon.png",

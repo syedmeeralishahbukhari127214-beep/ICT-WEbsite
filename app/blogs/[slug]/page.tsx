@@ -12,7 +12,7 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-const SITE_URL = "https://yourdomain.com"; 
+const SITE_URL = "https://ict.net.pk"; 
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;

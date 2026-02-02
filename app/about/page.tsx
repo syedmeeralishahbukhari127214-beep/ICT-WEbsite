@@ -495,13 +495,12 @@ export default function ICTPage() {
       <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 mb-4 sm:mb-6 ml-0 sm:ml-6 lg:ml-10">
         <div className="flex items-start gap-3 sm:gap-4">
           <img
-            src="/front-view-male-student-green-checkered-shirt-wearing-black-backpack-holding-files-blue-wall.jpg"
+            src="/About Student 1.webp"
             className="w-10 sm:w-12 h-10 sm:h-12 rounded-full object-cover"
             alt="Student"
           />
           <p className="text-gray-700 italic text-sm sm:text-base">
-            “On the Windows talking painted pasture yet its express parties use.
-            Sure last upon he same as knew next. Of believed or diverted no.”
+            “On the silent meeting carried forward, its arranged matters remain unclear. Certain steps followed as expected, yet no final direction appeared. Belief stayed divided, and the message passed without conclusion.”
           </p>
         </div>
       </div>
@@ -510,7 +509,7 @@ export default function ICTPage() {
       <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 ml-0 sm:ml-10 lg:ml-20">
         <div className="flex items-start gap-3 sm:gap-4">
           <img
-            src="/front-view-male-student-green-checkered-shirt-wearing-black-backpack-holding-files-blue-wall.jpg"
+            src="About Student 2.webp"
             className="w-10 sm:w-12 h-10 sm:h-12 rounded-full object-cover"
             alt="Student"
           />
@@ -519,7 +518,7 @@ export default function ICTPage() {
               “On the Windows talking painted pasture yet its express parties use.
               Sure last upon he same as knew next. Of believed or diverted no.”
             </p>
-            <p className="font-semibold text-gray-900 text-sm sm:text-base">Mayank das</p>
+            <p className="font-semibold text-gray-900 text-sm sm:text-base">Ahmed Ali</p>
             <p className="text-xs sm:text-sm text-gray-500">Delhi, India</p>
           </div>
         </div>
