@@ -18,12 +18,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const blog = await client.fetch(singleBlogQuery, { slug });
   if (!blog) return { title: "Blog Not Found", robots: "noindex" };
+
   const seo = blog.seo || {};
   return {
     title: seo.metaTitle || blog.title,
     description: seo.metaDescription || blog.excerpt,
     openGraph: {
-      images: seo.ogImage ? [{ url: urlFor(seo.ogImage).width(1200).height(630).url() }] : [],
+      images: seo.ogImage
+        ? [{ url: urlFor(seo.ogImage).width(1200).height(630).url() }]
+        : [],
     },
   };
 }
@@ -34,12 +37,11 @@ export default async function BlogDetail({ params }: PageProps) {
   const [blog, latestPosts, courses] = await Promise.all([
     client.fetch(singleBlogQuery, { slug }),
     client.fetch(blogsQuery),
-    client.fetch(coursesQuery)
+    client.fetch(coursesQuery),
   ]);
 
   if (!blog) return <div className="p-10 text-center">Blog not found</div>;
 
-  // Formatter for main blog header only
   const formatDate = (dateString: string) => {
     const date = dateString ? new Date(dateString) : new Date();
     return date.toLocaleDateString("en-US", {
@@ -59,10 +61,16 @@ export default async function BlogDetail({ params }: PageProps) {
     whatsapp: `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`,
   };
 
+  /* 🔹 NEW: Split blog body for middle image */
+  const bodyBlocks = blog.body || [];
+  const middleIndex = Math.floor(bodyBlocks.length / 2);
+  const firstHalf = bodyBlocks.slice(0, middleIndex);
+  const secondHalf = bodyBlocks.slice(middleIndex);
+
   return (
     <div className="max-w-7xl mx-auto py-10 px-6 font-sans">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
+
         {/* LEFT SIDE: Content Area */}
         <main className="lg:col-span-7">
           <h1 className="text-4xl font-bold mb-4 text-gray-900 leading-tight">
@@ -84,8 +92,32 @@ export default async function BlogDetail({ params }: PageProps) {
             </div>
           )}
 
+          {/* BLOG CONTENT WITH MIDDLE IMAGE */}
           <div className="prose prose-lg max-w-none text-gray-700 mb-12">
-            <PortableText value={blog.body} components={portableTextComponents} />
+
+            {/* First Half Text */}
+            <PortableText
+              value={firstHalf}
+              components={portableTextComponents}
+            />
+
+            {/* MIDDLE IMAGE */}
+            {blog.mainImage && (
+              <div className="my-10">
+                <img
+                  src={urlFor(blog.mainImage).width(900).url()}
+                  alt={blog.title}
+                  className="w-full h-auto rounded-xl shadow-md"
+                />
+              </div>
+            )}
+
+            {/* Second Half Text */}
+            <PortableText
+              value={secondHalf}
+              components={portableTextComponents}
+            />
+
           </div>
         </main>
 
@@ -117,7 +149,8 @@ export default async function BlogDetail({ params }: PageProps) {
           </form>
 
           <div className="space-y-12">
-            {/* 10 LATEST POSTS */}
+
+            {/* LATEST POSTS */}
             <div>
               <h3 className="text-xl font-bold text-gray-800 mb-6 border-b-2 border-gray-100 pb-2">Latest Posts</h3>
               <div className="flex flex-col gap-5">
@@ -135,7 +168,7 @@ export default async function BlogDetail({ params }: PageProps) {
                         {post.title}
                       </h4>
                       <span className="text-[10px] text-gray-400 font-medium italic">
-                         Recently
+                        Recently
                       </span>
                     </div>
                   </Link>
@@ -181,6 +214,7 @@ export default async function BlogDetail({ params }: PageProps) {
                 Get Free Consultation
               </a>
             </div>
+
           </div>
         </aside>
       </div>
