@@ -56,17 +56,14 @@ const CertificateVerification: React.FC = () => {
   };
 
   // 🎊 Trigger animation AFTER result is shown
-  useEffect(() => {
-    if (isModalOpen && status !== "loading" && status !== "idle") {
-      setShowConfetti(true);
+ useEffect(() => {
+  if (isModalOpen && status === "success") {
+    setShowConfetti(true);
+  } else {
+    setShowConfetti(false);
+  }
+}, [isModalOpen, status]);
 
-      const timer = setTimeout(() => {
-        setShowConfetti(false);
-      }, 3000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [isModalOpen, status]);
 
   return (
     <div className="w-full bg-white">
@@ -75,7 +72,7 @@ const CertificateVerification: React.FC = () => {
         {/* 🎉 LEFT SIDE CONFETTI */}
         {showConfetti && (
           <Confetti
-            recycle={false}
+            recycle={true}
             numberOfPieces={140}
             gravity={0.3}
             initialVelocityX={{ min: 6, max: 12 }}
@@ -91,7 +88,7 @@ const CertificateVerification: React.FC = () => {
         {/* 🎉 RIGHT SIDE CONFETTI */}
         {showConfetti && (
           <Confetti
-            recycle={false}
+            recycle={true}
             numberOfPieces={140}
             gravity={0.3}
             initialVelocityX={{ min: -12, max: -6 }}
@@ -239,12 +236,13 @@ const CertificateVerification: React.FC = () => {
       </div>
 
       {/* Floating WhatsApp Button (UNCHANGED) */}
-      <a
-        href="https://wa.me/923377774856?text=Hello%20ICT%20Team"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-[100]"
-      >
+     <a
+  href="https://wa.me/923377774856?text=Hello%20ICT%20Team%2C%20I%20am%20interested%20in%20your%20courses%20and%20seek%20your%20guidance." 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-8 right-8 z-[100] flex items-center justify-center group"
+  aria-label="Chat on WhatsApp"
+>
         <div className="bg-[#25D366] p-4 rounded-full shadow-2xl">
           <FaWhatsapp size={35} className="text-white" />
         </div>
