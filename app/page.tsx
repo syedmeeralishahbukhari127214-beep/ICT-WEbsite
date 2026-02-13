@@ -410,7 +410,7 @@ export default async function Home() {
 
   {/* Line Image */}
   <div className="flex justify-center mt-10 sm:mt-20">
-    <img className="w-full max-w-[1120px]" src="line 2.png" alt="" />
+    <img className="w-full max-w-[1120px]" src="Line 2.png" alt="" />
   </div>
 
   {/* Features Section */}
@@ -471,7 +471,7 @@ export default async function Home() {
   {/* Logo & Lines */}
   <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-7">
     <div className="w-full sm:w-[450px] flex justify-center">
-      <img src="line.png" alt="" className="w-full" />
+      <img src="Line.png" alt="" className="w-full" />
     </div>
 
     <div className="flex justify-center">
@@ -479,7 +479,7 @@ export default async function Home() {
     </div>
 
     <div className="w-full sm:w-[450px] flex justify-center">
-      <img src="line 1.png" alt="" className="w-full" />
+      <img src="Line 1.png" alt="" className="w-full" />
     </div>
   </div>
 
