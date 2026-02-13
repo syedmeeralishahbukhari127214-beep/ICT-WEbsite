@@ -28,7 +28,7 @@ const contactData = {
   Lahore: {
     phone: '+923360022399',
     email: 'info.lhr@ict.net.pk',
-    location: 'Mall Road, near Lahore Museum, Lahore 54000',
+    location: '5th Floor , Pace Shopping Mall, Model Town, Link Road, Lahore',
     image: '/lah.webp', // Example Image (Badshahi Mosque)
     hours: [
       { day: 'Monday–Friday', time: '9 am – 6 pm' },
@@ -38,7 +38,7 @@ const contactData = {
   Karachi: {
     phone: '+923710194615',
     email: 'info.khi@ict.net.pk',
-    location: 'Shahrah-e-Faisal, Karachi 74400',
+    location: 'Office 504, 5th Floor, Caesars Tower, Shahrah-E-Faisal, Karachi',
     image: '/kar.webp', // Example Image (Frere Hall/Sea View)
     hours: [
       { day: 'Monday–Friday', time: '10 am – 7 pm' },
