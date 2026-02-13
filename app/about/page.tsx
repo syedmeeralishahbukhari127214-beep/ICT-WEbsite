@@ -405,7 +405,7 @@ export default function ICTPage() {
             </p>
             <p className="flex items-start gap-2 sm:gap-3 text-gray-600">
               <span className="text-xl sm:text-2xl text-[#3D4098]"><RiMapPinLine /></span>
-              F/3 Sea Breeze Homes, Shershah Block, New Garden Town, Lahore
+              5th Floor , Pace Shopping Mall, Model Town, Link Road, Lahore
             </p>
           </div>
         </div>
