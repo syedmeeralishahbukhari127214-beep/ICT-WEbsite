@@ -71,7 +71,7 @@ export default async function BlogsPage() {
               >
                 Enroll Now
               </a>
-              <Link className="py-3 px-12 border-[#3D4098] border-2 text-[#3D4098] font-bold text-xl rounded-lg hover:bg-[#3D4098] hover:text-white transition" href="/about">
+              <Link className="bg-white border-[#3D4098] border-2 md:border-[3px] text-[#3D4098] hover:bg-[#3D4098] hover:text-white transition-all duration-300 py-3 px-10 md:py-4 md:px-12 font-bold text-lg md:text-xl rounded-xl text-center min-w-[200px]" href="/about">
                 Explore
               </Link>
             </div>
