@@ -24,20 +24,12 @@ export default function LeadForm({ courses }: { courses: Course[] }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const educationOptions = [
-    { value: "matric", label: "Matric" },
-    { value: "intermediate", label: "Intermediate" },
-    { value: "bachelors", label: "Bachelor's" },
-    { value: "masters", label: "Master's" },
-    { value: "phd", label: "PhD" },
-  ];
-
   // Focus input on step change
   useEffect(() => {
     const timer = setTimeout(() => {
       if (step === "reason") {
         textareaRef.current?.focus();
-      } else if (step !== "program" && step !== "education" && step !== "success") {
+      } else if (step !== "program" && step !== "success") {
         inputRef.current?.focus();
       }
     }, 100);
@@ -89,8 +81,8 @@ export default function LeadForm({ courses }: { courses: Course[] }) {
         }
         break;
       case "education":
-        if (!formData.education) {
-          setError("Please select your education level");
+        if (!formData.education.trim() || formData.education.trim().length < 2) {
+          setError("Please enter your education level");
           return false;
         }
         break;
@@ -362,27 +354,18 @@ export default function LeadForm({ courses }: { courses: Course[] }) {
               <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
                 Your education level
               </h1>
-              <p className="text-gray-500 mb-6">
-                Select your highest level of education
+              <p className="text-gray-500 mb-8">
+                Enter your highest level of education
               </p>
-              <div className="space-y-3">
-                {educationOptions.map((option) => (
-                  <button
-                    key={option.value}
-                    onClick={() => {
-                      setFormData({ ...formData, education: option.value });
-                      setError("");
-                    }}
-                    className={`w-full text-left px-5 py-4 rounded-xl border-2 transition-all duration-200 ${
-                      formData.education === option.value
-                        ? "border-[#3D4098] bg-[#3D4098]/5 text-[#3D4098]"
-                        : "border-gray-200 hover:border-gray-300 text-gray-700"
-                    }`}
-                  >
-                    <span className="font-medium">{option.label}</span>
-                  </button>
-                ))}
-              </div>
+              <input
+                ref={inputRef}
+                type="text"
+                value={formData.education}
+                onChange={(e) => setFormData({ ...formData, education: e.target.value })}
+                onKeyDown={handleKeyDown}
+                placeholder="e.g. Bachelor's in Computer Science"
+                className="w-full text-xl sm:text-2xl py-4 border-b-2 border-gray-200 focus:border-[#3D4098] outline-none transition-colors placeholder:text-gray-300"
+              />
             </div>
           )}
 
