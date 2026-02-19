@@ -19,10 +19,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // ESLint errors ko ignore karne ka sahi tareeka
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-} as any; // 'as any' lagane se type error khatam ho jayega
+};
 
 export default nextConfig;
