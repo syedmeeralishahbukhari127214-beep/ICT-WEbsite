@@ -4,9 +4,9 @@ import { supabase } from "@/utils/supabase";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, phone, email, program, reason } = body;
+    const { name, phone, email, program, city, education, reason } = body;
 
-    if (!name || !phone || !email || !program || !reason) {
+    if (!name || !phone || !email || !program || !city || !education || !reason) {
       return NextResponse.json(
         { error: "All fields are required" },
         { status: 400 }
@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     }
 
     const { error } = await supabase.from("ict_leads").insert([
-      { name, phone, email, program, reason },
+      { name, phone, email, program, city, education, reason },
     ]);
 
     if (error) {
