@@ -437,6 +437,7 @@ export default function ICTPage() {
         className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 object-contain"
       />
     </div>
+    </div>
 
     {/* Right Content */}
     <div className="text-center lg:text-left">
