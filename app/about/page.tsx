@@ -420,21 +420,25 @@ export default function ICTPage() {
  <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
     
     {/* Left Logos */}
- <div className="flex flex-wrap gap-6 sm:gap-8 lg:gap-10 items-center justify-center lg:justify-start">
-      {[
-        "/FBR5.webp",
-        "/FBR2.webp",
-        "/FBR3.webp",
-        "/FBR4.webp",
-      ].map((logo, index) => (
-        <div
-          key={index}
-          className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-white shadow-lg flex items-center justify-center"
-        >
-          <img src={logo} alt="Authority Logo" className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 object-contain" />
-        </div>
-      ))}
+ <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 items-center justify-items-center">
+  {[
+    "/FBR5.webp",
+    "/FBR2.webp",
+    "/FBR3.webp",
+    "/FBR4.webp",
+  ].map((logo, index) => (
+    <div
+      key={index}
+      className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-white shadow-lg flex items-center justify-center"
+    >
+      <img
+        src={logo}
+        alt="Authority Logo"
+        className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 object-contain"
+      />
     </div>
+  ))}
+</div>
 
     {/* Right Content */}
     <div className="text-center lg:text-left">
