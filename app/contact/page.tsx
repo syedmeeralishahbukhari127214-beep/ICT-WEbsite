@@ -135,6 +135,36 @@ const InteractiveContactTabs: React.FC = () => {
 
 // --- Complete Page Component ---
 export default function CompleteContactPage() {
+  const [formData, setFormData] = useState({
+    email: "",
+    phone: "",
+    address: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        
+        setFormData({ email: "", phone: "", address: "", message: "" });
+      } else {
+        
+      }
+    } catch (error) {
+      console.error(error);
+      
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     // Yeh div poore page ke liye background aur minimum height set karega
     <div className="min-h-screen bg-gray-50">
@@ -221,57 +251,48 @@ export default function CompleteContactPage() {
           {/* Right Side: The Form */}
             
           <div className="lg:w-1/2 w-full p-8 bg-white rounded-xl shadow-2xl">
-            <form className="space-y-6">
-              
-              {/* Row 1: Email and Phone */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex-1">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Your Email</label>
-                  <div className="mt-1 relative rounded-md shadow-sm">
-                    <input type="email" id="email" placeholder="Your Email" className="w-full p-3 border border-gray-300 rounded-lg pr-10" />
-                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                      <svg className="h-5 w-5 text-indigo-600" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Your Phone</label>
-                  <div className="mt-1 relative rounded-md shadow-sm">
-                    <input type="tel" id="phone" placeholder="Your Phone" className="w-full p-3 border border-gray-300 rounded-lg pr-10" />
-                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                      <svg className="h-5 w-5 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Row 2: Address */}
-              <div>
-                <label htmlFor="address" className="block text-sm font-medium text-gray-700">Your Address</label>
-                <div className="mt-1 relative rounded-md shadow-sm">
-                  <input type="text" id="address" placeholder="Your Address" className="w-full p-3 border border-gray-300 rounded-lg pr-10" />
-                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                    <svg className="h-5 w-5 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                  </div>
-                </div>
-              </div>
+           <form className="space-y-6" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              required
+              className="w-full p-3 border border-gray-300 rounded-lg"
+            />
+            <input
+              type="tel"
+              placeholder="Your Phone"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              required
+              className="w-full p-3 border border-gray-300 rounded-lg"
+            />
+            <input
+              type="text"
+              placeholder="Your Address"
+              value={formData.address}
+              onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+              required
+              className="w-full p-3 border border-gray-300 rounded-lg"
+            />
+            <textarea
+              rows={4}
+              placeholder="Write Message..."
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              required
+              className="w-full p-3 border border-gray-300 rounded-lg"
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-3 bg-[#3D4098] text-white font-semibold rounded-lg shadow-md"
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
 
-              {/* Row 3: Message */}
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                <div className="mt-1 relative rounded-md shadow-sm">
-                  <textarea id="message" rows={4} placeholder="Write Message..." className="w-full p-3 border border-gray-300 rounded-lg"></textarea>
-                  <div className="absolute top-3 right-3 flex items-start pointer-events-none">
-                    <svg className="h-5 w-5 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 8l7.848 5.232a2 2 0 002.304 0L21 8m-2 10a2 2 0 01-2 2H7a2 2 0 01-2-2V8a2 2 0 012-2h10a2 2 0 012 2v10z"></path></svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* Submit Button */}
-              <button type="submit" className="w-full py-3 bg-[#3D4098] text-white font-semibold rounded-lg shadow-md  transition">
-                Send Message
-              </button>
-            </form>
             {/* Floating WhatsApp Button */}
 <a
   href="https://wa.me/923377774856?text=Hello%20ICT%20Team%2C%20I%20am%20interested%20in%20your%20courses%20and%20seek%20your%20guidance." 

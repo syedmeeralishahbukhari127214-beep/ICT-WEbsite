@@ -30,5 +30,11 @@ export default {
   title: "SEO Settings",
   type: "seo",
 },
+{
+      name: "thumbnailAlt",
+      title: "Thumbnail Alt Text",
+      type: "string",
+      description: "Image ke bare mein batayein (SEO aur Accessibility ke liye)",
+    },
   ],
 };

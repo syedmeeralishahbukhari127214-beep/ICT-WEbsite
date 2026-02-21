@@ -11,6 +11,7 @@ export const blogsQuery = `
   "slug": slug.current,
   "mainImage": image,
   body,
+  thumbnail,
 }
 `;
 export const singleBlogQuery = `
@@ -24,6 +25,7 @@ export const singleBlogQuery = `
   "mainImage": image,
   body,
   seo,
+  thumbnail,
   author->{
     name
   }
@@ -36,6 +38,7 @@ export const mentorsQuery = `
   name,
   slug,
   image,
+  thumbnail,
   designation
 }
 `;
@@ -48,6 +51,7 @@ export const singleMentorQuery = `
   image,
   shortBio,
   bio,
+  thumbnail,
   expertise,
    seo {
     metaTitle,

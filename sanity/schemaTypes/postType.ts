@@ -66,6 +66,12 @@ export const postType = defineType({
       type: "boolean",
       initialValue: false,
     },
+    {
+      name: "thumbnailAlt",
+      title: "Thumbnail Alt Text",
+      type: "string",
+      description: "Image ke bare mein batayein (SEO aur Accessibility ke liye)",
+    },
   ],
 }
   ],
