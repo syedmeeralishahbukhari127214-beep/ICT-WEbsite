@@ -142,29 +142,46 @@ export default function CompleteContactPage() {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(""); // For inline error messages
+  const [success, setSuccess] = useState(""); 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      if (res.ok) {
-        
-        setFormData({ email: "", phone: "", address: "", message: "" });
-      } else {
-        
-      }
-    } catch (error) {
-      console.error(error);
+  e.preventDefault();
+
+  // Validate email and phone
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!formData.email || !emailRegex.test(formData.email)) {
+    
+    return;
+  }
+
+  if (!formData.phone) {
+    
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
       
-    } finally {
-      setLoading(false);
+      setFormData({ email: "", phone: "", address: "", message: "" });
+    } else {
+      
     }
-  };
+  } catch (error) {
+    console.error(error);
+    
+  } finally {
+    setLoading(false);
+  }
+};
   return (
     // Yeh div poore page ke liye background aur minimum height set karega
     <div className="min-h-screen bg-gray-50">
@@ -284,6 +301,10 @@ export default function CompleteContactPage() {
               required
               className="w-full p-3 border border-gray-300 rounded-lg"
             />
+             {error && <p className="text-red-600 text-sm">{error}</p>}
+
+      {/* Success Message */}
+      {success && <p className="text-green-600 text-sm">{success}</p>}
             <button
               type="submit"
               disabled={loading}

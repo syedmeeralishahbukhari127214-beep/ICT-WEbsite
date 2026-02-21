@@ -7,31 +7,36 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubscribe = async () => {
-    if (!email) return alert("Please enter an email!");
+ const handleSubscribe = async () => {
+  // If empty, do nothing
+  if (!email) return;
 
-    setLoading(true);
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) return; // message shown below input automatically
 
-      const data = await res.json();
-      if (res.ok) {
-        
-        setEmail("");
-      } else {
-        alert("Error: " + data.message);
-      }
-    } catch (error) {
-      console.error(error);
+  setLoading(true);
+  try {
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+
+    const data = await res.json();
+    if (res.ok) {
       
-    } finally {
-      setLoading(false);
+      setEmail("");
+    } else {
+      alert("Error: " + data.message);
     }
-  };
+  } catch (error) {
+    console.error(error);
+    
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <>
@@ -66,13 +71,16 @@ export default function Footer() {
                   className="flex-1 bg-transparent text-white placeholder-white outline-none px-3"
                 />
                 <button
-                  onClick={handleSubscribe}
+                  onClick={() => email && handleSubscribe()}
                   disabled={loading}
                   className="bg-white text-black font-medium px-6 py-2 rounded-full w-full sm:w-auto"
                 >
                   {loading ? "Subscribing..." : "Subscribe"}
                 </button>
               </div>
+              {email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && (
+  <p className="text-red-500 text-sm mt-1">Must be a valid email</p>
+)}
 
               <p className="text-white mt-3 text-sm">
                 Stay ahead with the latest updates, insights,

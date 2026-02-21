@@ -246,7 +246,7 @@ const ContactInfoAndFAQIntroSection: React.FC = () => {
 
                     {/* Phone Number */}
                     <p className="text-5xl sm:text-6xl font-bold tracking-tight mt-6 mb-4">
-                        +92 330 3966662
+                        +92 371 0194615
                     </p>
                     
                     {/* Social Icons */}
