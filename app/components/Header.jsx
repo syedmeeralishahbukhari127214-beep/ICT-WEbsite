@@ -181,7 +181,7 @@ function CoursesDropdown({ isMobile }) {
 
   if (loading) {
     return (
-      <div className="px-4 py-2 text-sm text-gray-500">Loading courses...</div>
+      <div className="px-4 py-2 text-medium text-[#15A959]"> Courses </div>
     );
   }
 
