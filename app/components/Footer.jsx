@@ -84,7 +84,7 @@ export default function Footer() {
 
               <p className="text-white mt-3 text-sm">
                 Stay ahead with the latest updates, insights,
-                <br className="hidden lg:block" /> and events from Macat Megatrons.
+                <br className="hidden lg:block" /> and events from ICT.
               </p>
             </div>
           </div>

@@ -69,6 +69,7 @@ export const coursesQuery = `
   slug,
   shortDescription,
   category,
+  country,
   price,
   duration,
   thumbnail,

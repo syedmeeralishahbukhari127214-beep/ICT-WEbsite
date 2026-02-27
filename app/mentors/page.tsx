@@ -91,7 +91,7 @@ export default function MentorsPage() {
                   src={
                     mentor.image
                       ? urlFor(mentor.image).width(300).height(383).url()
-                      : "/placeholder.jpg"
+                      : "/placeholder.webp"
                   }
                   className="w-40 sm:w-48 md:w-52 h-52 sm:h-60 object-cover rounded-2xl shadow-md shrink-0"
                   alt={mentor.name}
@@ -120,7 +120,7 @@ export default function MentorsPage() {
                   src={
                     mentor.image
                       ? urlFor(mentor.image).width(300).height(400).url()
-                      : "/placeholder.jpg"
+                      : "/placeholder.webp"
                   }
                   alt={mentor.name}
                   className="w-full h-44 sm:h-52 md:h-60 object-cover"

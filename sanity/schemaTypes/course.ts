@@ -17,6 +17,24 @@ export default {
       },
       validation: (Rule: any) => Rule.required(),
     },
+     // schemas/course.js
+{
+  name: "country",
+  title: "Country",
+  type: "string", 
+  options: {
+    list: [
+      { title: "Pakistan", value: "Pakistan" },
+      { title: "UK", value: "UK" },
+      { title: "USA", value: "USA" },
+      { title: "Saudi Arabia", value: "Saudi" },
+      { title: "UAE", value: "UAE" },
+      { title: "Canadain", value: "Canadian" },
+    ],
+    layout: "dropdown", // optional: nice dropdown in Sanity studio
+  },
+  validation: (Rule: any) => Rule.required(),
+},
 
     {
       name: "thumbnail",
