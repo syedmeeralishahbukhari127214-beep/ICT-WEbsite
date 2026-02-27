@@ -58,4 +58,36 @@ export const portableTextComponents = {
       <li className="mb-2">{children}</li>
     ),
   },
+
+  // 🔥 WORKING TABLE RENDERER
+  types: {
+    table: ({ value }: any) => {
+      const rows = value?.rows || [];
+      if (!rows.length) return null;
+
+      return (
+        <div className="overflow-x-auto my-8">
+          <table className="min-w-full border border-gray-300 text-sm">
+            <tbody>
+              {rows.map((row: any, rowIndex: number) => (
+                <tr
+                  key={rowIndex}
+                  className={rowIndex % 2 === 0 ? "bg-gray-50" : ""}
+                >
+                  {row.cells?.map((cell: string, cellIndex: number) => (
+                    <td
+                      key={cellIndex}
+                      className="border border-gray-300 px-4 py-2"
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    },
+  },
 };
