@@ -222,7 +222,7 @@ export default function CompleteContactPage() {
       </a>
       <a
         className="py-3 px-8 sm:px-10 lg:px-12 border-[#3D4098] border-2 lg:border-3 text-[#3D4098] font-bold text-base sm:text-lg lg:text-xl rounded-lg text-center"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform"
+        href="https://ict.net.pk/lead"
         target="_blank"
         rel="noopener noreferrer"
       >

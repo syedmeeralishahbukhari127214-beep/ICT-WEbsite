@@ -84,7 +84,7 @@ export default async function MentorDetail({ params }: PageProps) {
           </div>
 
           {/* CTA */}
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform">
+          <Link href="https://ict.net.pk/lead">
           <button className="bg-[#3D4098] hover:bg-[#2f327a] mt-6 lg:mt-10 text-white px-6 sm:px-7 py-2 rounded-lg shadow-lg transition">
             Enroll Now
           </button></Link>

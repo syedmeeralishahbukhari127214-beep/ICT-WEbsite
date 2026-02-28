@@ -285,7 +285,7 @@ function StudentDropdown({ isMobile }) {
         <div className={`${isMobile ? "pl-4 mt-2" : "absolute left-0 top-full pt-2 w-48 z-50"}`}>
           <div className={`${isMobile ? "" : "bg-white shadow-xl  rounded-md py-2"}`}>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform"
+              href="https://ict.net.pk/lead"
               className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-[#15A959]"
             >
               Admission Form

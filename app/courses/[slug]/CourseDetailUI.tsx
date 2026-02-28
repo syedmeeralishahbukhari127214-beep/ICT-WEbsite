@@ -355,7 +355,7 @@ export default function CourseDetailUI({ course }: any) {
         <p className="text-gray-600 mb-8">
           {course.certificate.text}
         </p>
-        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform">
+        <Link href="https://ict.net.pk/lead">
         <button className="bg-[#3c3f9e] text-white px-10 py-4 rounded-xl">
           Apply Now
         </button>

@@ -62,19 +62,25 @@ export default async function BlogsPage() {
             <p className="text-xl md:text-2xl font-sans mt-9">
               Dive into helpful articles, tips, and <br className="hidden md:block" /> updates created to guide you in your journey.
             </p>
-            <div className="mt-12 gap-4 flex flex-wrap">
-              <a
-                className="bg-[#3D4098] py-4 px-10 text-white font-bold text-xl rounded-lg hover:bg-opacity-90 transition"
-                href="https://docs.google.com/forms/d/..."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Enroll Now
-              </a>
-              <Link className="bg-white border-[#3D4098] border-2 md:border-[3px] text-[#3D4098] hover:bg-[#3D4098] hover:text-white transition-all duration-300 py-3 px-10 md:py-4 md:px-12 font-bold text-lg md:text-xl rounded-xl text-center min-w-[200px]" href="/about">
-                Explore
-              </Link>
-            </div>
+            <div className="mt-12 gap-4 flex flex-wrap items-center">
+  {/* Enroll Now Button */}
+  <a
+    className="bg-[#3D4098] py-4 px-10 text-white font-bold text-xl rounded-xl hover:bg-opacity-90 transition duration-300"
+    href="https://ict.net.pk/lead"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Enroll Now
+  </a>
+
+  {/* Explore Button */}
+  <Link 
+    className="bg-white border-[#3D4098] border-2 text-[#3D4098]  py-4 px-10 font-bold text-xl rounded-xl text-center" 
+    href="/about"
+  >
+    Explore
+  </Link>
+</div>
           </div>
 
           <div className="flex gap-10">
