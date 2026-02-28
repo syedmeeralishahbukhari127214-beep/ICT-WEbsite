@@ -62,7 +62,7 @@ export default function CourseDetailUI({ course }: any) {
             </div>
 
             <div className="flex gap-4 mt-8">
-              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform">
+              <Link href="https://ict.net.pk/lead">
                 <button className="bg-[#3c3f9e] text-white px-8 py-3 rounded-lg font-semibold">
                   Enroll Now
                 </button>
