@@ -145,7 +145,7 @@ const HeroContactSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <a
     className="bg-[#3D4098] py-4 px-10 text-white font-bold text-lg rounded-lg"
-    href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform"
+    href="https://ict.net.pk/lead"
     target="_blank"
     rel="noopener noreferrer"
   >
