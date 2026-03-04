@@ -50,14 +50,14 @@ export default function Header() {
           {/* Call & Enroll */}
           <div className="flex items-center gap-4">
             <a
-              href="tel:+923710194615"
+              href="tel:+923377774856"
               className="flex items-center gap-2 text-white hover:text-[#0073a8] text-sm"
             >
               <FaPhoneAlt size={14} /> Call Us
             </a>
 
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe0xltybDdhgmuadGDd6MJ8YU_wQejb9qRXZ5wYEIJgTIeQag/viewform"
+              href="https://ict.net.pk/lead"
               target="_blank"
               className="px-6 py-2 text-sm font-semibold text-white bg-[#15A959] rounded-full hover:bg-green-600 transition"
             >
@@ -66,22 +66,10 @@ export default function Header() {
           </div>
 
           {/* Search */}
-          <div className="flex items-center gap-1 w-full sm:w-auto">
-            <input
-              className="bg-white rounded-md px-3 py-1 w-full sm:w-56"
-              type="text"
-              placeholder="Search..."
-            />
-            <span className="py-2 px-3 rounded-md text-white bg-[#15A959] cursor-pointer">
-              <CiSearch />
-            </span>
-          </div>
+          
 
           {/* Extra Links */}
           <div className="flex gap-3">
-            <a className="px-4 py-1 text-sm border border-white text-white" href="/certificate-verification">
-              Certificate
-            </a>
             <a className="px-4 py-1 text-sm text-white bg-[#15A959]" href="https://lms.ictpk.cloud">
               ICT LMS
             </a>
