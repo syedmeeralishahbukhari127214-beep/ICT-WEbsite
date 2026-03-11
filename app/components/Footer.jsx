@@ -109,7 +109,7 @@ export default function Footer() {
                 <li><a href="/courses">Courses</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/mentors">Our Mentors</a></li>
-                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/">Privacy Policy</a></li>
               </ul>
             </div>
 
