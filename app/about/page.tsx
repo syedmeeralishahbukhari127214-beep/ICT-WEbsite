@@ -6,11 +6,34 @@ import { LuYoutube } from "react-icons/lu";
 import { TiTick } from "react-icons/ti";
 import { MdCallEnd } from "react-icons/md";
 import { RiMapPinLine } from "react-icons/ri";
+import Script from "next/script";
 import { FaWhatsapp } from "react-icons/fa6";
+import { FaUserTie, FaLaptopCode, FaRobot, FaUsers } from "react-icons/fa";
 
 
 export default function ICTPage() {
-  return (
+const features = [
+  {
+    icon: <FaUserTie />,
+    title: "Learn From Real Experts",
+    desc: "Get hands-on insights from seasoned corporate tax professionals and master strategies beyond textbooks.",
+  },
+  {
+    icon: <FaLaptopCode />,
+    title: "Tackle Live Tax Challenges",
+    desc: "Engage in real-time corporate tax scenarios and crisis simulations to sharpen your decision-making.",
+  },
+  {
+    icon: <FaRobot />,
+    title: "AI-Powered Learning, Anytime",
+    desc: "Access AI-driven quizzes, 24/7 mentor support, and bite-sized tax training videos.",
+  },
+  {
+    icon: <FaUsers />,
+    title: "Connect With Elite Tax Pros",
+    desc: "Join a global network of 10,000+ corporate tax professionals spanning 5 countries.",
+  },
+];  return (
     <div className="w-full bg-white">
 
     <div className="w-full min-h-screen bg-white text-black font-sans">
@@ -102,7 +125,7 @@ export default function ICTPage() {
             Rai Basharat Ali
           </h3>
           <p className="text-sm sm:text-base text-gray-200 text-center mt-2 leading-tight">
-            Principal <br />
+            CEO <br />
             Institute of Corporate and Taxation
           </p>
         </div>
@@ -113,7 +136,7 @@ export default function ICTPage() {
         <div className="flex items-center gap-3 mb-6 pt-2">
           <span className="w-10 h-[2px] bg-[#15A959]"></span>
           <h3 className="text-lg sm:text-xl font-bold text-[#3D4098] uppercase tracking-wide">
-            Principal Message
+            Message from the CEO
           </h3>
         </div>
 
@@ -188,8 +211,8 @@ export default function ICTPage() {
 
           {/* CENTER COLUMN (STACKED IMAGES) */}
           <div className="flex flex-col gap-6">
-            <div className="h-72  rounded-2xl "><img className="h-100 w-96 rounded-2xl" src="/Gallery center.webp" alt="" /></div>
-            <div className="h-48 bg-gray-200 mt-24 rounded-2xl shadow"> <img className="rounded-2xl" src="/Gallery center.webp" alt="" /></div>
+            <div className="h-72  rounded-2xl "><img className="h-90 w-96 rounded-2xl" src="/Corporate.webp" alt="" /></div>
+            <div className="h-48 bg-gray-200 mt-14.5 rounded-2xl shadow"> <img className="rounded-2xl" src="/Tax.webp" alt="" /></div>
           </div>
 
           {/* RIGHT COLUMN */}
@@ -210,83 +233,129 @@ export default function ICTPage() {
         </div>
       </section>
 {/* WHY CHOOSE ICT SECTION */}
-<section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
-  
-  {/* Background Decorative Image (Optional - replaces the massive negative margin logic) */}
+<section className="relative w-full bg-gradient-to-br from-white via-[#F7F8FF] to-[#F3FFF7] overflow-hidden py-16 md:py-24">
+
+  {/* Floating Background Shapes */}
+  <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#15A959]/10 rounded-full blur-3xl"></div>
+  <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#3D4098]/10 rounded-full blur-3xl"></div>
+
+  {/* Decorative Background Image */}
   <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
-    <img src="/Design about.webp" className="object-cover w-full h-full" alt="" />
+    <img
+      src="/Design about.webp"
+      className="object-cover w-full h-full"
+      alt=""
+    />
   </div>
 
   <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-    
+
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      
-      {/* LEFT CONTENT: Text blocks */}
-      <div className="space-y-8">
+
+      {/* LEFT CONTENT */}
+      <div className="space-y-10">
+
         <div>
-          <p className="text-[#3D4098] font-bold flex items-center gap-3 mb-2">
+          <p className="text-[#3D4098] font-bold flex items-center gap-3 mb-3">
             <span className="w-10 h-[2px] bg-[#15A959]"></span>
             Why Choose ICT?
           </p>
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#3D4098] leading-tight">
             No Compromise On Excellence
           </h2>
         </div>
 
-        <div className="grid gap-8">
-          {[
-            { title: "Learn From Real Experts", desc: "Get hands-on insights from seasoned corporate tax professionals and master strategies beyond textbooks." },
-            { title: "Tackle Live Tax Challenges", desc: "Engage in real-time corporate tax scenarios and crisis simulations to sharpen your decision-making." },
-            { title: "AI-Powered Learning, Anytime", desc: "Access AI-driven quizzes, 24/7 mentor support, and bite-sized tax training videos." },
-            { title: "Connect With Elite Tax Pros", desc: "Join a global network of 10,000+ corporate tax professionals spanning 5 countries." }
-          ].map((item, index) => (
-            <div key={index} className="group">
-              <h4 className="font-bold text-xl text-black mb-2 group-hover:text-[#3D4098] transition-colors">{item.title}</h4>
-              <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-                {item.desc}
-              </p>
+        {/* Features */}
+        <div className="grid gap-6">
+          {features.map((item, index) => (
+            <div
+              key={index}
+              className="group flex gap-4 p-6 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300"
+            >
+              <div className="text-[#15A959] text-2xl mt-1">
+                {item.icon}
+              </div>
+
+              <div>
+                <h4 className="font-bold text-xl text-black mb-2 group-hover:text-[#3D4098] transition">
+                  {item.title}
+                </h4>
+
+                <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+                  {item.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
+
+        
+
       </div>
 
-      {/* RIGHT CONTENT: Image Collage (As per image_2ddd8d.png) */}
+      {/* RIGHT IMAGE COLLAGE */}
       <div className="relative">
+
         <div className="flex flex-col gap-6">
+
           {/* Top Image */}
           <div className="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
-            <img src="/About gallery (1).webp" className="w-full h-48 md:h-64 object-cover" alt="Classroom" />
+            <img
+              src="/About gallery (1).webp"
+              className="w-full h-48 md:h-64 object-cover transform hover:scale-105 transition duration-500"
+              alt="Classroom"
+            />
           </div>
-          
-          {/* Bottom Row Collage */}
+
+          {/* Bottom Image */}
           <div className="grid grid-cols-12 gap-4 items-end">
             <div className="col-span-12 md:col-span-11 rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
-              <img src="/About gallery 0 (1).webp" className="w-full h-56 md:h-72 object-cover" alt="Team" />
+              <img
+                src="/About gallery 0 (1).webp"
+                className="w-full h-56 md:h-72 object-cover transform hover:scale-105 transition duration-500"
+                alt="Team"
+              />
             </div>
           </div>
+
         </div>
 
-        {/* Floating Overlap Image & Badge */}
+        {/* Floating Image + Badge */}
         <div className="absolute -bottom-10 -left-6 md:-left-16 w-56 md:w-72">
+
           <div className="relative">
-            <img 
-              src="/About gallery 1 (1).webp" 
-              className="rounded-3xl shadow-2xl border-4 border-white w-full h-44 md:h-56 object-cover" 
-              alt="Team Badge" 
+
+            <img
+              src="/About gallery 1 (1).webp"
+              className="rounded-3xl shadow-2xl border-4 border-white w-full h-44 md:h-56 object-cover transform hover:scale-105 transition duration-500"
+              alt="Team Badge"
             />
-            {/* 10+ YEARS BADGE - Styled exactly like the blue box in screenshot */}
+
+            {/* Years Badge */}
             <div className="absolute -bottom-4 -right-4 bg-[#3D4098] text-white p-4 md:p-6 rounded-2xl shadow-2xl text-center min-w-[120px]">
-              <p className="text-3xl md:text-5xl font-black leading-none">10+</p>
-              <p className="text-sm md:text-lg font-bold uppercase tracking-tighter">Years</p>
+
+              <p className="text-3xl md:text-5xl font-black leading-none">
+                10+
+              </p>
+
+              <p className="text-sm md:text-lg font-bold uppercase tracking-tighter">
+                Years
+              </p>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
 
     </div>
-  </div>
-</section>
 
+  </div>
+
+</section>
 {/* FEATURES CARDS (4 cards section) */}
 <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -341,86 +410,92 @@ export default function ICTPage() {
 </section>
 
 {/* CAMPUSES SECTION */}
-<section className="w-full mt-12 sm:mt-16 md:mt-20 mx-auto px-4 sm:px-10 md:px-20 lg:px-[160px] py-12 sm:py-16 md:py-20">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-    {/* Left Text */}
-    <div className="md:pt-12">
-      <h3 className="text-base sm:text-lg font-semibold text-[#3D4098] flex items-center gap-3 mb-4 sm:mb-6">
-        <span className="w-8 sm:w-12 h-[2px] sm:h-[3px] bg-green-500"></span>
-        Our Campuses
-      </h3>
-      <p className="text-gray-700 leading-relaxed max-w-sm text-sm sm:text-base">
-        We operate in key cities, offering modern classrooms and a supportive learning environment so students can study comfortably and grow with confidence.
-      </p>
-    </div>
+<section className="w-full mt-16 md:mt-5 px-6 sm:px-10 md:px-20 lg:px-[160px] py-16">
+  
+  {/* Heading */}
+  <div className="max-w-2xl mb-12">
+    <h3 className="text-lg font-semibold text-[#3D4098] flex items-center gap-3 mb-4">
+      <span className="w-12 h-[3px] bg-green-500"></span>
+      Our Campuses
+    </h3>
+    <p className="text-gray-700 leading-relaxed">
+      We operate in key cities, offering modern classrooms and a supportive learning environment so students can study comfortably and grow with confidence.
+    </p>
+  </div>
 
-    {/* Islamabad & Karachi */}
-    <div className="flex flex-col gap-8">
-      {/* Islamabad Campus */}
-      <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
-        <img src="/isb.webp" alt="Islamabad Campus" className="w-full h-40 sm:h-48 object-cover" />
-        <div className="p-4 sm:p-6">
-          <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">Islamabad Campus</h4>
-          <div className="space-y-2 sm:space-y-3 text-sm sm:text-base">
-            <p className="flex items-center gap-2 sm:gap-3 text-gray-600">
-              <span className="text-xl sm:text-2xl text-[#3D4098]"><MdCallEnd /></span>
-              03377774852
-            </p>
-            <p className="flex items-start gap-2 sm:gap-3 text-gray-600">
-              <span className="text-xl sm:text-2xl text-[#3D4098]"><RiMapPinLine /></span>
-              Plot No. 63, Service Road, I-10/3 North, Islamabad 44000
-            </p>
-          </div>
+  {/* Campus Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    {/* Islamabad */}
+    <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition overflow-hidden">
+      <img src="/isb.webp" alt="Islamabad Campus" className="w-full h-52 object-cover" />
+      <div className="p-6">
+        <h4 className="text-xl font-bold mb-4">Islamabad Campus</h4>
+
+        <div className="space-y-3 text-gray-600">
+          <p className="flex items-center gap-3">
+            <span className="text-2xl text-[#3D4098]"><MdCallEnd /></span>
+            03377774852
+          </p>
+
+          <p className="flex items-start gap-3">
+            <span className="text-2xl text-[#3D4098]"><RiMapPinLine /></span>
+            Plot No. 63, Service Road, I-10/3 North, Islamabad 44000
+          </p>
         </div>
       </div>
+    </div>
 
-      {/* Karachi Campus */}
-      <div className="bg-white shadow-lg overflow-hidden rounded-2xl flex flex-col sm:flex-row w-full sm:w-[790px] h-auto sm:h-[250px]">
-        <div>
-          <img className="w-full sm:w-[340px] h-40 sm:h-[250px] object-cover" src="/kar.webp" alt="Karachi Campus" />
-        </div>
-        <div className="p-4 sm:p-6">
-          <h1 className="text-lg sm:text-2xl font-bold">Karachi Campus</h1>
-          <p className="flex items-center gap-2 mt-4 sm:mt-8 text-sm sm:text-base">
-            <span className="text-xl sm:text-2xl text-[#3D4098]"><MdCallEnd /></span>03710194615
+    {/* Karachi */}
+    <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition overflow-hidden">
+      <img src="/kar.webp" alt="Karachi Campus" className="w-full h-52 object-cover" />
+      <div className="p-6">
+        <h4 className="text-xl font-bold mb-4">Karachi Campus</h4>
+
+        <div className="space-y-3 text-gray-600">
+          <p className="flex items-center gap-3">
+            <span className="text-2xl text-[#3D4098]"><MdCallEnd /></span>
+            03710194615
           </p>
-          <p className="flex items-start gap-2 mt-2 sm:mt-3 text-sm sm:text-base">
-            <span className="text-xl sm:text-2xl text-[#3D4098]"><RiMapPinLine /></span>
+
+          <p className="flex items-start gap-3">
+            <span className="text-2xl text-[#3D4098]"><RiMapPinLine /></span>
             Office 504, 5th Floor, Caesars Tower, Shahrah-E-Faisal, Karachi
           </p>
         </div>
       </div>
     </div>
 
-    {/* Lahore Campus */}
-    <div className="flex flex-col gap-8 md:pt-20 -mt-8 sm:-mt-12 md:-mt-20">
-      <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
-        <img src="/lah.webp" alt="Lahore Campus" className="w-full h-40 sm:h-48 object-cover" />
-        <div className="p-4 sm:p-6">
-          <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">Lahore Campus</h4>
-          <div className="space-y-2 sm:space-y-3 text-sm sm:text-base">
-            <p className="flex items-center gap-2 sm:gap-3 text-gray-600">
-              <span className="text-xl sm:text-2xl text-[#3D4098]"><MdCallEnd /></span>
-              03308880211
-            </p>
-            <p className="flex items-start gap-2 sm:gap-3 text-gray-600">
-              <span className="text-xl sm:text-2xl text-[#3D4098]"><RiMapPinLine /></span>
-              5th Floor , Pace Shopping Mall, Model Town, Link Road, Lahore
-            </p>
-          </div>
+    {/* Lahore */}
+    <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition overflow-hidden">
+      <img src="/lah.webp" alt="Lahore Campus" className="w-full h-52 object-cover" />
+      <div className="p-6">
+        <h4 className="text-xl font-bold mb-4">Lahore Campus</h4>
+
+        <div className="space-y-3 text-gray-600">
+          <p className="flex items-center gap-3">
+            <span className="text-2xl text-[#3D4098]"><MdCallEnd /></span>
+            03308880211
+          </p>
+
+          <p className="flex items-start gap-3">
+            <span className="text-2xl text-[#3D4098]"><RiMapPinLine /></span>
+            5th Floor, Pace Shopping Mall, Model Town, Link Road, Lahore
+          </p>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
  <section>
 
   {/* Who Will You Learn About Section */}
- <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+ <div className="relative z-10 mt-12 mb-12 max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
     
     {/* Left Logos */}
- <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 items-center justify-items-center">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 items-center justify-items-center">
   {[
     "/FBR5.webp",
     "/FBR2.webp",
@@ -429,12 +504,13 @@ export default function ICTPage() {
   ].map((logo, index) => (
     <div
       key={index}
-      className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-white shadow-lg flex items-center justify-center"
+      className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 rounded-full bg-white shadow-xl flex items-center justify-center overflow-hidden border border-gray-50"
     >
       <img
         src={logo}
-        alt="Authority Logo"
-        className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 object-contain"
+        alt={`Authority Logo ${index + 1}`}
+        /* Increased these values significantly to "zoom" the logo inside the circle */
+        className="w-[75%] h-[75%] sm:w-[80%] h-[80%] lg:w-[85%] lg:h-[85%] object-contain transition-transform duration-300 hover:scale-110"
       />
     </div>
   ))}
@@ -460,81 +536,57 @@ export default function ICTPage() {
   </div>
 
 {/* TRUSTED BY CUSTOMERS WORLDWIDE – IMAGE MATCHED */}
-<section className="w-full py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-white via-cyan-50 to-white mb-12 sm:mb-16 lg:mb-20 overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
+<div className="relative py-16 sm:py-20 md:py-28 overflow-hidden bg-gradient-to-br from-[#F1F5FF] via-[#ECFBF6] to-white">
+  
+  {/* Optimized Script Loading */}
+  <Script 
+    src="https://elfsightcdn.com/platform.js" 
+    strategy="lazyOnload" 
+  />
 
-    {/* LEFT CONTENT */}
-    <div className="text-center lg:text-left">
-      <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-        <span className="w-8 sm:w-10 lg:w-12 h-[2px] sm:h-[3px] bg-green-600"></span>
-        <span className="text-blue-700 font-semibold text-sm sm:text-base">
-          Trusted by Customers Worldwide
-        </span>
+  {/* Decorative Circle */}
+  <div className="absolute right-[-100px] sm:right-[-150px] md:right-[-200px] top-10 w-[250px] sm:w-[350px] md:w-[500px] h-[250px] sm:h-[350px] md:h-[500px] bg-[#3D4098] rounded-full opacity-90"></div>
+
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-10 md:px-20 lg:px-28">
+
+    {/* Section Heading */}
+    <div className="text-center mb-10">
+      <div className="flex items-center justify-center gap-2 mb-4">
+        <span className="w-8 sm:w-10 h-0.5 bg-[#15A959]"></span>
+        <p className="text-[#3D4098] font-semibold text-sm sm:text-base">
+          Trusted by Learners
+        </p>
+        <span className="w-8 sm:w-10 h-0.5 bg-[#15A959]"></span>
       </div>
-
-      <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4 sm:mb-6">
-        Who will you learn about?
+      <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-black">
+        What Our Students Say
       </h2>
-
-      <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
-        Our clients share their experiences and feedback to help you understand
-        the quality and reliability of our services. Read authentic reviews and
-        join the growing community of satisfied customers.
+      <p className="text-gray-700 text-lg max-w-2xl mx-auto leading-relaxed">
+        Don't just take our word for it. Here are the latest reviews from our 
+        Google Business profile where we have over 600+ satisfied learners.
       </p>
+    </div>
 
-      {/* Dots */}
-      <div className="flex gap-3 mt-6 sm:mt-8 lg:mt-10 justify-center lg:justify-start">
-        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-gray-300"></span>
-        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-gray-300"></span>
-        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-blue-800"></span>
+    {/* Google Reviews Widget Container */}
+    {/* Added 'overflow-hidden' here to act as a frame */}
+    <div className="mt-12 bg-white/50 p-4 rounded-3xl backdrop-blur-sm shadow-xl overflow-hidden">
+      {/* The wrapper below uses a negative bottom margin (-mb-12). 
+          This pulls the widget "down" so the attribution badge sits 
+          outside the parent's overflow-hidden boundary.
+      */}
+      <div className="-mb-12 relative">
+        <div 
+          className="elfsight-app-d04969c0-b158-4f8e-9e92-c22c360c9cb2" 
+          data-elfsight-app-lazy 
+        ></div>
+        
+        {/* Optional: A small "shield" div to ensure no stray pixels from the link show up */}
+        <div className="absolute bottom-0 left-0 w-full h-12 bg-transparent z-10"></div>
       </div>
     </div>
 
-    {/* RIGHT REVIEWS */}
-    <div className="relative w-full">
-      {/* Purple Shape */}
-      <div className="absolute inset-0 bg-indigo-500 rounded-[40px] sm:rounded-[50px] lg:rounded-[60px] -z-10"></div>
-
-      {/* Review Card 1 */}
-      <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 mb-4 sm:mb-6 ml-0 sm:ml-6 lg:ml-10">
-        <div className="flex items-start gap-3 sm:gap-4">
-          <img
-            src="/About Student 1.webp"
-            className="w-10 sm:w-12 h-10 sm:h-12 rounded-full object-cover"
-            alt="Student"
-          />
-          <p className="text-gray-700 italic text-sm sm:text-base">
-            “On the silent meeting carried forward, its arranged matters remain unclear. Certain steps followed as expected, yet no final direction appeared. Belief stayed divided, and the message passed without conclusion.”
-          </p>
-        </div>
-      </div>
-
-      {/* Review Card 2 */}
-      <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 ml-0 sm:ml-10 lg:ml-20">
-        <div className="flex items-start gap-3 sm:gap-4">
-          <img
-            src="About Student 2.webp"
-            className="w-10 sm:w-12 h-10 sm:h-12 rounded-full object-cover"
-            alt="Student"
-          />
-          <div>
-            <p className="text-gray-700 italic mb-2 sm:mb-4 text-sm sm:text-base">
-              “On the Windows talking painted pasture yet its express parties use.
-              Sure last upon he same as knew next. Of believed or diverted no.”
-            </p>
-            <p className="font-semibold text-gray-900 text-sm sm:text-base">Ahmed Ali</p>
-            <p className="text-xs sm:text-sm text-gray-500">Delhi, India</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Decorative Star */}
-      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 text-green-500 text-3xl sm:text-4xl lg:text-5xl">
-        ✦
-      </div>
-    </div>
   </div>
-</section>
+</div>
 
 
       </section>

@@ -42,7 +42,7 @@ export default function Footer() {
     <>
       {/* Newsletter Section */}
       <div className="w-full bg-white">
-        <div className="flex justify-center bg-gray-100 px-4">
+        <div className="flex justify-center bg-white px-4">
           <div className="flex flex-col lg:flex-row bg-[#3D4098] mt-24 pt-18 rounded-3xl w-full max-w-5xl gap-10 items-center px-6 pb-10">
             
             {/* Image */}
@@ -98,7 +98,7 @@ export default function Footer() {
             <div>
               <img src="/logo ict.png" alt="Logo" className="h-12 mb-4" />
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                "ICT (Institute of Corporate and Taxation): Premier educational institution in Islamabad Lahore and Karachi offering Taxation and Corporate Trainings. Prepare for success in law, taxation, and business with expert faculty, practical education, and industry relevance. Unlock your potential in the corporate and taxation sectors."
+                ICT (Institute of Corporate and Taxation): Premier educational institution in Islamabad Lahore and Karachi offering Taxation and Corporate Trainings. Prepare for success in law, taxation, and business with expert faculty, practical education, and industry relevance. Unlock your potential in the corporate and taxation sectors.
               </p>
             </div>
 
@@ -109,7 +109,7 @@ export default function Footer() {
                 <li><a href="/courses">Courses</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/mentors">Our Mentors</a></li>
-                <li><a href="#">Disclaimer</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
               </ul>
             </div>
 
@@ -173,12 +173,7 @@ export default function Footer() {
         <div className="bg-gray-200 px-6 py-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
             <p>© 2026 ICT. All rights reserved.</p>
-            <div className="flex flex-wrap gap-4">
-              <a href="">Privacy Policy</a>
-              <a href="">Terms of Use</a>
-              <a href="">Legal</a>
-              <a href="">Sitemap</a>
-            </div>
+            
           </div>
         </div>
       </div>

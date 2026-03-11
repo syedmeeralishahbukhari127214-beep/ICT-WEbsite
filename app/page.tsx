@@ -4,8 +4,8 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
 import { LuYoutube } from "react-icons/lu";
 import Link from "next/dist/client/link"; 
+import Script from "next/script";
 import { FaWhatsapp } from "react-icons/fa6";
-
 
 export default async function Home() {
   return (
@@ -168,7 +168,7 @@ export default async function Home() {
 
 
       <div className="flex justify-center flex-col items-center mt-16 -mb-10">
-        <p className="text-[#3D4098] font-bold text-md">Course we offer's</p>
+        <p className="text-[#3D4098] font-bold text-md">Courses we offer</p>
         <h1 className="text-black text-3xl font-extrabold">Build Your Skills</h1>
         <p>From taxation to corporate affairs, our courses help you grow with clear, practical learning</p>
       </div>
@@ -226,12 +226,10 @@ export default async function Home() {
   <div className="bg-[#F9FAFB] py-20 mt-16">
     <div className="max-w-7xl mx-auto px-6 text-center">
 
-      <p className="text-sm text-[#15A959] font-semibold mb-2">
-        — About Campus
-      </p>
+      
 
       <h2 className="text-4xl font-extrabold text-black mb-4">
-        Inside Our Campus
+        Inside Our Campuses
       </h2>
 
       <p className="text-gray-600 max-w-3xl mx-auto mb-14">
@@ -283,8 +281,7 @@ export default async function Home() {
 
   <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
     
-    {/* Logos Section */}
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 items-center justify-items-center lg:justify-items-start">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 items-center justify-items-center">
   {[
     "/FBR5.webp",
     "/FBR2.webp",
@@ -293,12 +290,13 @@ export default async function Home() {
   ].map((logo, index) => (
     <div
       key={index}
-      className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full bg-white shadow-lg flex items-center justify-center"
+      className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 rounded-full bg-white shadow-xl flex items-center justify-center overflow-hidden border border-gray-50"
     >
       <img
         src={logo}
         alt={`Authority Logo ${index + 1}`}
-        className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 object-contain"
+        /* Increased these values significantly to "zoom" the logo inside the circle */
+        className="w-[75%] h-[75%] sm:w-[80%] h-[80%] lg:w-[85%] lg:h-[85%] object-contain transition-transform duration-300 hover:scale-110"
       />
     </div>
   ))}
@@ -327,70 +325,58 @@ export default async function Home() {
 
 
 {/* Testimonials Section */}
+{/* Testimonials Section */}
 <div className="relative py-16 sm:py-20 md:py-28 overflow-hidden bg-gradient-to-br from-[#F1F5FF] via-[#ECFBF6] to-white">
+  
+  {/* Optimized Script Loading */}
+  <Script 
+    src="https://elfsightcdn.com/platform.js" 
+    strategy="lazyOnload" 
+  />
 
   {/* Decorative Circle */}
   <div className="absolute right-[-100px] sm:right-[-150px] md:right-[-200px] top-10 w-[250px] sm:w-[350px] md:w-[500px] h-[250px] sm:h-[350px] md:h-[500px] bg-[#3D4098] rounded-full opacity-90"></div>
 
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-10 md:px-20 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-10 md:px-20 lg:px-28">
 
-    {/* Left Content */}
-    <div className="text-center lg:text-left">
-      <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
+    {/* Section Heading */}
+    <div className="text-center mb-10">
+      <div className="flex items-center justify-center gap-2 mb-4">
         <span className="w-8 sm:w-10 h-0.5 bg-[#15A959]"></span>
         <p className="text-[#3D4098] font-semibold text-sm sm:text-base">
           Trusted by Learners
         </p>
+        <span className="w-8 sm:w-10 h-0.5 bg-[#15A959]"></span>
       </div>
-
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 sm:mb-6">
+      <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-black">
         What Our Students Say
       </h2>
-
-      <p className="text-gray-700 text-base sm:text-lg max-w-full sm:max-w-xl leading-relaxed mx-auto lg:mx-0">
-        Hear directly from our learners about their journey, experience,
-        and success with ICT’s professional training programs.
+      <p className="text-gray-700 text-lg max-w-2xl mx-auto leading-relaxed">
+        Don't just take our word for it. Here are the latest reviews from our 
+        Google Business profile where we have over 600+ satisfied learners.
       </p>
-
-      {/* Dots */}
-      <div className="flex gap-3 mt-6 sm:mt-8 md:mt-10 justify-center lg:justify-start">
-        <span className="w-3 h-3 rounded-full bg-[#3D4098]"></span>
-        <span className="w-3 h-3 rounded-full bg-gray-300"></span>
-        <span className="w-3 h-3 rounded-full bg-gray-300"></span>
-      </div>
     </div>
 
-    {/* Right Card */}
-    <div className="relative flex justify-center lg:justify-end">
-      <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 max-w-md sm:max-w-lg w-full">
-
-        {/* Avatar */}
-        <div className="absolute -top-6 sm:-top-8 left-6 sm:left-8">
-          <img
-            src="/Small Pic student Hompage (1).webp"
-            alt="Student"
-            className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 border-white shadow-md object-cover"
-          />
-        </div>
-
-        {/* Feedback */}
-        <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 mt-6">
-          “ICT provided me with practical taxation knowledge that helped me
-          grow professionally. The mentors are highly experienced and supportive.”
-        </p>
-
-        <h4 className="font-bold text-[#3D4098]">
-          Ali Raza
-        </h4>
-        <p className="text-gray-500 text-sm">
-          Tax Consultant — Islamabad
-        </p>
+    {/* Google Reviews Widget Container */}
+    {/* Added 'overflow-hidden' here to act as a frame */}
+    <div className="mt-12 bg-white/50 p-4 rounded-3xl backdrop-blur-sm shadow-xl overflow-hidden">
+      {/* The wrapper below uses a negative bottom margin (-mb-12). 
+          This pulls the widget "down" so the attribution badge sits 
+          outside the parent's overflow-hidden boundary.
+      */}
+      <div className="-mb-12 relative">
+        <div 
+          className="elfsight-app-d04969c0-b158-4f8e-9e92-c22c360c9cb2" 
+          data-elfsight-app-lazy 
+        ></div>
+        
+        {/* Optional: A small "shield" div to ensure no stray pixels from the link show up */}
+        <div className="absolute bottom-0 left-0 w-full h-12 bg-transparent z-10"></div>
       </div>
     </div>
 
   </div>
 </div>
-
 
 
 <div className="px-4 sm:px-10 lg:px-28">
