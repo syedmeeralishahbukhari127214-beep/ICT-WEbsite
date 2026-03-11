@@ -96,7 +96,7 @@ export default function Header() {
           
         >
           <FaEnvelope className="text-green-400" size={16} />
-          <span className="hidden sm:inline tracking-wide font-medium">
+          <span className="tracking-wide font-medium">
             admission@ict.net.pk
           </span>
         </a>
