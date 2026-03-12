@@ -64,7 +64,7 @@ export default function Header() {
 
     <div className="overflow-hidden w-full">
       <p className="whitespace-nowrap animate-ticker">
-        Admissions Now Open – Take the First Step Towards a Successful Academic and Professional Future. Apply Today. 
+        Admissions Now Open – Take the First Step Towards a Successful Academic and Professional Future Apply Today. 
           50% OFF (All Courses). 50% discount is applicable on lump-sum payment only. 
           This offer is valid till the end of Ramadan. </p>
         
