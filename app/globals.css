@@ -155,14 +155,15 @@ body {
 }
 @keyframes ticker {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-110%);
   }
 }
 
 .animate-ticker {
   display: inline-block;
-  animation: ticker 20s linear infinite;
+  padding-left: 40px; /* creates small gap before restart */
+  animation: ticker 30s linear infinite;
 }

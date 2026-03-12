@@ -64,7 +64,10 @@ export default function Header() {
 
     <div className="overflow-hidden w-full">
       <p className="whitespace-nowrap animate-ticker">
-        Admissions Now Open – Take the First Step Towards a Successful Academic and Professional Future. Apply Today</p>
+        Admissions Now Open – Take the First Step Towards a Successful Academic and Professional Future. Apply Today. 
+          50% OFF (All Courses). 50% discount is applicable on lump-sum payment only. 
+          This offer is valid till the end of Ramadan. </p>
+        
     </div>
 
   </div>
@@ -96,7 +99,7 @@ export default function Header() {
           
         >
           <FaEnvelope className="text-green-400" size={16} />
-          <span className="hidden sm:inline tracking-wide font-medium">
+          <span className="tracking-wide font-medium">
             admission@ict.net.pk
           </span>
         </a>
