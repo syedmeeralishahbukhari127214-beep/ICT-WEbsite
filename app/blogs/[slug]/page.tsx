@@ -16,16 +16,44 @@ const SITE_URL = "https://ict.net.pk";
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+
   const blog = await client.fetch(singleBlogQuery, { slug });
-  if (!blog) return { title: "Blog Not Found", robots: "noindex" };
+
+  if (!blog) {
+    return {
+      title: "Blog Not Found",
+      robots: "noindex",
+    };
+  }
 
   const seo = blog.seo || {};
+  const baseUrl = "https://ict.net.pk";
+
   return {
+    // Meta Title
     title: seo.metaTitle || blog.title,
+
+    // Meta Description
     description: seo.metaDescription || blog.excerpt,
+
+    // Canonical URL
+    alternates: {
+      canonical: seo.canonicalUrl || `${baseUrl}/blogs/${slug}`,
+    },
+
+    // Open Graph (Facebook / LinkedIn sharing)
     openGraph: {
+      title: seo.metaTitle || blog.title,
+      description: seo.metaDescription || blog.excerpt,
       images: seo.ogImage
-        ? [{ url: urlFor(seo.ogImage).width(1200).height(630).url() }]
+        ? [
+            {
+              url: urlFor(seo.ogImage)
+                .width(1200)
+                .height(630)
+                .url(),
+            },
+          ]
         : [],
     },
   };

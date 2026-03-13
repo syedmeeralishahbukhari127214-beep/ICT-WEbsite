@@ -8,7 +8,10 @@ import { FaWhatsapp } from "react-icons/fa6";
 export async function generateMetadata(
   { params }: { params: { slug: string } | Promise<{ slug: string }> }
 ): Promise<Metadata> {
+
   const { slug } = await params;
+
+  // Sanity se mentor ka SEO data fetch
   const mentor = await client.fetch(singleMentorQuery, { slug });
 
   if (!mentor) {
@@ -18,27 +21,31 @@ export async function generateMetadata(
     };
   }
 
-  const seo = mentor.seo || {};
+  const baseUrl = "https://ict.net.pk";
 
   return {
-    title: seo.metaTitle || mentor.name,
-    description: seo.metaDescription || mentor.designation,
-    keywords: seo.keywords?.join(", "),
-    robots: seo.noIndex ? "noindex, nofollow" : "index, follow",
+    // Meta Title
+    title: mentor.seo?.metaTitle || mentor.name,
+
+    // Meta Description
+    description:
+      mentor.seo?.metaDescription ||
+      `Learn from ${mentor.name}, an expert mentor at ICT Pakistan.`,
+
+    // Canonical URL
+    alternates: {
+      canonical:
+        mentor.seo?.canonicalUrl || `${baseUrl}/mentors/${slug}`,
+    },
+
+    // Open Graph (Social Media)
     openGraph: {
-      title: seo.metaTitle || mentor.name,
-      description: seo.metaDescription || mentor.designation,
-      images: seo.ogImage
-        ? [
-            {
-              url: urlFor(seo.ogImage).width(1200).height(630).url(),
-            },
-          ]
-        : [],
+      title: mentor.seo?.metaTitle || mentor.name,
+      description: mentor.seo?.metaDescription,
+      images: mentor.seo?.ogImage ? [mentor.seo.ogImage] : [],
     },
   };
 }
-
 type PageProps = {
   params: { slug: string } | Promise<{ slug: string }>;
 };
