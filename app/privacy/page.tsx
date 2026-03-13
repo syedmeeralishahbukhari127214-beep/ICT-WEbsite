@@ -110,7 +110,7 @@ const StudentPolicies = () => (
 /* ---------------- MAIN PAGE ---------------- */
 
 const PrivacyHeroSection = () => {
-  const rightImageUrl = "/policies.webp";
+  const rightImageUrl = "/Policies.webp";
   const backgroundImageUrl = "/Design.webp";
 
   return (
