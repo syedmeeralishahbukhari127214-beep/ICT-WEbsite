@@ -28,29 +28,27 @@ const StaffPolicies = () => (
     </h2>
 
     <div className="space-y-4">
-      {staffPolicies.map((policy, index) => (
-        <div
-          key={index}
-          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-xl border bg-gray-50 hover:border-[#3D4098]/40 hover:shadow-md transition"
-        >
-          <div className="flex items-center gap-3">
-            <FaFilePdf className="text-red-500 text-lg sm:text-xl flex-shrink-0" />
-            <span className="text-sm sm:text-base text-gray-800">
-              {policy.name}
-            </span>
-          </div>
-
-          <a
-            href={policy.file}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto text-center px-4 py-2 bg-[#3D4098] text-white text-sm rounded-lg hover:bg-[#15A959] transition"
-          >
-            View PDF
-          </a>
+  {staffPolicies.map((policy, index) => (
+    <a
+      key={index}
+      href={policy.file}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+    >
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-xl border bg-gray-50 hover:border-[#3D4098]/40 hover:shadow-md transition cursor-pointer">
+        
+        <div className="flex items-center gap-3">
+          <FaFilePdf className="text-red-500 text-lg sm:text-xl flex-shrink-0" />
+          <span className="text-sm sm:text-base text-gray-800 font-medium">
+            {policy.name}
+          </span>
         </div>
-      ))}
-    </div>
+
+      </div>
+    </a>
+  ))}
+</div>
   </div>
 );
 
@@ -85,36 +83,34 @@ const StudentPolicies = () => (
     </h2>
 
     <div className="space-y-4">
-      {studentPolicies.map((policy, index) => (
-        <div
-          key={index}
-          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-xl border bg-gray-50 hover:border-[#3D4098]/40 hover:shadow-md transition"
-        >
-          <div className="flex items-center gap-3">
-            <FaFilePdf className="text-red-500 text-lg sm:text-xl flex-shrink-0" />
-            <span className="text-sm sm:text-base text-gray-800">
-              {policy.name}
-            </span>
-          </div>
-
-          <a
-            href={policy.file}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto text-center px-4 py-2 bg-[#3D4098] text-white text-sm rounded-lg hover:bg-[#15A959] transition"
-          >
-            View PDF
-          </a>
+  {studentPolicies.map((policy, index) => (
+    <a
+      key={index}
+      href={policy.file}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+    >
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-xl border bg-gray-50 hover:border-[#3D4098]/40 hover:shadow-md transition cursor-pointer">
+        
+        <div className="flex items-center gap-3">
+          <FaFilePdf className="text-red-500 text-lg sm:text-xl flex-shrink-0" />
+          <span className="text-sm sm:text-base text-gray-800 font-medium">
+            {policy.name}
+          </span>
         </div>
-      ))}
-    </div>
+
+      </div>
+    </a>
+  ))}
+</div>
   </div>
 );
 
 /* ---------------- MAIN PAGE ---------------- */
 
 const PrivacyHeroSection = () => {
-  const rightImageUrl = "/Secure.webp";
+  const rightImageUrl = "/policies.webp";
   const backgroundImageUrl = "/Design.webp";
 
   return (
@@ -134,39 +130,32 @@ const PrivacyHeroSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* LEFT CONTENT */}
             <div className="flex flex-col items-start space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-0.5 bg-emerald-500 rounded"></div>
-                <span className="text-sm font-semibold text-blue-900 tracking-wide uppercase">
-                  Privacy Protection
-                </span>
-              </div>
+              
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-950 leading-tight tracking-tight">
-                <span className="block">Your Data,</span>
+                
                 <span className="block text-emerald-600">
-                  Our Responsibility
+                 Our Policies
                 </span>
               </h1>
 
               <p className="text-base md:text-lg text-gray-700 max-w-xl leading-relaxed">
-                We value the trust our clients place in us. Protecting your
-                personal and financial information is our priority. Our privacy
-                practices ensure your data remains secure, confidential, and
-                handled with complete transparency.
+                Our policies are established to maintain a safe, respectful, and well-organized environment for everyone involved with our organization. They outline the standards, responsibilities, and procedures that guide our operations and interactions, ensuring fairness, transparency, and professionalism. These guidelines help staff, students, partners, and visitors understand their rights and obligations while promoting a culture of integrity and accountability. We regularly review and update our policies to ensure they remain relevant and aligned with current regulations and organizational values.
+
               </p>
             </div>
 
             {/* RIGHT IMAGE */}
             <div className="relative group">
               <div className="absolute -inset-4 bg-blue-100/70 rounded-3xl blur-2xl opacity-80 group-hover:opacity-100 transition-opacity" />
-
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+<div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10">
                 <img
                   src={rightImageUrl}
                   alt="Security Illustration"
                   className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
+             
             </div>
           </div>
         </div>

@@ -182,9 +182,7 @@ export default function CourseDetailUI({ course }: any) {
               <PortableText value={course.explain} />
             </div>
 
-            <button className="bg-[#3c3f9e] text-white px-10 py-4 mt-10 rounded-2xl font-semibold shadow-md hover:opacity-90 transition">
-              Attempt Quiz
-            </button>
+            
           </div>
         </div>
       </section>
