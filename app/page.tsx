@@ -323,62 +323,6 @@ export default async function Home() {
   </div>
 </div>
 
-
-{/* Testimonials Section */}
-{/* Testimonials Section */}
-<div className="relative py-16 sm:py-20 md:py-28 overflow-hidden bg-gradient-to-br from-[#F1F5FF] via-[#ECFBF6] to-white">
-  
-  {/* Optimized Script Loading */}
-  <Script 
-    src="https://elfsightcdn.com/platform.js" 
-    strategy="lazyOnload" 
-  />
-
-  {/* Decorative Circle */}
-  <div className="absolute right-[-100px] sm:right-[-150px] md:right-[-200px] top-10 w-[250px] sm:w-[350px] md:w-[500px] h-[250px] sm:h-[350px] md:h-[500px] bg-[#3D4098] rounded-full opacity-90"></div>
-
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-10 md:px-20 lg:px-28">
-
-    {/* Section Heading */}
-    <div className="text-center mb-10">
-      <div className="flex items-center justify-center gap-2 mb-4">
-        <span className="w-8 sm:w-10 h-0.5 bg-[#15A959]"></span>
-        <p className="text-[#3D4098] font-semibold text-sm sm:text-base">
-          Trusted by Learners
-        </p>
-        <span className="w-8 sm:w-10 h-0.5 bg-[#15A959]"></span>
-      </div>
-      <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-black">
-        What Our Students Say
-      </h2>
-      <p className="text-gray-700 text-lg max-w-2xl mx-auto leading-relaxed">
-        Don't just take our word for it. Here are the latest reviews from our 
-        Google Business profile where we have over 600+ satisfied learners.
-      </p>
-    </div>
-
-    {/* Google Reviews Widget Container */}
-    {/* Added 'overflow-hidden' here to act as a frame */}
-    <div className="mt-12 bg-white/50 p-4 rounded-3xl backdrop-blur-sm shadow-xl overflow-hidden">
-      {/* The wrapper below uses a negative bottom margin (-mb-12). 
-          This pulls the widget "down" so the attribution badge sits 
-          outside the parent's overflow-hidden boundary.
-      */}
-      <div className="-mb-12 relative">
-        <div 
-          className="elfsight-app-d04969c0-b158-4f8e-9e92-c22c360c9cb2" 
-          data-elfsight-app-lazy 
-        ></div>
-        
-        {/* Optional: A small "shield" div to ensure no stray pixels from the link show up */}
-        <div className="absolute bottom-0 left-0 w-full h-12 bg-transparent z-10"></div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
 <div className="px-4 sm:px-10 lg:px-28">
 
   {/* Heading */}
