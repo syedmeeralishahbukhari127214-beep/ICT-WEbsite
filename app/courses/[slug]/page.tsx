@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Course Not Found" };
   }
 
-  const baseUrl = "http://localhost:3000";
+  const baseUrl = "https://ict.net.pk";
 
   return {
     // Sanity mein enter kiya gaya Meta Title, warna default title
