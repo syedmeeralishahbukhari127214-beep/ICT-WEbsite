@@ -5,12 +5,14 @@ export const postType = defineType({
   title: "Post",
   type: "document",
   fields: [
+    // TITLE
     defineField({
       name: "title",
       type: "string",
       validation: (rule) => rule.required(),
     }),
 
+    // SLUG
     defineField({
       name: "slug",
       type: "slug",
@@ -18,6 +20,7 @@ export const postType = defineType({
       validation: (rule) => rule.required(),
     }),
 
+    // PUBLISH DATE
     defineField({
       name: "publishedAt",
       type: "datetime",
@@ -25,20 +28,51 @@ export const postType = defineType({
       validation: (rule) => rule.required(),
     }),
 
+    // THUMBNAIL IMAGE WITH ALT TEXT
     defineField({
       name: "image",
+      title: "Thumbnail Image",
       type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alt Text",
+          description: "Describe the image for SEO and accessibility",
+          validation: (Rule) => Rule.required(),
+        },
+      ],
     }),
 
-    // 🔥 BODY WITH WORKING TABLE STRUCTURE
+    // BLOG BODY
     defineField({
       name: "body",
       title: "Body",
       type: "array",
       of: [
         { type: "block" },
-        { type: "image" },
 
+        // BODY IMAGE WITH ALT TEXT
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alt Text",
+              description: "Describe the image for SEO and accessibility",
+              validation: (Rule) => Rule.required(),
+            },
+          ],
+        },
+
+        // TABLE STRUCTURE
         {
           name: "table",
           title: "Table",
@@ -69,28 +103,48 @@ export const postType = defineType({
       ],
     }),
 
-    // SEO
+    // SEO SETTINGS
     defineField({
       name: "seo",
       title: "SEO",
       type: "object",
       fields: [
-        { name: "metaTitle", type: "string" },
-        { name: "metaDescription", type: "text", rows: 3 },
+        {
+          name: "metaTitle",
+          type: "string",
+        },
+        {
+          name: "metaDescription",
+          type: "text",
+          rows: 3,
+        },
         {
           name: "keywords",
           type: "array",
           of: [{ type: "string" }],
         },
-        { name: "ogImage", type: "image" },
+
+        // OG IMAGE WITH ALT
+        {
+          name: "ogImage",
+          title: "Open Graph Image",
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alt Text",
+            },
+          ],
+        },
+
         {
           name: "noIndex",
           type: "boolean",
           initialValue: false,
-        },
-        {
-          name: "thumbnailAlt",
-          type: "string",
         },
       ],
     }),
