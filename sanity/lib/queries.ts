@@ -1,127 +1,69 @@
-// ================= BLOG QUERIES =================
 
-// List of all blogs
+
+
+
+
 export const blogsQuery = `
 *[_type == "post"] | order(publishedAt desc){
   _id,
   title,
   excerpt,
   "slug": slug.current,
-  "image": image{
-    asset->{
-      _id,
-      url
-    },
-    alt
-  },
+  "mainImage": image,
   body,
+  thumbnail,
 }
 `;
-
-// Single blog by slug
 export const singleBlogQuery = `
 *[_type == "post" && slug.current == $slug][0]{
   _id,
   title,
   slug,
   excerpt,
-  publishedAt,
-  "image": image{
-    asset->{
-      _id,
-      url
-    },
-    alt
-  },
   body,
-  seo{
-    metaTitle,
-    metaDescription,
-    keywords,
-    "ogImage": ogImage{
-      asset->{
-        _id,
-        url
-      },
-      alt
-    },
-    noIndex
-  },
+  publishedAt,
+  "mainImage": image,
+  body,
+  seo,
+  thumbnail,
   author->{
     name
   }
 }
 `;
 
-// ================= MENTORS QUERIES =================
-
-// List of mentors
 export const mentorsQuery = `
-*[_type == "mentor"] | order(name asc){
+*[_type == "mentor"] | order(name asc) {
   _id,
   name,
   slug,
-  "image": image{
-    asset->{
-      _id,
-      url
-    },
-    alt
-  },
-  "thumbnail": thumbnail{
-    asset->{
-      _id,
-      url
-    },
-    alt
-  },
+  image,
+  thumbnail,
   designation
 }
 `;
 
-// Single mentor by slug
+// SINGLE mentor
 export const singleMentorQuery = `
 *[_type == "mentor" && slug.current == $slug][0]{
   name,
   designation,
-  "image": image{
-    asset->{
-      _id,
-      url
-    },
-    alt
-  },
+  image,
   shortBio,
   bio,
-  "thumbnail": thumbnail{
-    asset->{
-      _id,
-      url
-    },
-    alt
-  },
+  thumbnail,
   expertise,
-  seo{
+   seo {
     metaTitle,
     metaDescription,
     keywords,
-    "ogImage": ogImage{
-      asset->{
-        _id,
-        url
-      },
-      alt
-    },
+    ogImage,
     noIndex
   }
 }
 `;
-
-// ================= COURSES QUERIES =================
-
-// List of courses
 export const coursesQuery = `
-*[_type == "course"] | order(_createdAt desc){
+*[_type == "course"] | order(_createdAt desc) {
   _id,
   title,
   slug,
@@ -130,71 +72,46 @@ export const coursesQuery = `
   country,
   price,
   duration,
-  "thumbnail": thumbnail{
-    asset->{
-      _id,
-      url
-    },
-    alt
-  },
+  thumbnail,
   instructor->{
     name,
-    "image": image{
-      asset->{
-        _id,
-        url
-      },
-      alt
-    }
+    image
   }
 }
 `;
 
-// Single course by slug
+
+// sanity/lib/queries.ts
 export const singleCourseQuery = `
 *[_type=="course" && slug.current==$slug][0]{
   title,
   category,
-  "thumbnail": thumbnail{
-    asset->{
-      _id,
-      url
-    },
-    alt
-  },
+  thumbnail,
   description,
-  explain,
+   explain,        // 🔥 Add this
   shortExplain,
-  faqs,
+  faqs, 
   features,
   gallery,
   benefits,
   outline,
-  seo{
+  seo {
     metaTitle,
     metaDescription,
     canonicalUrl,
-    keywords,
-    "ogImage": ogImage{
-      asset->{
-        _id,
-        url
-      },
-      alt
-    }
+     keywords,
+    ogImage
   },
+
   instructor->{
     name,
     designation,
-    "image": image{
-      asset->{
-        _id,
-        url
-      },
-      alt
-    },
-    slug
+    image,
+    slug 
   },
+
   certificate
 }
 `;
+
+
