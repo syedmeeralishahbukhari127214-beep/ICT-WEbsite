@@ -13,48 +13,22 @@ type PageProps = {
 };
 
 const SITE_URL = "https://ict.net.pk"; 
+const DEFAULT_OG_IMAGE = "/default-og-image.jpg"; // fallback for OG image
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-
   const blog = await client.fetch(singleBlogQuery, { slug });
-
-  if (!blog) {
-    return {
-      title: "Blog Not Found",
-      robots: "noindex",
-    };
-  }
+  if (!blog) return { title: "Blog Not Found", robots: "noindex" };
 
   const seo = blog.seo || {};
-  const baseUrl = "https://ict.net.pk";
 
   return {
-    // Meta Title
     title: seo.metaTitle || blog.title,
-
-    // Meta Description
     description: seo.metaDescription || blog.excerpt,
-
-    // Canonical URL
-    alternates: {
-      canonical: seo.canonicalUrl || `${baseUrl}/blogs/${slug}`,
-    },
-
-    // Open Graph (Facebook / LinkedIn sharing)
     openGraph: {
-      title: seo.metaTitle || blog.title,
-      description: seo.metaDescription || blog.excerpt,
-      images: seo.ogImage
-        ? [
-            {
-              url: urlFor(seo.ogImage)
-                .width(1200)
-                .height(630)
-                .url(),
-            },
-          ]
-        : [],
+      images: seo.ogImage?.asset
+        ? [{ url: urlFor(seo.ogImage).width(1200).height(630).url() }]
+        : [{ url: DEFAULT_OG_IMAGE }],
     },
   };
 }
@@ -89,7 +63,6 @@ export default async function BlogDetail({ params }: PageProps) {
     whatsapp: `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`,
   };
 
-  /* 🔹 NEW: Split blog body for middle image */
   const bodyBlocks = blog.body || [];
   const middleIndex = Math.floor(bodyBlocks.length / 2);
   const firstHalf = bodyBlocks.slice(0, middleIndex);
@@ -110,11 +83,11 @@ export default async function BlogDetail({ params }: PageProps) {
             <span>No Comments</span>
           </div>
 
-          {blog.mainImage && (
+          {blog.mainImage?.asset && (
             <div className="mb-8">
               <img
                 src={urlFor(blog.mainImage).width(1200).url()}
-                alt={blog.title}
+                alt={blog.mainImage.alt || blog.title}
                 className="w-full h-auto rounded-xl shadow-sm"
               />
             </div>
@@ -124,27 +97,21 @@ export default async function BlogDetail({ params }: PageProps) {
           <div className="prose prose-lg max-w-none text-gray-700 mb-12">
 
             {/* First Half Text */}
-            <PortableText
-              value={firstHalf}
-              components={portableTextComponents}
-            />
+            <PortableText value={firstHalf} components={portableTextComponents} />
 
             {/* MIDDLE IMAGE */}
-            {blog.mainImage && (
+            {blog.mainImage?.asset && (
               <div className="my-10">
                 <img
                   src={urlFor(blog.mainImage).width(900).url()}
-                  alt={blog.title}
+                  alt={blog.mainImage.alt || blog.title}
                   className="w-full h-auto rounded-xl shadow-md"
                 />
               </div>
             )}
 
             {/* Second Half Text */}
-            <PortableText
-              value={secondHalf}
-              components={portableTextComponents}
-            />
+            <PortableText value={secondHalf} components={portableTextComponents} />
 
           </div>
         </main>
@@ -185,19 +152,19 @@ export default async function BlogDetail({ params }: PageProps) {
                 {latestPosts?.slice(0, 10).map((post: any) => (
                   <Link key={post._id} href={`/blogs/${post.slug}`} className="flex gap-4 group items-center">
                     <div className="w-16 h-16 shrink-0 overflow-hidden rounded-lg bg-gray-100">
-                      <img 
-                        src={urlFor(post.mainImage).width(100).height(100).url()} 
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
+                      {post.mainImage?.asset && (
+                        <img 
+                          src={urlFor(post.mainImage).width(100).height(100).url()} 
+                          alt={post.mainImage.alt || post.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                      )}
                     </div>
                     <div className="flex flex-col gap-1">
                       <h4 className="text-sm font-bold text-gray-900 group-hover:text-[#22c55e] transition-colors line-clamp-2 leading-snug">
                         {post.title}
                       </h4>
-                      <span className="text-[10px] text-gray-400 font-medium italic">
-                        Recently
-                      </span>
+                      <span className="text-[10px] text-gray-400 font-medium italic">Recently</span>
                     </div>
                   </Link>
                 ))}
@@ -210,15 +177,15 @@ export default async function BlogDetail({ params }: PageProps) {
               <div className="grid grid-cols-1 gap-6">
                 {courses?.slice(0, 5).map((course: any) => (
                   <div key={course._id} className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 group">
-                    <img 
-                      src={urlFor(course.thumbnail).url()} 
-                      alt={course.title} 
-                      className="w-full h-32 object-cover group-hover:opacity-90 transition-opacity" 
-                    />
+                    {course.thumbnail?.asset && (
+                      <img 
+                        src={urlFor(course.thumbnail).url()} 
+                        alt={course.title} 
+                        className="w-full h-32 object-cover group-hover:opacity-90 transition-opacity" 
+                      />
+                    )}
                     <div className="p-4">
-                      <h4 className="font-bold text-sm text-gray-900 mb-3 line-clamp-1 group-hover:text-[#22c55e]">
-                        {course.title}
-                      </h4>
+                      <h4 className="font-bold text-sm text-gray-900 mb-3 line-clamp-1 group-hover:text-[#22c55e]">{course.title}</h4>
                       <Link 
                         href={`/courses/${course.slug.current}`}
                         className="block text-center bg-[#3D4098] text-white text-xs font-bold py-2 rounded-lg hover:bg-[#22c55e] transition-all"
